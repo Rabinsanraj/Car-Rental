@@ -16,6 +16,3 @@ function CardBox(props){
     );
 }
 export default CardBox 
-//  "cat": "git add . && git commit -m 'mod' && git push origin main"
-// 
-// 

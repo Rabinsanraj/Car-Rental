@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "snap": "git add . && git commit -m 'mod' && git push origin main"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
