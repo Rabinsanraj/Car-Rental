@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "snap": "git add . && git commit -m 'mod' && git push origin main"
+    "snap": "git add . && git commit -m 'mod' && git push origin main && npm run build && npm run deploy"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
