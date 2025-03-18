@@ -9,8 +9,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "cat": "git add . && git commit -m 'mo' && git push origin main && npm run build"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",

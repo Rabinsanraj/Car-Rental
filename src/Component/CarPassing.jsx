@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 function CarPassing (){
     return(
         <>
-        <div className="container-fluid w-100 mt-5" style={{backgroundImage: `url(${CaratNight})`,
+        <div className="container-fluid w-100 mt-4" style={{backgroundImage: `url(${CaratNight})`,
             backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
              width: "100%", height:"auto"}}>
                 <div className='container-fluid pt-5 pb-5 w-100'>
