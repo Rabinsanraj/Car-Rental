@@ -29,7 +29,7 @@ function Services(){
             <CardBox icon={<box-icon name='heart' color='#08082d' size="45px" className="p-3 rounded-circle"style={{backgroundColor:"red"}}></box-icon>} head="Life Insurance" sub="producting what matters most your life, your future."/>
             </div>
             <div className="col-sm-2 pb-4">
-            <CardBox icon={<box-icon name='building-house' color='#08082d' size="45px" className="p-3 rounded-circle"style={{backgroundColor:"red"}} ></box-icon>} head="City fuck City" sub="Connecting cities one ride at a time."/>
+            <CardBox icon={<box-icon name='building-house' color='#08082d' size="45px" className="p-3 rounded-circle"style={{backgroundColor:"red"}} ></box-icon>} head="City to City" sub="Connecting cities one ride at a time."/>
             </div>
         </div>
         <CarPassing/>
