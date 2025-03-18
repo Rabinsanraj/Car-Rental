@@ -1,6 +1,5 @@
 {
   "name": "rental-car",
-  "homepage": " https://rabinsanraj.github.io/Car-Rental/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +15,7 @@
     "bootstrap": "^5.3.3",
     "boxicons": "^2.1.4",
     "gh-pages": "^6.3.0",
+    "git": "^0.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0"
