@@ -143,6 +143,7 @@ function Home() {
           </div>
         </div>
       </div>
+
       <div className="col-md-5 pb-5" style={{backgroundImage:`url(${KeyInHand})`,
       backgroundRepeat:"no-repeat",backgroundSize:"cover",height:"700px"}} >
         <div className="container position-relative w-75 left-25  mt-5 top-50">
@@ -152,6 +153,7 @@ function Home() {
     </div>
    </div>
     <CarPassing/>
+
     <div className="container-fluid mt-1" style={{backgroundImage: `url(${CarGray})`,
     backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
      width: "100%"}}>
@@ -160,12 +162,23 @@ function Home() {
         <h1 className="display-1 fw-bold pt-2 lh-base" style={{color:"white"}}>Intrerested in Renting ?</h1>
         <h1 className="display-3 fw-bold pt-2 lh-base" style={{color:"white"}}>Don't hesitate and <span style={{color:"red"}}>SEND </span> 
         us a <span style={{color:"red"}}>MESSAGE</span></h1>
-
-        <div className="button-container  d-flex" style={{gap:"70px",marginTop:"150px"}}>
-          <button className="btn text-white fs-4 fw-bold" style={{backgroundColor:"#ff1b1b",
-            borderRadius:"25px",padding:"0px 45px 0px 45px"}}>Whatsapp</button>
-          <button className="btn text-white fs-4 fw-bold" style={{backgroundColor:"#ff1b1b",
-            borderRadius:"25px",padding:"0px 45px 0px 45px"}}>Contactus</button>
+        <div className="row row row-cols-2 row-cols-md-2 pt-5">
+          <div className="col">
+            <div className="row">
+            <div className="col-4"></div>
+            <div className="col"><button className="btn text-white fs-4 fw-bold" style={{backgroundColor:"#ff1b1b",
+            borderRadius:"25px",padding:"0px 35px 0px 35px"}}>Whatsapp</button></div>
+            <div className="col-4"></div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="row">
+            <div className="col-4"></div>
+            <div className="col"><button className="btn text-white fs-4 fw-bold" style={{backgroundColor:"#ff1b1b",
+            borderRadius:"25px",padding:"0px 35px 0px 35px"}}>Contactus</button></div>
+            <div className="col-4"></div>
+            </div>
+          </div>
         </div>
       </div>
      </div>
