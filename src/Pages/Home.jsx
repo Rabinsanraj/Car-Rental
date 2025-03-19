@@ -14,46 +14,46 @@ function Home() {
     backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
      width: "100%"}}>
     <div className="container-fluid ps-5 pb-5 d-flex align-items-center">
-    <div classNAme="card">
+    <div>
       <div className="card-body p-3"  style={{backgroundColor:"#050563",borderRadius:"10px",opacity:"90%",margin:"auto", marginTop:"30px"}}>
         <h5 className="card-title text-center text-white mb-4">CONTINUE CARE RESERVATION</h5>
         <form>
           <div className="mb-4">
-            <input type="text" className="form-control" id="username" placeholder="Enter Your Car Type" required/>
+            <input type="text" className="form-control" placeholder="Enter Your Car Type" required/>
           </div>
           <div className="mb-4">
-            <input type="text" className="form-control" id="password" placeholder="Enter Pickup Location" required/>
+            <input type="text" className="form-control" placeholder="Enter Pickup Location" required/>
           </div>
           <div className="mb-4">
-            <input type="text" className="form-control" id="password" placeholder="Enter Drop Location" required/>
+            <input type="text" className="form-control" placeholder="Enter Drop Location" required/>
           </div>
         
         <div className="row pb-4" >
         <div className="col-md-6">
         <label htmlFor="date" className="form-label text-white">Pickup Date</label>
-        <input type="date" className="form-control" id="password" placeholder="Enter Drop Location" style={{width:"200px"}} required/>
+        <input type="date" className="form-control" placeholder="Enter Drop Location" style={{width:"200px"}} required/>
           </div>
         <div className="col-md-6">
         <label htmlFor="time" className="form-label text-white">Pickup Time</label>
-        <input type="time" className="form-control" id="password" placeholder="Enter Drop Location" style={{width:"200px"}} required/>
+        <input type="time" className="form-control" placeholder="Enter Drop Location" style={{width:"200px"}} required/>
           </div>
         </div>
 
         <div className="row pb-4">
         <div className="col-md-6">
         <label htmlFor="date" className="form-label text-white">Drop Date</label>
-        <input type="date" className="form-control" id="password" placeholder="Enter Drop Location" style={{width:"200px"}}  required/>
+        <input type="date" className="form-control" placeholder="Enter Drop Location" style={{width:"200px"}}  required/>
           </div>
         <div className="col-md-6">
         <label htmlFor="date" className="form-label text-white">Drop time</label>
-        <input type="time" className="form-control" id="password" placeholder="Enter Drop Location" style={{width:"200px"}} required/>
+        <input type="time" className="form-control" placeholder="Enter Drop Location" style={{width:"200px"}} required/>
           </div>
         </div>
           <button type="submit" className="btn btn-danger text-white w-100">Book Now</button>
         </form>
       </div>
     </div>
-  </div>
+    </div>
     </div>
     {/* ---------------------------------------------------------------- */}
 
@@ -161,7 +161,7 @@ function Home() {
         <h1 className="display-3 fw-bold pt-2 lh-base" style={{color:"white"}}>Don't hesitate and <span style={{color:"red"}}>SEND </span> 
         us a <span style={{color:"red"}}>MESSAGE</span></h1>
 
-        <div className="button-container  d-inline-flex" style={{gap:"70px",marginTop:"150px"}}>
+        <div className="button-container  d-flex" style={{gap:"70px",marginTop:"150px"}}>
           <button className="btn text-white fs-4 fw-bold" style={{backgroundColor:"#ff1b1b",
             borderRadius:"25px",padding:"0px 45px 0px 45px"}}>Whatsapp</button>
           <button className="btn text-white fs-4 fw-bold" style={{backgroundColor:"#ff1b1b",
@@ -169,7 +169,6 @@ function Home() {
         </div>
       </div>
      </div>
-
     </>
   );
 }

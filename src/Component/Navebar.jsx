@@ -39,7 +39,6 @@ function Navebar (){
         <Routes>
             <Route path="/" element={<Home/>}/>
              <Route path="service" element={<Sevices/>}/>
-            {/*<Route path="" element={<Login/>}/> */}
         </Routes>
       </BrowserRouter>
     );
