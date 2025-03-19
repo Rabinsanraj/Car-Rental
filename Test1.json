@@ -1,58 +1,32 @@
-{
-    "cars": [
-      {
-        "id": 1,
-        "brand": "Toyota",
-        "model": "Camry",
-        "year": 2022,
-        "price_per_day": 50,
-        "available": true
-      },
-      {
-        "id": 2,
-        "brand": "Honda",
-        "model": "Civic",
-        "year": 2021,
-        "price_per_day": 45,
-        "available": false
-      }
-    ],
-    "customers": [
-      {
-        "id": 101,
-        "name": "John Doe",
-        "email": "johndoe@example.com",
-        "phone": "123-456-7890"
-      },
-      {
-        "id": 102,
-        "name": "Jane Smith",
-        "email": "janesmith@example.com",
-        "phone": "098-765-4321"
-      }
-    ],
-    "locations": [
-      {
-        "id": 1,
-        "city": "New York",
-        "address": "123 Main St, New York, NY 10001"
-      },
-      {
-        "id": 2,
-        "city": "Los Angeles",
-        "address": "456 Sunset Blvd, Los Angeles, CA 90028"
-      }
-    ],
-    "bookings": [
-      {
-        "booking_id": 5001,
-        "customer_id": 101,
-        "car_id": 1,
-        "pickup_location": 1,
-        "dropoff_location": 2,
-        "start_date": "2025-03-20",
-        "end_date": "2025-03-25",
-        "total_price": 250
-      }
-    ]
-  }
+  [
+    {"id": 1, "city": "Mumbai", "state": "Maharashtra"},
+    {"id": 2, "city": "Delhi", "state": "Delhi"},
+    {"id": 3, "city": "Bangalore", "state": "Karnataka"},
+    {"id": 4, "city": "Hyderabad", "state": "Telangana"},
+    {"id": 5, "city": "Ahmedabad", "state": "Gujarat"},
+    {"id": 6, "city": "Chennai", "state": "Tamil Nadu"},
+    {"id": 7, "city": "Kolkata", "state": "West Bengal"},
+    {"id": 8, "city": "Pune", "state": "Maharashtra"},
+    {"id": 9, "city": "Jaipur", "state": "Rajasthan"},
+    {"id": 10, "city": "Lucknow", "state": "Uttar Pradesh"},
+    {"id": 11, "city": "Kanpur", "state": "Uttar Pradesh"},
+    {"id": 12, "city": "Nagpur", "state": "Maharashtra"},
+    {"id": 13, "city": "Visakhapatnam", "state": "Andhra Pradesh"},
+    {"id": 14, "city": "Indore", "state": "Madhya Pradesh"},
+    {"id": 15, "city": "Patna", "state": "Bihar"},
+    {"id": 16, "city": "Bhopal", "state": "Madhya Pradesh"},
+    {"id": 17, "city": "Ludhiana", "state": "Punjab"},
+    {"id": 18, "city": "Agra", "state": "Uttar Pradesh"},
+    {"id": 19, "city": "Nashik", "state": "Maharashtra"},
+    {"id": 20, "city": "Vadodara", "state": "Gujarat"},
+    {"id": 21, "city": "Varanasi", "state": "Uttar Pradesh"},
+    {"id": 22, "city": "Coimbatore", "state": "Tamil Nadu"},
+    {"id": 23, "city": "Kochi", "state": "Kerala"},
+    {"id": 24, "city": "Thiruvananthapuram", "state": "Kerala"},
+    {"id": 25, "city": "Guwahati", "state": "Assam"},
+    {"id": 26, "city": "Chandigarh", "state": "Chandigarh"},
+    {"id": 27, "city": "Dehradun", "state": "Uttarakhand"},
+    {"id": 28, "city": "Ranchi", "state": "Jharkhand"},
+    {"id": 29, "city": "Raipur", "state": "Chhattisgarh"},
+    {"id": 30, "city": "Shimla", "state": "Himachal Pradesh"}
+  ]
