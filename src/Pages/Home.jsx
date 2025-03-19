@@ -5,6 +5,7 @@ import CarGray from "../Images/Car-gray.jpg"
 import Merun from "../Images/merun.png"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import CarPassing from '../Component/CarPassing'
+import {LocationAPI} from '../Component/LocationAPI'
 
 
 function Home() {
@@ -22,10 +23,10 @@ function Home() {
             <input type="text" className="form-control" placeholder="Enter Your Car Type" required/>
           </div>
           <div className="mb-4">
-            <input type="text" className="form-control" placeholder="Enter Pickup Location" required/>
+          <LocationAPI placeholder="Enter Pickup Location"/>
           </div>
           <div className="mb-4">
-            <input type="text" className="form-control" placeholder="Enter Drop Location" required/>
+          <LocationAPI placeholder="Enter Drop Location"/>
           </div>
         
         <div className="row pb-4" >
