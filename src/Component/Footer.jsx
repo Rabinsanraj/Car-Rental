@@ -4,7 +4,7 @@ import 'boxicons'
 
 function Footer(){
     return(
-      <div className='container-fluid w-100 mt-4' style={{backgroundColor:"black"}}>
+      <div className='container-fluid w-100 mt-4 pb-5' style={{backgroundColor:"black"}}>
         <div className="row row-cols-sm-1 d-flex text-white">
           <div className="col-md-5">
             <p className='display-5 fs-2 fw-normal mt-5 ms-5 text-start'>About US</p>
@@ -33,6 +33,11 @@ function Footer(){
           <p className='display-5 fs-2 fw-normal mt-5 text-center'>Contact Info</p>
           <h1 className="fs-6 fw-bold text-center"><box-icon name='phone' size='30px' color='#ff0000' ></box-icon>+91 0000000000</h1>
           <h1 className="fs-6 fw-bold text-center"><box-icon name='envelope' size='30px' color='#ff0000' ></box-icon>Easycar@gmail.com</h1>
+          <div className="pt-3 d-flex justify-content-center "style={{gap:"15px"}}>
+              <box-icon className="bg-white p-2 rounded-circle" name='facebook' size="35px" type='logo' color='red' ></box-icon>
+              <box-icon className="bg-white p-2 rounded-circle" name='instagram' size="35px" type='logo' color='red' ></box-icon>
+              <box-icon className="bg-white p-2 rounded-circle" name='twitter' size="35px" type='logo' color='red' ></box-icon>
+          </div>
           </div>
         </div>
       </div>
