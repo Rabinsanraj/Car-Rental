@@ -6,6 +6,7 @@ import Merun from "../Images/merun.png"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import CarPassing from '../Component/CarPassing'
 import {LocationAPI} from '../Component/LocationAPI'
+import { Link } from "react-router-dom"
 
 
 function Home() {
@@ -13,10 +14,10 @@ function Home() {
     <>
     <div className="container-fluid" style={{backgroundImage: `url(${Car})`,
     backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
-     width: "100%"}}>
+     width: "100%",minHeight:"681px"}}>
     <div className="container-fluid ps-5 pb-5 d-flex align-items-center">
     <div>
-      <div className="card-body p-3"  style={{backgroundColor:"#050563",borderRadius:"10px",opacity:"90%",margin:"auto", marginTop:"30px"}}>
+      <div className="card-body  p-3"  style={{backgroundColor:"#050563",borderRadius:"10px",opacity:"90%",margin:"auto", marginTop:"30px",}}>
         <h5 className="card-title text-center text-white mb-4">CONTINUE CARE RESERVATION</h5>
         <form>
           <div className="mb-4">
@@ -175,8 +176,8 @@ function Home() {
           <div className="col">
             <div className="row">
             <div className="col-4"></div>
-            <div className="col"><button className="btn text-white fs-4 fw-bold" style={{backgroundColor:"#ff1b1b",
-            borderRadius:"25px",padding:"0px 35px 0px 35px"}}>Contactus</button></div>
+            <div className="col"><Link to="contact" className="btn text-white fs-4 fw-bold" style={{backgroundColor:"#ff1b1b",
+            borderRadius:"25px",padding:"0px 35px 0px 35px"}}>Contactus</Link></div>
             <div className="col-4"></div>
             </div>
           </div>
@@ -185,5 +186,9 @@ function Home() {
      </div>
     </>
   );
+  setTimeout(()=>{
+    console.log=()=>{}
+  },5000)
+ 
 }
 export default Home;

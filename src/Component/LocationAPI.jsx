@@ -1,66 +1,52 @@
 import React, { useState, useEffect } from "react";
 
 export const LocationAPI = (props) => {
-  const [cities, setCities] = useState([]);
-  const [inputValue, setInputValue] = useState("");
+  const [places, setPlaces] = useState([]);
+  const [inputPlaces, setInputPlaces] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  console.log(suggestions)
 
   useEffect(() => {
     fetch("/Car-Rental/Locations.json")
       .then((response) => response.json())
-      .then((data) => setCities(data))
+      .then((data) => setPlaces(data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
   const handleInputChange = (e) => {
     const value = e.target.value;
-    setInputValue(value);
-
-    if (value.trim() === "") {
+    setInputPlaces(value);
+     console.log(value);
+    if (value === "") {
       setSuggestions([]);
     } else {
-      const filteredSuggestions = cities.filter((city) =>
+
+      const filteredSuggestions = places.filter((city) =>
+        // console.log(city);
         city.toLowerCase().includes(value.toLowerCase())
+
       );
-      setSuggestions(filteredSuggestions.slice(0, 5));
+      // console.log(filteredSuggestions)
+      setSuggestions(filteredSuggestions.slice(0, 3));
     }
   };
 
   const selectSuggestion = (city) => {
-    setInputValue(city);
+    setInputPlaces(city);
     setSuggestions([]);
   };
 
   return (
     <div>
-      <input
-        className="form-control"
-        type="text"
-        placeholder={props.placeholder}
-        value={inputValue}
-        onChange={handleInputChange}
-      />
+      <input className="form-control" type="text" placeholder={props.placeholder}
+       value={inputPlaces} onChange={handleInputChange}/>
       {suggestions.length > 0 && (
         <ul
-          style={{
-            marginTop: "3px",
-            maxHeight: "auto",
-            maxWidth: "auto",
-            listStyle: "none",
-          }}
-        >
+          style={{ marginTop: "3px", maxHeight: "auto", maxWidth: "auto", listStyle: "none",}}>
           {suggestions.map((city, index) => (
-            <li
-              key={index}
-              onClick={() => selectSuggestion(city)}
-              style={{
-                backgroundColor: "white",
-                textAlign: "start",
-                cursor: "pointer",
-                padding: "5px",
-                borderBottom: "2px solid #ddd",
-              }}
-            >
+            <li key={index} onClick={() => selectSuggestion(city)}
+              style={{ backgroundColor: "white", textAlign: "start", cursor: "pointer", padding: "5px",
+                borderBottom: "2px solid #ddd"}}>
               {city}
             </li>
           ))}
