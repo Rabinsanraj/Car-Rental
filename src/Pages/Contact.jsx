@@ -7,7 +7,7 @@ import Map from '../Component/Map'
 
 function Contact(){
     return(<>
-    <CarNav name="Contact Us" link1="Home" link2="About" link3="Our Car" pagename1="/" pagename2="/" pagename3="/"/>
+    <CarNav name="Contact Us" link1="Home" link2="About" link3="Our Car" pagename1="/" pagename2="/" pagename3="getstart"/>
     <div className="text-center fs-3">
             <h1 className='text-danger'>Contact us</h1>
         </div>
@@ -32,10 +32,10 @@ function Contact(){
         </div>
         </div>
 
-        <div className="container-fluid pt-2 pb-2 ">
+        <div className="container-fluid pt-4 pb-4 ">
             <div className="row row-cols-1 row-cols-md-2 d-flex justify-content-center align-items-center ">
                 <div className="col ">
-                    <div className="card" style={{width:"95%",backgroundColor:"#000c69"}}>
+                    <div className="card" style={{width:"95%",backgroundColor:"#000c69",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
                       <div className="card-body mt-3">
                         <h1 className="card-title text-danger">Send Your Message</h1>
                         <div class="container mt-5">
@@ -70,22 +70,22 @@ function Contact(){
                       </div>
                     </div>
                 </div>
-                <div className="col pt-3">
-                <div className="card mt-1 pb-3" style={{width:"95%",border:"none", backgroundColor:"#dfdfdf",boxShadow:"5px 5px rgba(0,0,0,0.2)"}}>
-                      <div className="card-body bg-white ms-4 me-4 mt-3" style={{borderRadius:"40px"}}>
+                <div className="col">
+                <div className="card mt-1 pb-3" style={{width:"95%",border:"none", backgroundColor:"#dfdfdf",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
+                      <div className="card-body bg-white ms-4 me-4 mt-3" style={{borderRadius:"40px", boxShadow:"inset 5px 5px 10px rgba(0,0,0,0.5) "}}>
                         <h3 className="card-title">Our Branch 1</h3>
                         <p className="fs-6">Address : <box-icon name='location-plus' size="15px" color='#ff0000'></box-icon></p>
-                        <p>Telephone : <box-icon name='phone'></box-icon></p>
+                        <p>Telephone : <box-icon name='phone' color='#ff0000'></box-icon></p>
                       </div>
-                      <div className="card-body bg-white ms-4 me-4 mt-3"style={{borderRadius:"40px"}}>
+                      <div className="card-body bg-white ms-4 me-4 mt-3"style={{borderRadius:"40px", boxShadow:"inset 5px 5px 10px rgba(0,0,0,0.5)"}}>
                         <h3 className="card-title">Our Branch 2</h3>
                         <p className="fs-6">Address : <box-icon name='location-plus' size="15px" color='#ff0000'></box-icon></p>
-                        <p>Telephone : <box-icon name='phone'></box-icon></p>
+                        <p>Telephone : <box-icon name='phone' color='#ff0000'></box-icon></p>
                       </div>
-                      <div className="card-body bg-white ms-4 me-4 mt-3"style={{borderRadius:"40px"}}>
+                      <div className="card-body bg-white ms-4 me-4 mt-3"style={{borderRadius:"40px",  boxShadow:"inset 5px 5px 10px rgba(0,0,0,0.5) "}}>
                         <h3 className="card-title">Our Branch 3</h3>
                         <p className="fs-6">Address : <box-icon name='location-plus' size="15px" color='#ff0000'></box-icon></p>
-                        <p>Telephone : <box-icon name='phone'></box-icon></p>
+                        <p>Telephone : <box-icon name='phone'color='#ff0000'></box-icon></p>
                       </div>
                     </div> 
                 </div>

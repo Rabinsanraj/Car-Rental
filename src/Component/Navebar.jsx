@@ -4,7 +4,21 @@ import { BrowserRouter,Routes,Route,Link} from "react-router-dom";
 import Home from '../Pages/Home'
 import Sevices from "../Pages/Services"
 import Contact from "../Pages/Contact"
+import GetStart from "../Pages/GetStart"
 import 'boxicons'
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+export const ScrollToTop = () =>{
+  const {pathname} = useLocation();
+  // console.log(pathname)
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[pathname]);
+  return null;
+};
+
 function Navebar (){
     return(
       <BrowserRouter basename="/Car-Rental">
@@ -13,7 +27,7 @@ function Navebar (){
             <Link to="/"><box-icon name='car' color='#ffffff' size="25px" className="bg-danger ms-5 p-2 rounded-circle"></box-icon></Link>
             <Link className="navbar-brand fs-3 ms-2 fw-bold text-danger" to="/">Easy  Car</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
@@ -30,19 +44,22 @@ function Navebar (){
                   <Link className="nav-link me-5 fs-5" to="contact" >Contact US</Link>
                 </li>
                <li className='nav-item'>
-                <Link className="btn btn-danger fs-5 rounded-pill ps-4 pe-4 me-4"> Get Started</Link>
+                <Link className="btn btn-danger fs-5 rounded-pill ps-4 pe-4 me-4" to="/service/getstart"> Get Started</Link>
                 </li>
               </ul>
             </div>
           </div>
+          <ScrollToTop/>
         </nav>
 
         <Routes>
             <Route path="/" element={<Home/>}/>
              <Route path="service" element={<Sevices/>}/>
              <Route path="contact" element={<Contact/>}/>
+             <Route path="/service/getstart" element={<GetStart/>}/>
         </Routes>
       </BrowserRouter>
+    
     );
 }
 export default Navebar

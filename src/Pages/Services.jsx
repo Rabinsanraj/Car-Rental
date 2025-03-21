@@ -11,7 +11,7 @@ function Services(){
     return(
         <>
         <CarNav name="Our Services" link1="Home" link2="About" link3="Our Cars"
-        pagename1="/" pagename2="/" pagename3="/"/>
+        pagename1="/" pagename2="/" pagename3="getstart"/>
         <div className="text-center fs-3">
             <h1>Easy Car <span className="text-danger">Services</span></h1>
         </div>

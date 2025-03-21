@@ -17,7 +17,8 @@ function Home() {
      width: "100%",minHeight:"681px"}}>
     <div className="container-fluid ps-5 pb-5 d-flex align-items-center">
     <div>
-      <div className="card-body  p-3"  style={{backgroundColor:"#050563",borderRadius:"10px",opacity:"90%",margin:"auto", marginTop:"30px",}}>
+      <div className="card-body  p-3"  style={{backgroundColor:"#050563",borderRadius:"15px",opacity:"90%",
+        margin:"auto", marginTop:"30px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.6)"}}>
         <h5 className="card-title text-center text-white mb-4">CONTINUE CARE RESERVATION</h5>
         <form>
           <div className="mb-4">
@@ -71,7 +72,7 @@ function Home() {
 <div className="container-fluid w-100 pb-5" style={{paddingTop:"250px"}}>
   <div className="row row-cols-2 d-flex text-center">
     <div className="col-md-3">
-    <box-icon name='trophy' color='#08082d' size="45px" className="p-3 rounded-circle"style={{backgroundColor:"red"}}></box-icon>
+    <box-icon name='trophy' color='#08082d' size="45px" className="p-3 rounded-circle"style={{backgroundColor:"red",}}></box-icon>
     <h1 className="fs-4 text-black fw-bolder">First Class Service</h1>
           <h4>Experience Excellence</h4>
           <h4> - Ride First Class </h4>
@@ -107,14 +108,14 @@ function Home() {
           <div className="container-fluid pt-5">
             <div className="row row-cols-2">
               <div className="col-6">
-              <div className="card border border-dark" style={{height:"260px",borderRadius:"20px"}}>
+              <div className="card" style={{height:"260px",borderRadius:"20px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
               <h1><box-icon name='target-lock'  color='#08082d' size="45px" className="p-3 mt-3 rounded-circle" style={{backgroundColor:"red"}}></box-icon></h1>
               <h3 className="fs-2 fw-bold">Our Vision</h3>
               <p className="fs-6 fw-bold">"Redefining Mobility, Empowering journeys."</p>
             </div>
               </div>
               <div className="col-6">
-              <div className="card border border-dark" style={{height:"260px",borderRadius:"20px"}}>
+              <div className="card" style={{height:"260px",borderRadius:"20px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
               <h1><box-icon name='like' color='#08082d' size="45px" className="p-3 mt-3 rounded-circle" style={{backgroundColor:"red"}} ></box-icon></h1>
                 <h3 className="fs-2 fw-bold">Our Mision</h3>
                 <p className="fs-6 fw-bold">"To Provide reliable, affordable and customer car rental solutions and convenience at every Mile"</p>
@@ -123,7 +124,7 @@ function Home() {
             </div>
             <div className="row row-cols-2 pt-5">
               <div className="col-6">
-              <div className="card border border-dark pt-5 text-white" style={{backgroundColor:"#050563",height:"200px",borderRadius:"20px"}}>
+              <div className="card pt-5 text-white" style={{backgroundColor:"#050563",height:"200px",borderRadius:"20px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
               <h1 className="fw-bold">10</h1>
               <p className="fs-2 fw-bold">Years of Experience</p>
             </div>
