@@ -7,7 +7,7 @@ import Map from '../Component/Map'
 
 function Contact(){
     return(<>
-    <CarNav name="Contact Us" link1="Home" link2="About" link3="Our Car" pagename1="/" pagename2="/" pagename3="getstart"/>
+    <CarNav name="Contact Us" link1="/" link2="/" link3="getstart" pagename1="Home" pagename2="About" pagename3="Our Car"/>
     <div className="text-center fs-3">
             <h1 className='text-danger'>Contact us</h1>
         </div>

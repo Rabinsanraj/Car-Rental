@@ -3,6 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { BrowserRouter,Routes,Route,Link} from "react-router-dom";
 import Home from '../Pages/Home'
 import Sevices from "../Pages/Services"
+import Dashboard from '../Pages/Dashboard'
 import Contact from "../Pages/Contact"
 import GetStart from "../Pages/GetStart"
 import 'boxicons'
@@ -38,13 +39,13 @@ function Navebar (){
                   <Link className="nav-link me-5 fs-5" to="service" >Services</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link me-5 fs-5" to="#" >Dashboard</Link>
+                  <Link className="nav-link me-5 fs-5" to="dashboard" >Dashboard</Link>
                 </li>
                 <li className="nav-item ">
                   <Link className="nav-link me-5 fs-5" to="contact" >Contact US</Link>
                 </li>
                <li className='nav-item'>
-                <Link className="btn btn-danger fs-5 rounded-pill ps-4 pe-4 me-4" to="/service/getstart"> Get Started</Link>
+                <Link className="btn btn-danger fs-5 rounded-pill ps-4 pe-4 me-4" to="/service/getstart">Get Started</Link>
                 </li>
               </ul>
             </div>
@@ -55,6 +56,7 @@ function Navebar (){
         <Routes>
             <Route path="/" element={<Home/>}/>
              <Route path="service" element={<Sevices/>}/>
+             <Route path="dashboard" element={<Dashboard/>}/>
              <Route path="contact" element={<Contact/>}/>
              <Route path="/service/getstart" element={<GetStart/>}/>
         </Routes>

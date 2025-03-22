@@ -6,8 +6,12 @@ function Carousel (props){
     return(
         <>
             <div className="col-md-4">
-              <div className="card" >
-                <img src={props.image} className="card-img-top" alt="This is Car Image"/>
+              <div className="card mb-3" >
+                <div className="container" style={{backgroundImage: `url(${props.image})`, backgroundColor:"#e4e4e4",
+              backgroundSize:"420px",backgroundPosition:"center",backgroundRepeat:"no-repeat",
+              width: "100%",minHeight:"300px"}}>
+                <a href="#"><box-icon name='heart'size="40px" className='p-1 rounded-circle fw-bold'></box-icon></a>
+                </div>
                 <div className="card-body mt-2 mb-2" style={{backgroundColor:"#dfdfdf"}}>
                   <h3 className="card-title text-center">{props.head}</h3>
                   <h5 className='text-center pt-3 pb-3'>{props.review}</h5>
