@@ -9,6 +9,7 @@ import GetStart from "../Pages/GetStart"
 import 'boxicons'
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import MyBooking from '../Pages/MyBooking';
 
 export const ScrollToTop = () =>{
   const {pathname} = useLocation();
@@ -59,6 +60,7 @@ function Navebar (){
              <Route path="dashboard" element={<Dashboard/>}/>
              <Route path="contact" element={<Contact/>}/>
              <Route path="/service/getstart" element={<GetStart/>}/>
+             <Route path="dashboard/mybooking" element={<MyBooking/>}/>
         </Routes>
       </BrowserRouter>
     
