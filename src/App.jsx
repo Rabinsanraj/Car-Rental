@@ -1,6 +1,4 @@
-import { useState } from 'react'
 import './App.css'
-import HeaderNav from './Component/HeaderNav'
 import Navebar from './Component/Navebar'
 import Footer from './Component/Footer'
 

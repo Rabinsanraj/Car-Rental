@@ -10,6 +10,8 @@ import 'boxicons'
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import MyBooking from '../Pages/MyBooking';
+import WishList from '../Pages/wishlist';
+import CheckOut from '../Pages/CheckOut';
 
 export const ScrollToTop = () =>{
   const {pathname} = useLocation();
@@ -61,6 +63,9 @@ function Navebar (){
              <Route path="contact" element={<Contact/>}/>
              <Route path="/service/getstart" element={<GetStart/>}/>
              <Route path="dashboard/mybooking" element={<MyBooking/>}/>
+             <Route path="dashboard/wistlist" element={<WishList/>}/>
+             <Route path="service/getstart/checkout" element={<CheckOut/>}/>
+
         </Routes>
       </BrowserRouter>
     

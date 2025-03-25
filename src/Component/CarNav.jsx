@@ -11,7 +11,7 @@ function CarNav(props){
                 <p className="d-flex justify-content-center text-white gap-1 pt-1"style={{paddingBottom:"70px"}}>
                     <Link className='text-white fw-bold text-decoration-none' to={props.link1}>{props.pagename1}</Link>/
                     <Link className='text-white fw-bold text-decoration-none' to={props.link2}>{props.pagename2}</Link>/
-                    <Link className='text-white fw-bold text-decoration-none' to={props.link3}>{props.pagename3}</Link>
+                    <Link className='text-white fw-bold text-decoration-none' to={props.link3}>{props.pagename3}</Link>/
                 </p>
         </div>
     );

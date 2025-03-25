@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'boxicons'
 import { Link } from 'react-router-dom';
+import Car1 from '../Images/Car1.jpg'
 
 function Dashboardcard (props){
     return(
@@ -25,7 +26,7 @@ function Dashboardcard (props){
                     <div className="row pt-2 pb-5">
                         <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='mybooking'>{props.view1}</Link>
                         <a className='fs-4 ms-3 fw-bold text-decoration-none text-black' href='#5'>{props.view2}</a>
-                        <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='/'>{props.view3}</Link>
+                        <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='wistlist'>{props.view3}</Link>
                     </div>
                 </div>
             </div>
@@ -86,3 +87,57 @@ return (
     </>
 );
 }
+
+export function WishListComp(){
+    return(
+      <>
+      <div className="row pb-5">
+                  <div className="col-4">
+                      <img src={Car1} alt="" className='w-100 rounded-4' />
+                  </div>
+                  <div className="col-5 mt-3">
+                      <div className="row">
+                          <div className="col text-center mb-5">
+                              <h4>BMW 640 XI Gran Turismo</h4>
+                              <h4>Category : <span>BMW</span></h4>
+                          </div>
+                          <div className="row mt-5">
+                          <div className="col-4 mb-4">
+                        <h3 className='text-center fs-5 fw-bold'>4 Seats</h3>
+                      </div>
+                      <div className="col-4">
+                       <h3 className='text-center fs-5 fw-bold'>AT/MT</h3>
+                      </div>
+                      <div className="col-4">
+                        <h3 className='text-center fs-5 fw-bold'>Petrol</h3>
+                      </div>
+                      </div>
+                      <div className="row">
+                      <div className="col-4">
+                        <h3 className='text-center fs-5 fw-bold'>2015</h3>
+                      </div>
+                      <div className="col-4">
+                        <h3 className='text-center fs-5 fw-bold'>Settings</h3>
+                      </div>
+                      <div className="col-4">
+                        <h3 className='text-center fs-5 fw-bold'>27 K</h3>
+                      </div>
+                      </div>
+                      </div>
+                  </div>
+                  <div className="col text-center mt-3">
+                          <div className="row">
+                              <h3>3.58 Reviews</h3>
+                          </div>
+                          <div className="row pb-5">
+                              <h3 className='fs-2 fw-bold text-danger'>1500/day</h3>
+                          </div>
+                          <div className="row mt-5 align-items-center justify-content-center">
+                              <Link type='button' className='form-control text-white bg-dark w-50 pt-3 pb-3 fs-4'
+                              style={{textDecoration:"none"}} to="/">Rent Now</Link>
+                          </div>
+                  </div>
+              </div>
+      </>
+    );
+  }

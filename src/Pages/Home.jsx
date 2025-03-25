@@ -169,16 +169,16 @@ function Home() {
           <div className="col">
             <div className="row">
             <div className="col-4"></div>
-            <div className="col"><button className="btn text-white fs-4 fw-bold" style={{backgroundColor:"#ff1b1b",
-            borderRadius:"25px",padding:"0px 35px 0px 35px"}}>Whatsapp</button></div>
+            <div className="col"><button className="btn text-white fs-4 fw-bold p-auto" style={{backgroundColor:"#ff1b1b",
+            borderRadius:"25px"}}>Whatsapp</button></div>
             <div className="col-4"></div>
             </div>
           </div>
           <div className="col">
             <div className="row">
             <div className="col-4"></div>
-            <div className="col"><Link to="contact" className="btn text-white fs-4 fw-bold" style={{backgroundColor:"#ff1b1b",
-            borderRadius:"25px",padding:"0px 35px 0px 35px"}}>Contactus</Link></div>
+            <div className="col"><Link to="contact" className="btn text-white fs-4 fw-bold p-auto" style={{backgroundColor:"#ff1b1b",
+            borderRadius:"25px"}}>Contactus</Link></div>
             <div className="col-4"></div>
             </div>
           </div>
