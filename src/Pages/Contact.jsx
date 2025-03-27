@@ -39,33 +39,33 @@ function Contact(){
                     <div className="card" style={{width:"95%",backgroundColor:"#000c69",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
                       <div className="card-body mt-3">
                         <h1 className="card-title text-danger">Send Your Message</h1>
-                        <div class="container mt-5">
+                        <div className="container mt-5">
                         <form>
                        <div className="row d-flex mb-3">
                        <div className=" col mb-3">
-                       <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+                       <input type="text" className="form-control" id="name" placeholder="Enter your name" required />
                        </div>
                        <div className="col mb-3">
-                       <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
+                       <input type="email" className="form-control" id="email" placeholder="Enter your email" required />
                        </div>
                        </div>
                        <div className="row d-flex mb-3">
                        <div className=" col mb-3">
-                       <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+                       <input type="text" className="form-control" id="name" placeholder="Enter your name" required />
                        </div>
                        <div className="col mb-3">
-                       <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
+                       <input type="email" className="form-control" id="email" placeholder="Enter your email" required />
                        </div>
                        </div>
                        <div className="row d-flex mb-3">
                        <div className=" col mb-3">
-                       <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+                       <input type="text" className="form-control" id="name" placeholder="Enter your name" required />
                        </div>
                        </div>
-                       <div class="mb-4 mt-3">
-                       <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                       <div className="mb-4 mt-3">
+                       <textarea className="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
                       </div>
-                      <button type="submit" class="form-control btn btn-primary mb-3">Send Message</button>
+                      <button type="submit" className="form-control btn btn-primary mb-3">Send Message</button>
                        </form>
                        </div>
                       </div>
