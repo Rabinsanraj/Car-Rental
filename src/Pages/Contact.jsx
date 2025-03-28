@@ -43,18 +43,18 @@ function Contact(){
                         <form>
                        <div className="row d-flex mb-3">
                        <div className=" col mb-3">
-                       <input type="text" className="form-control" id="name" placeholder="Enter your name" required />
+                       <input type="text" className="form-control" id="name" placeholder="Enter your Name" required />
                        </div>
                        <div className="col mb-3">
-                       <input type="email" className="form-control" id="email" placeholder="Enter your email" required />
+                       <input type="email" className="form-control" id="email" placeholder="Enter your Email" required />
                        </div>
                        </div>
                        <div className="row d-flex mb-3">
                        <div className=" col mb-3">
-                       <input type="text" className="form-control" id="name" placeholder="Enter your name" required />
+                       <input type="text" className="form-control" id="name" placeholder="Enter your Phone" required />
                        </div>
                        <div className="col mb-3">
-                       <input type="email" className="form-control" id="email" placeholder="Enter your email" required />
+                       <input type="email" className="form-control" id="email" placeholder="your Trip" required />
                        </div>
                        </div>
                        <div className="row d-flex mb-3">

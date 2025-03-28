@@ -7,7 +7,7 @@ export const LocationAPI = (props) => {
   console.log(suggestions)
 
   useEffect(() => {
-    fetch("/Car-Rental/Locations.json")
+    fetch("/Car-Rental/Locations.json",{mode:"no-cors"})
       .then((response) => response.json())
       .then((data) => setPlaces(data))
       .catch((error) => console.error("Error fetching data:", error));

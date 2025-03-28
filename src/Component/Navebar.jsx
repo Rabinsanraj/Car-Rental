@@ -11,7 +11,6 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import MyBooking from '../Pages/MyBooking';
 import WishlistPage from '../Pages/WishlistPage';
-// import CarouselPage from '../Pages/CarouselPage';
 import CheckOut from '../Pages/CheckOut';
 
 export const ScrollToTop = () =>{
@@ -40,16 +39,16 @@ function Navebar (){
                   <Link className="nav-link active me-5 fs-5" aria-current="page" to="/" >Home</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link me-5 fs-5" to="service" >Services</Link>
+                  <Link className="nav-link me-5 fs-5" to="/service" >Services</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link me-5 fs-5" to="dashboard" >Dashboard</Link>
+                  <Link className="nav-link me-5 fs-5" to="/dashboard" >Dashboard</Link>
                 </li>
                 <li className="nav-item ">
-                  <Link className="nav-link me-5 fs-5" to="contact" >Contact US</Link>
+                  <Link className="nav-link me-5 fs-5" to="/contact" >Contact US</Link>
                 </li>
                <li className='nav-item'>
-                <Link className="btn btn-danger fs-5 rounded-pill ps-4 pe-4 me-4" to="/service/getstart">Get Started</Link>
+                <Link className="btn btn-danger fs-5 rounded-pill ps-4 pe-4 me-4" to="/getstart">Get Started</Link>
                 </li>
               </ul>
             </div>
@@ -59,14 +58,13 @@ function Navebar (){
 
         <Routes>
             <Route path="/" element={<Home/>}/>
-             <Route path="service" element={<Sevices/>}/>
-             <Route path="dashboard" element={<Dashboard/>}/>
-             <Route path="contact" element={<Contact/>}/>
-             <Route path="/service/getstart" element={<GetStart/>}/>
-             <Route path="dashboard/mybooking" element={<MyBooking/>}/>
-             <Route path="service/getstart" element={<CheckOut/>}/>
-             <Route path='dashboard/wishlistpage'element={<WishlistPage/>}/>
-
+             <Route path="/service" element={<Sevices/>}/>
+             <Route path="/dashboard" element={<Dashboard/>}/>
+             <Route path="/contact" element={<Contact/>}/>
+             <Route path="/getstart" element={<GetStart/>}/>
+             <Route path='/dashboard/MyBooking' element={<MyBooking/>}/>
+             <Route path='/dashboard/wishlistpage' element={<WishlistPage/>}/>
+             <Route path='/getstart/checkout' element={<CheckOut/>}/>
         </Routes>
       </BrowserRouter>
     

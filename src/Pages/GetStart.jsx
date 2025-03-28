@@ -1,5 +1,6 @@
 import Carousel from '../Component/Carousel';
 
+
 function GetStart(){
   return (
     <div>
