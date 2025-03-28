@@ -50,6 +50,23 @@ const Carousel = () => {
     localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
   };
 
+  // ---------------------------------------------------------------------------
+  const [booknow, setBooknow] = useState(() => {
+    const savedBooknow = localStorage.getItem("booknow");
+    return savedBooknow ? JSON.parse(savedBooknow) : [];
+  });
+
+  const toggleBooknow = (product) => {
+    const updatedBooknow = booknow.some((item) => item.id === product.id)
+      ? booknow.filter((item) => item.id !== product.id)
+      : [...booknow, product];
+
+    setBooknow(updatedBooknow);
+    // Update localStorage with the new booknow
+    localStorage.setItem("booknow", JSON.stringify(updatedBooknow));
+  };
+  // ---------------------------------------------------------------------------
+
   const [count, Count] = useState(1500);
 
   const Increase = () => {
@@ -131,7 +148,7 @@ const Carousel = () => {
                <h3 className="text-center fs-5 fw-bold">{product.km}</h3>
              </div>
            </div>
-           <Link className="btn btn-dark form-control mt-2 mb-3" type="button" to="checkout">Book Now</Link>
+           <Link className="btn btn-dark form-control mt-2 mb-3" type="button" to="checkout" onClick={() => toggleBooknow(product)}>Book Now</Link>
          </div>
        </div>
      </div>
