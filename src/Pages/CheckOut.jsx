@@ -58,8 +58,8 @@ const CheckOut = () => {
                 </div>
                 </div>
                 <div className="row pt-4 w-100 h-50 mx-auto pb-4">
-                  <div className="col">
-                  <button className="btn btn-danger" onClick={() => removeFromBooknow(product)}>Remove</button>
+                  <div className="col text-center">
+                  <button className="btn fs-3 fw-bold btn-danger" onClick={() => removeFromBooknow(product)}>Remove</button>
                   </div>
                 </div>
                 </div>
@@ -108,11 +108,16 @@ const CheckOut = () => {
                       <li className="mt-3 fs-5 fw-bold">No of Rides Completed : 32</li>
                       <li className="mt-3 fs-5 fw-bold">Age : 36</li>
                     </ul>
+                    <div className="row">
+                      <div className="col">
+                        <Link className="btn btn-dark fs-4 fw-bold" to="changedriver">Change Driver</Link>
+                      </div>
+                    </div>
                   </div>
                   </div>
                   <div className="row mt-5 pt-5 justify-content-end">
-                    <div className="col-4">
-                    <Link className="btn bg-warning btn-light p-auto fs-4 fw-bold" to="/">Confirm & Pay</Link>
+                    <div className="col text-end">
+                    <Link className="btn btn-warning text-white fs-4 fw-bold" to="billingdetails">Confirm & Pay</Link>
                     </div>
                   </div>
 

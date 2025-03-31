@@ -86,8 +86,8 @@ const Carousel = () => {
         backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
          width: "100%",minHeight:"681px"}}>
       <h2 className="text-black text-center fs-1 fw-bold pb-5 pt-5">Vehicle <span className="text-danger">Categories</span></h2>
-      <div id="productCarousel" className="carousel slide" data-bs-ride="carousel" >
-        <div className="carousel-inner ">
+      <div id="productCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" >
+        <div className="carousel-inner">
           {products.map((product, index) => (
             <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={product.id}>
               <div className="row">
@@ -175,5 +175,3 @@ const Carousel = () => {
 };
 
 export default Carousel;
-
-

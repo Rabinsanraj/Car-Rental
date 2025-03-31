@@ -1,17 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import 'boxicons'
 import { HashRouter,Routes,Route,Link} from "react-router-dom";
 import Home from '../Pages/Home'
 import Sevices from "../Pages/Services"
 import Dashboard from '../Pages/Dashboard'
 import Contact from "../Pages/Contact"
 import GetStart from "../Pages/GetStart"
-import 'boxicons'
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import MyBooking from '../Pages/MyBooking';
 import WishlistPage from '../Pages/WishlistPage';
 import CheckOut from '../Pages/CheckOut';
+import DriverDetails from '../Pages/DriverDetails';
+import BillingDetails from '../Pages/BillingDetails';
 
 export const ScrollToTop = () =>{
   const {pathname} = useLocation();
@@ -65,6 +67,8 @@ function Navebar (){
              <Route path='/dashboard/MyBooking' element={<MyBooking/>}/>
              <Route path='/dashboard/wishlistpage' element={<WishlistPage/>}/>
              <Route path='/getstart/checkout' element={<CheckOut/>}/>
+             <Route path='/getstart/checkout/changedriver' element={<DriverDetails/>}/>
+             <Route path='/getstart/checkout/billingdetails' element={<BillingDetails/>}/>
         </Routes>
       </HashRouter>
     

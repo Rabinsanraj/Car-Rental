@@ -11,6 +11,3 @@ function GetStart(){
   
 
 export default GetStart
-
-
-

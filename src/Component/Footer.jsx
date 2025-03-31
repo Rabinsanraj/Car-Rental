@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'boxicons'
+import { Link } from 'react-router-dom';
 
 
 function Footer(){
@@ -18,9 +19,9 @@ function Footer(){
           <div className="col-md-2">
           <p className='display-5 fs-2 fw-normal mt-5 text-center'>Quick Links</p>
           <div className="row">
-          <a className='fs-4 text-center mt-4 fw-semibold lh-base' href="#">Home</a>
-          <a className='fs-4 text-center mt-4 fw-semibold lh-base' href="#">Services</a>
-          <a className='fs-4 text-center mt-4 fw-semibold lh-base' href="#">Dashboard</a>
+          <a className='fs-4 text-center mt-4 fw-semibold lh-base' href="/home">Home</a>
+          <a className='fs-4 text-center mt-4 fw-semibold lh-base' href="/service">Services</a>
+          <a className='fs-4 text-center mt-4 fw-semibold lh-base' href="/dashboard">Dashboard</a>
           </div>
           </div>
           <div className="col-md-3">
