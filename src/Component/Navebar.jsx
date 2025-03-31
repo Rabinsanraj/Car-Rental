@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import { BrowserRouter,Routes,Route,Link} from "react-router-dom";
+import { HashRouter,Routes,Route,Link} from "react-router-dom";
 import Home from '../Pages/Home'
 import Sevices from "../Pages/Services"
 import Dashboard from '../Pages/Dashboard'
@@ -25,7 +25,7 @@ export const ScrollToTop = () =>{
 
 function Navebar (){
     return(
-      <BrowserRouter basename="/Car-Rental">
+      <HashRouter>
       <nav className="navbar navbar-expand-lg pt-2 pb-2 navbar-light bg-light position-sticky top-0 z-3">
           <div className="container-fluid">
             <Link to="/"><box-icon name='car' color='#ffffff' size="25px" className="bg-danger ms-5 p-2 rounded-circle"></box-icon></Link>
@@ -66,7 +66,7 @@ function Navebar (){
              <Route path='/dashboard/wishlistpage' element={<WishlistPage/>}/>
              <Route path='/getstart/checkout' element={<CheckOut/>}/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     
     );
 }

@@ -20,6 +20,17 @@ const WishlistPage = () => {
     const updatedWishlist = wishlist.filter((item) => item.id !== product.id);
     setWishlist(updatedWishlist);
   };
+ const [count, Count] = useState(1500);
+
+  const Increase = () => {
+        Count(count + 500);
+      };
+    
+      const Decrease = () => {
+        if (count > 0) {
+          Count(count - 500);
+        }
+      };
 
   return (
     <>
@@ -53,14 +64,27 @@ const WishlistPage = () => {
                 <div className="row">
                   <h1>Review</h1>
                 </div>
-                <div className="row">
-
+                <div className="row m-3 bg-white rounded-pill" style={{ boxShadow: "inset 5px 5px 5px rgba(0,0,0,2)" }}>
+             <div className="col-3">
+               <button className="mt-1" type="button" style={{ background: "none", border: "none" }}>
+                 <box-icon name="plus" size="30px" onClick={Increase}></box-icon>
+               </button>
+             </div>
+             <div className="col">
+               <h3 className="text-danger fs-4 text-center mt-1" id="count">{count}/day</h3></div>
+             <div className="col-3">
+               <button className="mt-1" type="button" style={{ background: "none", border: "none" }}>
+                 <box-icon name="minus" size="30px" onClick={Decrease}></box-icon>
+               </button>
+             </div>
+           </div>
+                <div className="row mt-5">
+                <div className="col-md-6 mx-auto">
+                  <button className="btn btn-dark">Rent Now</button>
                 </div>
-                <div className="row"> 
+                <div className="col-md-6 mx-auto"> 
                 <button className="btn btn-danger" onClick={() => removeFromWishlist(product)}>Remove</button>
                 </div>
-                <div className="row">
-                  <button>Rent Now</button>
                 </div>
               </div>
             </div>
