@@ -44,7 +44,7 @@ function PaymentOptions() {
                     <div className="row pb-3">
                         <div className="col-md-4 text-center">
                             <Link className="card payment-card" style={{ backgroundColor: "#88f78a",
-                                textDecoration: "none", borderRadius: "30px", border: "2px solid green"}}>
+                                textDecoration: "none",borderRadius: "30px", border: "2px solid green"}}>
                                 <h1 className='fs-3 fw-bold'>VISA</h1>
                                 <h3 className='fs-4 fw-light'>Debit Card</h3>
                                 <h4 className='fs-3 fw-bold'>4532*****5221</h4>
@@ -52,7 +52,7 @@ function PaymentOptions() {
                         </div>
                         <div className="col-md-4 text-center pt-3 my-auto">
                             <Link className="card payment-card" style={{
-                                border: "1px solid orange", textDecoration: "none"}}>
+                                border: "1px solid orange", textDecoration: "none",borderRadius: "30px"}}>
                                 <h1 className='fs-2 p-4'>+ Add a new Card</h1>
                             </Link>
                         </div>
@@ -60,7 +60,7 @@ function PaymentOptions() {
                 </div>
 
                 <div className="container d-flex justify-content-center align-items-center pt-5 pb-5">
-                    <Link className='btn btn-warning fs-2 fw-bold text-light'>Confirm & Pay</Link>
+                    <Link className='btn btn-warning fs-2 fw-bold text-light' to="finalbill">Confirm & Pay</Link>
                 </div>
             </div>
         </>

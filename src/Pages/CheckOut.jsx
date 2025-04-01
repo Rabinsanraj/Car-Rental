@@ -140,7 +140,6 @@ export function Row(props){
   </div>
   <div className="row">
   <h1  className="col fw-bold fs-3">{props.head}</h1>
-
   </div>
 
   </>
