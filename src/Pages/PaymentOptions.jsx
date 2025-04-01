@@ -50,7 +50,7 @@ function PaymentOptions() {
                                 <h4 className='fs-3 fw-bold'>4532*****5221</h4>
                             </Link>
                         </div>
-                        <div className="col-md-4 text-center my-auto">
+                        <div className="col-md-4 text-center pt-3 my-auto">
                             <Link className="card payment-card" style={{
                                 border: "1px solid orange", textDecoration: "none"}}>
                                 <h1 className='fs-2 p-4'>+ Add a new Card</h1>
