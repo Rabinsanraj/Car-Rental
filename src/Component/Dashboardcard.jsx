@@ -5,6 +5,17 @@ import { Link } from 'react-router-dom';
 import Car1 from '../Images/Car1.jpg'
 
 function Dashboardcard (props){
+
+    const scrollToAllBooking = (elementId)=>{
+        const targetElement = document.getElementById('allBooking')
+        if(targetElement){
+            window.scrollTo({
+                top:targetElement.offsetTop,
+                behavior:"smooth"
+            });
+        }
+    };
+
     return(
         <>
         <div className="col-lg-6 col-12">
@@ -25,7 +36,7 @@ function Dashboardcard (props){
                     </div>
                     <div className="row pt-2 pb-5">
                         <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='mybooking'>{props.view1}</Link>
-                        <a className='fs-4 ms-3 fw-bold text-decoration-none text-black' href='#5'>{props.view2}</a>
+                        <a className='fs-4 ms-3 fw-bold text-decoration-none text-black' onClick={()=>scrollToAllBooking("allBooking")}>{props.view2}</a>
                         <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='wishlistpage'>{props.view3}</Link>
                     </div>
                 </div>
@@ -38,7 +49,7 @@ export default Dashboardcard
 export function Booking (props){
 return (
     <>
-    <div className="container-fluid mt-5" id='5' style={{width:"95%"}}>
+    <div className="container-fluid mt-5" id='allBooking' style={{width:"95%"}}>
         <h1 className='display-5 fw-bold text-danger'>{props.heading}</h1>
     </div>
     <div className="container-fluid d-flex justify-content-center align-content-center mt-5">

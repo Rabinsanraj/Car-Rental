@@ -123,7 +123,7 @@ function BillingDetails(){
                 </div>
                 <div className="col-md-6 text-center">
                 <div className="mb-4">
-                <Link className='btn btn-warning form-control text-light fs-3 fw-bold' to="/">Confirm & Pay</Link>
+                <Link className='btn btn-warning text-light fs-3 fw-bold' type="submit" to="paymentoptions">Confirm & Pay</Link>
                 </div>
                 </div>
             </div>

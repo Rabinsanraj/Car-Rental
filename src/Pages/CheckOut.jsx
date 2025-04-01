@@ -25,7 +25,7 @@ const CheckOut = () => {
 
   return (
     <>
-    <CarNav name="Our Cars" link1="/" link2="/" pagename1="Home" pagename2="About"/>
+    <CarNav name="Checkout" link1="/" link2="/" pagename1="Home" pagename2="About"/>
     <div className="container-fluid mt-4 pb-4" style={{border:"3px solid black", width:"95%"}}>
       <h1 className="mt-3">Reserve Your Car</h1>
       <h3  className="mt-3 mb-3 text-danger">Check the Details</h3>
