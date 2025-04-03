@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CarNav from "../Component/CarNav";
-import Car1 from '../Images/Car1.jpg'
+import CarDriver from '../Images/CarDriver.jpg'
 import { Link } from "react-router-dom";
 
 const CheckOut = () => {
@@ -70,7 +70,9 @@ const CheckOut = () => {
         <div className="row ms-3 mt-5 mx-auto">
                   <div className="col-md-6" style={{border:"2px solid orange"}}>
                     <div className="row">
-                      <h1 className="col fw-bold fs-3 pt-3 pb-3">Location & Time</h1>
+                      <h1 className="col fw-bold fs-3 pt-4 pb-2">Location & Time</h1>
+                      <Link className="col fw-bold pt-4 pb-2 text-end pe-5" to="">
+                        <box-icon type='solid' name='edit' color="#787878" size="40px"></box-icon></Link>
                     </div>
                     <hr style={{border:"2px solid black"}} />
                     <div className="row">
@@ -100,7 +102,7 @@ const CheckOut = () => {
                     <div className="row pb-3" style={{border:"3px solid orange"}}>
                     <h1 className="mt-3 mb-3">Driver Details</h1>
                     <div className="col-md-4">
-                    <img src={Car1} alt="" className="w-100"/>
+                    <img src={CarDriver} alt="" className="w-100"/>
                   </div>
                   <div className="col">
                     <ul>

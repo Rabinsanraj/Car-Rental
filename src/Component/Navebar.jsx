@@ -16,6 +16,7 @@ import DriverDetails from '../Pages/DriverDetails';
 import BillingDetails from '../Pages/BillingDetails';
 import PaymentOptions from '../Pages/PaymentOptions';
 import FinalBill from '../Pages/FinalBill';
+import RentNow from '../Pages/RentNow'
 
 export const ScrollToTop = () =>{
   const {pathname} = useLocation();
@@ -73,6 +74,8 @@ function Navebar (){
              <Route path='/getstart/checkout/billingdetails' element={<BillingDetails/>}/>
              <Route path='/getstart/checkout/billingdetails/paymentoptions' element={<PaymentOptions/>}/>
              <Route path='/getstart/checkout/billingdetails/paymentoptions/finalbill' element={<FinalBill/>}/>
+             <Route path='/getstart/checkout/billingdetails/paymentoptions/finalbill/changedriver' element={<DriverDetails/>}/>
+             <Route path='/dashboard/wishlistpage/rentnow' element={<RentNow/>}/>
         </Routes>
       </HashRouter>
     

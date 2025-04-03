@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CarNav from "../Component/CarNav";
+import { Link } from "react-router-dom";
 
 const WishlistPage = () => {
   const [wishlist, setWishlist] = useState(() => {
@@ -80,7 +81,7 @@ const WishlistPage = () => {
            </div>
                 <div className="row mt-5">
                 <div className="col-md-6 mx-auto">
-                  <button className="btn btn-dark">Rent Now</button>
+                  <Link className="btn btn-dark" to="rentnow">Rent Now</Link>
                 </div>
                 <div className="col-md-6 mx-auto"> 
                 <button className="btn btn-danger" onClick={() => removeFromWishlist(product)}>Remove</button>

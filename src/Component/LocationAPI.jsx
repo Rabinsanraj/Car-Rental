@@ -38,8 +38,8 @@ export const LocationAPI = (props) => {
 
   return (
     <div>
-      <input className="form-control" type="text" placeholder={props.placeholder}
-       value={inputPlaces} onChange={handleInputChange}/>
+      <input className={props.inputstyle} type="text" placeholder={props.placeholder}
+       value={inputPlaces} onChange={handleInputChange}  style={props.style}/>
       {suggestions.length > 0 && (
         <ul
           style={{ marginTop: "3px", maxHeight: "auto", maxWidth: "auto", listStyle: "none",}}>

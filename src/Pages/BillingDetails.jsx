@@ -3,11 +3,24 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'boxicons'
 import CarNav from '../Component/CarNav';
 import { Link} from 'react-router-dom';
+import {LocationAPI} from '../Component/LocationAPI'
 
 function BillingDetails(){
+
+
     const BacktoDetails =()=>{
         history.back()
     }
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target.closest("form");
+
+        if (form.checkValidity()) {
+            navigate("/paymentoptions");
+        } else {
+            form.reportValidity();
+        }
+    };
     return(
         <>
        <CarNav name="Checkout"/>
@@ -63,19 +76,17 @@ function BillingDetails(){
             <div className="row">
                 <div className="col-md-4">
                 <div className="mb-4">
-                    <label htmlFor="country" className='form-label fs-4 fw-bold'>Country :</label>
-                    <input type="text" id='country' className='form-control fs-5' 
-                    placeholder='Enter Your Country'required
-                    style={{height:"50px", border:"1px solid black"}}/>
+                <label htmlFor="country" className='form-label fs-4 fw-bold'>Country :</label>
+                <LocationAPI placeholder="Enter Your Country" inputstyle="form-control fs-5"
+                 style={{height:"50px", border:"1px solid black"}} required/>
                     </div>
                 </div>
                 <div className="col-md-4">
                 <div className="mb-4">
-                    <label htmlFor="city" className='form-label fs-4 fw-bold'>City :</label>
-                    <input type="text" id='city' className='form-control fs-5' 
-                    placeholder='Enter Your City'required
-                    style={{height:"50px", border:"1px solid black"}}/>
-                    </div>
+                <label htmlFor="city" className='form-label fs-4 fw-bold'>City :</label>
+                <LocationAPI placeholder="Enter Your City" inputstyle="form-control fs-5" 
+                style={{height:"50px", border:"1px solid black"}} required/>
+                    </div> 
                 </div>
                 <div className="col-md-4">
                 <div className="mb-4">
@@ -123,7 +134,8 @@ function BillingDetails(){
                 </div>
                 <div className="col-md-6 text-center">
                 <div className="mb-4">
-                <Link className='btn btn-warning text-light fs-3 fw-bold' type="submit" to="paymentoptions">Confirm & Pay</Link>
+                {/* <button type="submit" className='btn btn-warning text-light fs-3 fw-bold' onClick={handleSubmit}>Confirm & Pay</button> */}
+                <Link type="submit" className='btn btn-warning text-light fs-3 fw-bold' to="paymentoptions">Confirm & Pay</Link>
                 </div>
                 </div>
             </div>

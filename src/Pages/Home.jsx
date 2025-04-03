@@ -25,10 +25,10 @@ function Home() {
             <input type="text" className="form-control" placeholder="Enter Your Car Type" required/>
           </div>
           <div className="mb-4">
-          <LocationAPI placeholder="Enter Pickup Location"/>
+          <LocationAPI inputstyle="form-control" placeholder="Enter Pickup Location"/>
           </div>
           <div className="mb-4">
-          <LocationAPI placeholder="Enter Drop Location"/>
+          <LocationAPI inputstyle="form-control" placeholder="Enter Drop Location"/>
           </div>
         
         <div className="row pb-4" >
