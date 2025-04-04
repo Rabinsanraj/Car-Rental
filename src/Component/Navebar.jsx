@@ -70,12 +70,21 @@ function Navebar (){
              <Route path='/dashboard/MyBooking' element={<MyBooking/>}/>
              <Route path='/dashboard/wishlistpage' element={<WishlistPage/>}/>
              <Route path='/getstart/checkout' element={<CheckOut/>}/>
+             <Route path='/getstart/checkout/rentnow' element={<RentNow/>}/>
              <Route path='/getstart/checkout/changedriver' element={<DriverDetails/>}/>
              <Route path='/getstart/checkout/billingdetails' element={<BillingDetails/>}/>
              <Route path='/getstart/checkout/billingdetails/paymentoptions' element={<PaymentOptions/>}/>
              <Route path='/getstart/checkout/billingdetails/paymentoptions/finalbill' element={<FinalBill/>}/>
              <Route path='/getstart/checkout/billingdetails/paymentoptions/finalbill/changedriver' element={<DriverDetails/>}/>
              <Route path='/dashboard/wishlistpage/rentnow' element={<RentNow/>}/>
+             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions' element={<PaymentOptions/>}/>
+             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/finalbill' element={<FinalBill/>}/>
+             <Route path='/getstart/checkout/billingdetails/paymentoptions/finalbill/rentnow' element={<RentNow/>}/>
+             <Route path='/getstart/checkout/billingdetails/paymentoptions/finalbill/rentnow/paymentoptions' element={<PaymentOptions/>}/>
+             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/finalbill/rentnow' element={<RentNow/>}/>
+             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/finalbill/rentnow/paymentoptions' element={<PaymentOptions/>}/>
+             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/finalbill/rentnow/paymentoptions/finalbill' element={<FinalBill/>}/>
+
         </Routes>
       </HashRouter>
     

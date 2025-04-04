@@ -44,7 +44,7 @@ function FinalBill() {
           <div className="col-md-6 text-start" style={{ border: "2px solid black" }}>
             <div className="row">
               <h1 className="col fw-bold fs-3 pt-3 pb-3">Location & Time</h1>
-              <Link className="col fw-bold pt-4 pb-2 text-end pe-5" to="">
+              <Link className="col fw-bold pt-4 pb-2 text-end pe-5" to="rentnow">
               <box-icon type='solid' name='edit' color="#787878" size="40px"></box-icon></Link>
             </div>
             <hr style={{ border: "2px solid black" }} />

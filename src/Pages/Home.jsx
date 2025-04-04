@@ -6,6 +6,7 @@ import Merun from "../Images/merun.png"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import CarPassing from '../Component/CarPassing'
 import {LocationAPI} from '../Component/LocationAPI'
+import { CarAPI } from "../Component/CarAPI"
 import { Link } from "react-router-dom"
 
 
@@ -22,7 +23,7 @@ function Home() {
         <h5 className="card-title text-center text-white mb-4">CONTINUE CARE RESERVATION</h5>
         <form>
           <div className="mb-4">
-            <input type="text" className="form-control" placeholder="Enter Your Car Type" required/>
+          <CarAPI inputstyle="form-control"  placeholder="Enter Your Car Type" />
           </div>
           <div className="mb-4">
           <LocationAPI inputstyle="form-control" placeholder="Enter Pickup Location"/>
