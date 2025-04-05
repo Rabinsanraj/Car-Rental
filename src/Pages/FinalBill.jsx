@@ -5,23 +5,20 @@ import CarNav from "../Component/CarNav";
 import CarDriver from "../Images/CarDriver.jpg";
 import Car1 from "../Images/Car1.jpg";
 import { Row } from "./CheckOut";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 function FinalBill() {
+  const { state } = useLocation();
+  
   return (
     <>
       <CarNav name="Checkout" />
 
       <div className="container-fluid text-center mx-auto pt-3">
         <h1>
-          <box-icon
-            name="check-double"
-            color="white"
-            size="70px"
-            className="bg-success p-1 rounded-circle"
-          ></box-icon>
+          <box-icon name="check-double"color="white"size="70px"className="bg-success p-1 rounded-circle"></box-icon>
         </h1>
         <h1 className="fs-2 fw-bold pt-3">
-          Thank you! Your Booking Has Been Recived
+          Thank you! Your Booking Has Been Received
         </h1>
         <div className="container-fluid mx-auto mt-5 pt-1 pb-1"
           style={{ backgroundColor: "#a5eed1" }}>
@@ -44,7 +41,7 @@ function FinalBill() {
           <div className="col-md-6 text-start" style={{ border: "2px solid black" }}>
             <div className="row">
               <h1 className="col fw-bold fs-3 pt-3 pb-3">Location & Time</h1>
-              <Link className="col fw-bold pt-4 pb-2 text-end pe-5" to="rentnow">
+              <Link className="col fw-bold pt-4 pb-2 text-end pe-5" to="rentnow" >
               <box-icon type='solid' name='edit' color="#787878" size="40px"></box-icon></Link>
             </div>
             <hr style={{ border: "2px solid black" }} />
@@ -52,25 +49,25 @@ function FinalBill() {
               <div className="col">
                 <ul>
                   <li className="fs-4 fw-bold">Booking Type</li>
-                  <li className="fs-5">Delivery</li>
+                  <li className="fs-5">{state?.bookingType}</li>
                 </ul>
                 <ul>
                   <li className="fs-4 fw-bold">Rental Type</li>
-                  <li className="fs-5">Days</li>
+                  <li className="fs-5">{state?.rentalType}</li>
                 </ul>
                 <ul>
                   <li className="fs-4 fw-bold">Delivery Location & Time </li>
                   <li className="fs-5">
                     1230 E Springs Rd, Los Angeles, CA, USA
                   </li>
-                  <li className="fs-5">04/18/2025</li>
+                  <li className="fs-5">{state?.startDate} - {state?.startTime}</li>
                 </ul>
                 <ul>
                   <li className="fs-4 fw-bold">Booking Type</li>
                   <li className="fs-5">
                     Norwegian Caribbean Cruise Los Angeles, CA 90025
                   </li>
-                  <li className="fs-5">04/27/2025 - 03:00</li>
+                  <li className="fs-5">{state?.endDate} - {state?.endTime}</li>
                 </ul>
               </div>
             </div>

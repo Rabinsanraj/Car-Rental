@@ -84,7 +84,6 @@ function Navebar (){
              <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/finalbill/rentnow' element={<RentNow/>}/>
              <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/finalbill/rentnow/paymentoptions' element={<PaymentOptions/>}/>
              <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/finalbill/rentnow/paymentoptions/finalbill' element={<FinalBill/>}/>
-
         </Routes>
       </HashRouter>
     
