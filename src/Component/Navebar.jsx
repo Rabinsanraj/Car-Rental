@@ -15,7 +15,6 @@ import CheckOut from '../Pages/CheckOut';
 import DriverDetails from '../Pages/DriverDetails';
 import BillingDetails from '../Pages/BillingDetails';
 import PaymentOptions from '../Pages/PaymentOptions';
-import FinalBill from '../Pages/FinalBill';
 import RentNow from '../Pages/RentNow'
 
 export const ScrollToTop = () =>{
@@ -74,16 +73,13 @@ function Navebar (){
              <Route path='/getstart/checkout/changedriver' element={<DriverDetails/>}/>
              <Route path='/getstart/checkout/billingdetails' element={<BillingDetails/>}/>
              <Route path='/getstart/checkout/billingdetails/paymentoptions' element={<PaymentOptions/>}/>
-             <Route path='/getstart/checkout/billingdetails/paymentoptions/finalbill' element={<FinalBill/>}/>
-             <Route path='/getstart/checkout/billingdetails/paymentoptions/finalbill/changedriver' element={<DriverDetails/>}/>
+             <Route path='/getstart/checkout/billingdetails/paymentoptions/changedriver' element={<DriverDetails/>}/>
              <Route path='/dashboard/wishlistpage/rentnow' element={<RentNow/>}/>
              <Route path='/dashboard/wishlistpage/rentnow/paymentoptions' element={<PaymentOptions/>}/>
-             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/finalbill' element={<FinalBill/>}/>
-             <Route path='/getstart/checkout/billingdetails/paymentoptions/finalbill/rentnow' element={<RentNow/>}/>
-             <Route path='/getstart/checkout/billingdetails/paymentoptions/finalbill/rentnow/paymentoptions' element={<PaymentOptions/>}/>
-             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/finalbill/rentnow' element={<RentNow/>}/>
-             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/finalbill/rentnow/paymentoptions' element={<PaymentOptions/>}/>
-             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/finalbill/rentnow/paymentoptions/finalbill' element={<FinalBill/>}/>
+             <Route path='/getstart/checkout/billingdetails/paymentoptions/rentnow' element={<RentNow/>}/>
+             <Route path='/getstart/checkout/billingdetails/paymentoptions/rentnow/paymentoptions' element={<PaymentOptions/>}/>
+             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/rentnow' element={<RentNow/>}/>
+             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/rentnow/paymentoptions' element={<PaymentOptions/>}/>
         </Routes>
       </HashRouter>
     

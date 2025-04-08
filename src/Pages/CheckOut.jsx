@@ -68,37 +68,6 @@ const CheckOut = () => {
       )}
 
         <div className="row ms-3 mt-5 mx-auto">
-                  <div className="col-md-6" style={{border:"2px solid orange"}}>
-                    <div className="row">
-                      <h1 className="col fw-bold fs-3 pt-4 pb-2">Location & Time</h1>
-                      <Link className="col fw-bold pt-4 pb-2 text-end pe-5" to="rentnow">
-                        <box-icon type='solid' name='edit' color="#787878" size="40px"></box-icon></Link>
-                    </div>
-                    <hr style={{border:"2px solid black"}} />
-                    <div className="row">
-                    <div className="col">
-                    <ul>
-                    <li className="fs-4 fw-bold">Booking Type</li>
-                    <li className="fs-5">Delivery</li>
-                    </ul>
-                    <ul>
-                      <li className="fs-4 fw-bold">Rental Type</li>
-                      <li className="fs-5">Days</li>
-                    </ul>
-                    <ul>
-                      <li className="fs-4 fw-bold">Delivery Location & Time</li>
-                      <li className="fs-5">1230 E Springs Rd, Los Angeles, CA, USA</li>
-                      <li className="fs-5">04/18/2025</li>
-                    </ul>
-                    <ul>
-                      <li className="fs-4 fw-bold">Booking Type</li>
-                      <li className="fs-5">Norwegian Caribbean Cruise Los Angeles, CA 90025</li>
-                      <li className="fs-5">04/27/2025 - 03:00</li>
-                    </ul>
-                    </div>
-                    </div>
-                  </div>
-                  <div className="col-md-5 mt-5 g-5">
                     <div className="row pb-3" style={{border:"3px solid orange"}}>
                     <h1 className="mt-3 mb-3">Driver Details</h1>
                     <div className="col-md-4">
@@ -122,9 +91,7 @@ const CheckOut = () => {
                     <Link className="btn btn-warning text-white fs-4 fw-bold" to="billingdetails">Confirm & Pay</Link>
                     </div>
                   </div>
-
                   </div>
-                </div>
     </div>
     </>
   );
