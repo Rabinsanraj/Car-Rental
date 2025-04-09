@@ -4,6 +4,7 @@ import 'boxicons'
 import CarNav from '../Component/CarNav'
 import CardBox from'../Component/CardBox'
 import Map from '../Component/Map'
+import { Outlet } from 'react-router-dom'
 
 function Contact(){
     return(<>

@@ -5,6 +5,7 @@ import CarNav from '../Component/CarNav';
 import { useNavigate } from 'react-router-dom';
 import { LocationAPI } from '../Component/LocationAPI';
 import { useRef } from 'react';
+import { Outlet } from 'react-router-dom';
 
 function BillingDetails() {
   const navigate = useNavigate();
@@ -142,14 +143,14 @@ function BillingDetails() {
           </div>
 
           <div className="row mt-4">
-            <div className="col-md-6 text-center mb-2">
-              <button type="button" className='btn btn-dark text-light fs-3 fw-bold' onClick={BacktoDetails}>
-                Back to Details
+            <div className="col-md-6 text-center mb-3">
+              <button type="submit" className='btn btn-warning text-light fs-3 fw-bold'>
+                Confirm & Pay
               </button>
             </div>
             <div className="col-md-6 text-center mb-2">
-              <button type="submit" className='btn btn-warning text-light fs-3 fw-bold'>
-                Confirm & Pay
+              <button type="button" className='btn btn-dark text-light fs-3 fw-bold' onClick={BacktoDetails}>
+                Back to Details
               </button>
             </div>
           </div>

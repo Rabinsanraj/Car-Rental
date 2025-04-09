@@ -10,7 +10,7 @@ import Car7 from "../Images/Car7.jpg"
 import Car8 from "../Images/Car8.jpg"
 import Car9 from "../Images/Car9.jpg"
 import Carouselbg from '../Images/Carouselbg.jpg'
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 const products = [
   { id: 1, name: "Product 1", image:Car1, review:"Review: 3.8", seats:"4 Seats", 
     trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Settings", km:"27 K "},

@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'boxicons'
 import { HashRouter,Routes,Route,Link} from "react-router-dom";
 import Home from '../Pages/Home'
-import Sevices from "../Pages/Services"
+import Services from "../Pages/Services"
 import Dashboard from '../Pages/Dashboard'
 import Contact from "../Pages/Contact"
 import GetStart from "../Pages/GetStart"
@@ -61,26 +61,33 @@ function Navebar (){
         </nav>
 
         <Routes>
-            <Route path="/" element={<Home/>}/>
-             <Route path="/service" element={<Sevices/>}/>
-             <Route path="/dashboard" element={<Dashboard/>}/>
-             <Route path="/contact" element={<Contact/>}/>
-             <Route path="/getstart" element={<GetStart/>}/>
-             <Route path='/dashboard/MyBooking' element={<MyBooking/>}/>
-             <Route path='/dashboard/wishlistpage' element={<WishlistPage/>}/>
-             <Route path='/getstart/checkout' element={<CheckOut/>}/>
-             <Route path='/getstart/checkout/rentnow' element={<RentNow/>}/>
-             <Route path='/getstart/checkout/changedriver' element={<DriverDetails/>}/>
-             <Route path='/getstart/checkout/billingdetails' element={<BillingDetails/>}/>
-             <Route path='/getstart/checkout/billingdetails/paymentoptions' element={<PaymentOptions/>}/>
-             <Route path='/getstart/checkout/billingdetails/paymentoptions/changedriver' element={<DriverDetails/>}/>
-             <Route path='/dashboard/wishlistpage/rentnow' element={<RentNow/>}/>
-             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions' element={<PaymentOptions/>}/>
-             <Route path='/getstart/checkout/billingdetails/paymentoptions/rentnow' element={<RentNow/>}/>
-             <Route path='/getstart/checkout/billingdetails/paymentoptions/rentnow/paymentoptions' element={<PaymentOptions/>}/>
-             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/rentnow' element={<RentNow/>}/>
-             <Route path='/dashboard/wishlistpage/rentnow/paymentoptions/rentnow/paymentoptions' element={<PaymentOptions/>}/>
-        </Routes>
+      {/* Main Pages */}
+      <Route path="/" element={<Home />} />
+      <Route path="/service" element={<Services />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/getstart" element={<GetStart />} />
+
+      {/* Dashboard & Subpages */}
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard/mybooking" element={<MyBooking />} />
+      <Route path="/dashboard/wishlistpage" element={<WishlistPage />} />
+      <Route path="/dashboard/wishlistpage/rentnow" element={<RentNow />} />
+      <Route path="/dashboard/wishlistpage/rentnow/paymentoptions" element={<PaymentOptions />} />
+      <Route path="/dashboard/checkout/billingdetails/paymentoptions/changedriver" element={<DriverDetails />} />
+      <Route path="/dashboard/checkout/billingdetails/paymentoptions/changedriver/paymentoptions" element={<PaymentOptions/>} />
+      <Route path="/dashboard/wishlistpage/rentnow/paymentoptions/rentnow" element={<RentNow />} />
+      <Route path="/dashboard/wishlistpage/rentnow/paymentoptions/rentnow/paymentoptions" element={<PaymentOptions />} />
+
+      {/* Checkout Flow */}
+      <Route path="/getstart/checkout" element={<CheckOut />} />
+      <Route path="/getstart/checkout/changedriver" element={<DriverDetails />} />
+      <Route path="/getstart/checkout/billingdetails" element={<BillingDetails />} />
+      <Route path="/getstart/checkout/billingdetails/paymentoptions" element={<PaymentOptions />} />
+      <Route path="/getstart/checkout/billingdetails/paymentoptions/changedriver" element={<DriverDetails />} />
+      <Route path="/getstart/checkout/billingdetails/paymentoptions/changedriver/paymentoptions" element={<PaymentOptions/>} />
+      <Route path="/getstart/checkout/billingdetails/paymentoptions/rentnow" element={<RentNow />} />
+      <Route path="/getstart/checkout/billingdetails/paymentoptions/rentnow/paymentoptions" element={<PaymentOptions />} />
+    </Routes>
       </HashRouter>
     
     );

@@ -10,6 +10,7 @@ import Car2 from'../Images/Car2.jpg'
 import Car3 from'../Images/Car3.jpg'
 import Car4 from'../Images/Car4.jpg'
 import Car5 from'../Images/Car5.jpg'
+import { Outlet } from 'react-router-dom';
 
 
 function Dashboard(){

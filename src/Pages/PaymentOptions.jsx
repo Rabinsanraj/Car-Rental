@@ -6,7 +6,7 @@ import Paypal from "../Images/paypal-logo.png";
 import Stripe from "../Images/Stripe-Logo.png";
 import Gpay from "../Images/google-pay.png";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import CarDriver from "../Images/CarDriver.jpg";
 import Car1 from "../Images/Car1.jpg";
 import { Row } from "./CheckOut";
@@ -259,13 +259,13 @@ export function FinalBill({
               </div> 
             </div>
             <div className="col-md-5 my-auto">
-              <div className="col text-end">
+              <div className="col text-end pt-4">
                 <Link className="btn btn-warning text-white fs-2 fw-bold">Print Order</Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+      </>
   );
 }

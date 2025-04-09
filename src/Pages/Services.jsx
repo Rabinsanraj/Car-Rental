@@ -6,6 +6,7 @@ import CarNav from '../Component/CarNav'
 import CardBox from '../Component/CardBox'
 import OldLady from '../Images/old-lady.jpg'
 import { CardBox1 } from '../Component/CardBox'
+import { Outlet } from 'react-router-dom'
 
 function Services(){
     return(

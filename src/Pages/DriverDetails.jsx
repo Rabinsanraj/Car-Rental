@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import "boxicons"
 import CarNav from '../Component/CarNav';
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 function DriverDetails() {
   const [selectedDriver, setSelectedDriver] = useState("");
 
