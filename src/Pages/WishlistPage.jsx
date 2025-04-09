@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CarNav from "../Component/CarNav";
-import { Link, Outlet } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const WishlistPage = () => {
   const [wishlist, setWishlist] = useState(() => {

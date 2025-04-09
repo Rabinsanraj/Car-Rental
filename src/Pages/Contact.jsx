@@ -1,10 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import 'boxicons'
+import "boxicons/css/boxicons.min.css";
 import CarNav from '../Component/CarNav'
 import CardBox from'../Component/CardBox'
 import Map from '../Component/Map'
-import { Outlet } from 'react-router-dom'
 
 function Contact(){
     return(<>

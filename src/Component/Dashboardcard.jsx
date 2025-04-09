@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import 'boxicons'
+import "boxicons/css/boxicons.min.css";
 import { Link } from 'react-router-dom';
 import Car1 from '../Images/Car1.jpg'
 

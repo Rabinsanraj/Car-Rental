@@ -1,12 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import 'boxicons'
+import "boxicons/css/boxicons.min.css";
 import CarPassing from '../Component/CarPassing'
 import CarNav from '../Component/CarNav'
 import CardBox from '../Component/CardBox'
 import OldLady from '../Images/old-lady.jpg'
 import { CardBox1 } from '../Component/CardBox'
-import { Outlet } from 'react-router-dom'
 
 function Services(){
     return(

@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import CarPassing from '../Component/CarPassing'
 import {LocationAPI} from '../Component/LocationAPI'
 import { CarAPI } from "../Component/CarAPI"
-import { Link, Outlet } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 function Home() {

@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "boxicons";
+import "boxicons/css/boxicons.min.css";
 import CarNav from "../Component/CarNav";
 import { useState } from "react";
-import {Outlet, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 function RentNow() {
   const [selectedDelivery, setSelectedDelivery] = useState("");

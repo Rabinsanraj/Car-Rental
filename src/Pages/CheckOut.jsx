@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CarNav from "../Component/CarNav";
 import CarDriver from '../Images/CarDriver.jpg'
-import { Link, Outlet } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 const CheckOut = () => {

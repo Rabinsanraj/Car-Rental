@@ -1,12 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "boxicons";
+import "boxicons/css/boxicons.min.css";
 import CarNav from "../Component/CarNav";
 import Paypal from "../Images/paypal-logo.png";
 import Stripe from "../Images/Stripe-Logo.png";
 import Gpay from "../Images/google-pay.png";
 import { useState } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import CarDriver from "../Images/CarDriver.jpg";
 import Car1 from "../Images/Car1.jpg";
 import { Row } from "./CheckOut";
