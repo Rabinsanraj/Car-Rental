@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "boxicons/css/boxicons.min.css";
+import "boxicons";
 import CarNav from "../Component/CarNav";
 import Paypal from "../Images/paypal-logo.png";
 import Stripe from "../Images/Stripe-Logo.png";

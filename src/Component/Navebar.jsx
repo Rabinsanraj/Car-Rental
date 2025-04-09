@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import "boxicons/css/boxicons.min.css";
+import "boxicons";
 import { HashRouter,Routes,Route,Link} from "react-router-dom";
 import Home from '../Pages/Home'
 import Services from "../Pages/Services"

@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import "boxicons/css/boxicons.min.css";
+import "boxicons";
 function CardBox(props){
     return(
         <> 

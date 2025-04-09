@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import "boxicons/css/boxicons.min.css";
+import "boxicons";
 function Footer(){
     return(
       <div className='container-fluid w-100 mt-4 pb-5' style={{backgroundColor:"black"}}>
