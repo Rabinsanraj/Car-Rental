@@ -7,17 +7,12 @@ const ChangeDriver = () => {
 
   // Extracting data from location state
   const { selectedDriver, firstName, lastName, dlNumber, dlImage } = location.state || {};
-
-  if (!location.state) {
-    return <div>No driver data found!</div>;
-  }
-
   return (
     <div className="container">
-      <h1 className="fw-bold text-center pt-4 pb-3">Driver Details</h1>
+      <h1 className="fw-bold text-center pt-5 pb-3">Driver Details</h1>
       
       <div className="row pt-3">
-        <div className="col-md-6" style={{ border: "2px solid orange" }}>
+        <div className="col-md-6" style={{ border: "2px solid orange", padding:"20px" }}>
           <h2 className="fs-3 fw-bold text-start pt-3 pb-3">Driver Details</h2>
           <div className="row">
             <div className="col-md-4">
@@ -29,13 +24,17 @@ const ChangeDriver = () => {
                 <li className="mt-3 fs-5 fw-bold">{dlNumber}</li>
                 <li className="mt-3 fs-5 fw-bold">{firstName} <span>{lastName}</span></li>
               </ul>
+              <div className="row">
+              <div className="col">
+              <Link className="btn btn-dark fs-5 fw-bold" to="/changedriver">Change Driver</Link>
+              </div>
+              </div>
             </div>
           </div> 
         </div>
       </div>
-
-      <div className="pt-4 text-center">
-        <Link to="/paymentoptions" className="btn btn-dark fs-4 fw-bold">Proceed to Payment</Link>
+      <div className="pt-5 text-center">
+        <Link to="/paymentoptions" className="btn btn-warning fs-2 text-white fw-bold">Print Now</Link>
       </div>
     </div>
   );

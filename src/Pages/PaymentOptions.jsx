@@ -203,7 +203,7 @@ export function FinalBill({
                 </div>
               </div>
             </div>
-            <div className="col-md-5 mx-auto" style={{ border: "3px solid black", borderRadius: "20px" }}>
+            <div className="col-md-5 mt-3 mx-auto" style={{ border: "3px solid black", borderRadius: "20px" }}>
               <Row detail="Rental Charge" amount="+300" />
               <Row detail="Rental Charge" amount="+60" />
               <Row detail="Rental Charge" amount="+200" />
@@ -254,33 +254,6 @@ export function FinalBill({
             </div>
           </div>
           <ChangeDriver/>
-          {/* <div className="row Maple pt-4">
-            <div className="col-md-6" style={{border:"2px solid orange"}}>
-              <h1 className="text-start fs-3 fw-bold pt-3 pb-3">Driver Details</h1>
-              <div className="row">
-                <div className="col-md-4">
-                  <img src={dlImage} alt="" className="w-100"/> 
-                </div>
-                <div className="col my-auto text-start">
-                  <ul>
-                    <h2>{selectedDriver}</h2>
-                    <li className="mt fs-5 fw-bold">{dlNumber}</li>
-                    <li className="mt-3 fs-5 fw-bold">{firstName} <span>{lastName}</span></li>
-                  </ul>
-                  <div className="row pb-4">
-                    <div className="col mx-auto">
-                      <Link className="btn btn-dark fs-4 fw-bold" to="/changedriver">Change Driver</Link>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-            </div>
-            <div className="col-md-5 my-auto">
-              <div className="col text-end pt-4">
-                <Link className="btn btn-warning text-white fs-2 fw-bold">Print Order</Link>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
       </>

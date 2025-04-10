@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CarNav from "../Component/CarNav";
 import CarDriver from '../Images/CarDriver.jpg'
 import {Link} from "react-router-dom";
+import ChangeDriver from "../Component/ChangeDriver";
 
 
 const CheckOut = () => {
@@ -67,32 +68,12 @@ const CheckOut = () => {
           ))}
         </div>
       )}
-
-        <div className="row ms-3 mt-5 mx-auto">
-                    <div className="row pb-3" style={{border:"3px solid orange"}}>
-                    <h1 className="mt-3 mb-3">Driver Details</h1>
-                    <div className="col-md-4">
-                    <img src={CarDriver} alt="" className="w-100"/>
-                  </div>
-                  <div className="col">
-                    <ul>
-                      <h4></h4>
-                      <li className="mt-3 fs-5 fw-bold">No of Rides Completed : 32</li>
-                      <li className="mt-3 fs-5 fw-bold">Age : 36</li>
-                    </ul>
-                    <div className="row">
-                      <div className="col">
-                        <Link className="btn btn-dark fs-4 fw-bold" to="/changedriver">Change Driver</Link>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                  <div className="row mt-5 pt-5 justify-content-end">
-                    <div className="col text-end">
-                    <Link className="btn btn-warning text-white fs-4 fw-bold" to="/billingdetails">Confirm & Pay</Link>
-                    </div>
-                  </div>
-                  </div>
+      <ChangeDriver/>
+      <div className="row mt-5 pt-5 justify-content-end">
+      <div className="col text-end">
+      <Link className="btn btn-warning text-white fs-4 fw-bold" to="/billingdetails">Confirm & Pay</Link>
+      </div>
+      </div>
     </div>
     </>
   );
