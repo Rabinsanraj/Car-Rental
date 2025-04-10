@@ -10,6 +10,8 @@ import { Link, useLocation } from "react-router-dom";
 import CarDriver from "../Images/CarDriver.jpg";
 import Car1 from "../Images/Car1.jpg";
 import { Row } from "./CheckOut";
+import ChangeDriver from "../Component/ChangeDriver";
+
 
 function PaymentOptions() {
   const [selectedMethod, setSelectedMethod] = useState("");
@@ -17,11 +19,10 @@ function PaymentOptions() {
   
   const location = useLocation();
   const {selectedDelivery,bookingType,
-  startDate,endDate,
-    startTime,
-    endTime,currentLocation,
-    returnLocation
+  startDate,endDate,startTime,endTime,currentLocation,returnLocation
   } = location.state || {};
+
+  const { selectedDriver, firstName, lastName, dlNumber, dlImage } = location.state ||{};
 
   const handleSelect = (method) => {
     setSelectedMethod(method);
@@ -44,6 +45,10 @@ function PaymentOptions() {
   const getBackgroundColor = (method) => {
     return selectedMethod === method ? "rgb(214, 245, 255)" : "#88f78a"; 
   };
+
+  // ..........................................................
+
+
 
   return (
     <>
@@ -110,7 +115,8 @@ function PaymentOptions() {
           </button>
         </div>{showFinalBill && (<FinalBill selectedDelivery={selectedDelivery} bookingType={bookingType}
           startDate={startDate} endDate={endDate}startTime={startTime}endTime={endTime} 
-          currentLocation={currentLocation} returnLocation={returnLocation}/>)}</div>
+          currentLocation={currentLocation} returnLocation={returnLocation} selectedDriver={selectedDriver}
+          firstName={firstName} lastName={lastName} dlNumber={dlNumber} dlImage={dlImage}/>)}</div>
     </> 
   );
 }
@@ -118,6 +124,8 @@ function PaymentOptions() {
 export default PaymentOptions;
 
 export function FinalBill({
+
+
   selectedDelivery,
   bookingType,
   startDate,
@@ -125,8 +133,15 @@ export function FinalBill({
   startTime,
   endTime,
   currentLocation,
-  returnLocation
+  returnLocation,
+
+  selectedDriver,
+   firstName, 
+   lastName, 
+   dlNumber,
+  dlImage
 }) {
+  // console.log(typeof selectedDriver)
   return (
     <>
       <div className="container-fluid text-center mx-auto mt-5 pt-5 pb-5" id='finalbill' style={{border:"2px solid black"}}>
@@ -156,7 +171,7 @@ export function FinalBill({
             <div className="col-md-6 text-start" style={{ border: "2px solid black" }}>
               <div className="row">
                 <h1 className="col fw-bold fs-3 pt-3 pb-3">Location & Time</h1>
-                <Link className="col fw-bold pt-4 pb-2 text-end pe-5" to="rentnow">
+                <Link className="col fw-bold pt-4 pb-2 text-end pe-5" to="/rentnow">
                   <box-icon type='solid' name='edit' color="#787878" size="40px"></box-icon>
                 </Link>
               </div>
@@ -238,21 +253,23 @@ export function FinalBill({
               </div>
             </div>
           </div>
-          <div className="row pt-4">
+          <ChangeDriver/>
+          {/* <div className="row Maple pt-4">
             <div className="col-md-6" style={{border:"2px solid orange"}}>
               <h1 className="text-start fs-3 fw-bold pt-3 pb-3">Driver Details</h1>
               <div className="row">
                 <div className="col-md-4">
-                  <img src={CarDriver} alt="" className="w-100"/> 
+                  <img src={dlImage} alt="" className="w-100"/> 
                 </div>
                 <div className="col my-auto text-start">
                   <ul>
-                    <li className="mt fs-5 fw-bold">No of Rides Completed : 32</li>
-                    <li className="mt-3 fs-5 fw-bold">Age : 36</li>
+                    <h2>{selectedDriver}</h2>
+                    <li className="mt fs-5 fw-bold">{dlNumber}</li>
+                    <li className="mt-3 fs-5 fw-bold">{firstName} <span>{lastName}</span></li>
                   </ul>
                   <div className="row pb-4">
                     <div className="col mx-auto">
-                      <Link className="btn btn-dark fs-4 fw-bold" to="changedriver">Change Driver</Link>
+                      <Link className="btn btn-dark fs-4 fw-bold" to="/changedriver">Change Driver</Link>
                     </div>
                   </div>
                 </div>
@@ -263,7 +280,7 @@ export function FinalBill({
                 <Link className="btn btn-warning text-white fs-2 fw-bold">Print Order</Link>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       </>

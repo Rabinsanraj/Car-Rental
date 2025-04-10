@@ -82,14 +82,14 @@ const CheckOut = () => {
                     </ul>
                     <div className="row">
                       <div className="col">
-                        <Link className="btn btn-dark fs-4 fw-bold" to="changedriver">Change Driver</Link>
+                        <Link className="btn btn-dark fs-4 fw-bold" to="/changedriver">Change Driver</Link>
                       </div>
                     </div>
                   </div>
                   </div>
                   <div className="row mt-5 pt-5 justify-content-end">
                     <div className="col text-end">
-                    <Link className="btn btn-warning text-white fs-4 fw-bold" to="billingdetails">Confirm & Pay</Link>
+                    <Link className="btn btn-warning text-white fs-4 fw-bold" to="/billingdetails">Confirm & Pay</Link>
                     </div>
                   </div>
                   </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import CarNav from "../Component/CarNav";
 import Car1 from "../Images/Car1.jpg"
 import Car2 from "../Images/Car2.jpg"
@@ -148,7 +148,7 @@ const GetStart = () => {
                <h3 className="text-center fs-5 fw-bold">{product.km}</h3>
              </div>
            </div>
-           <Link className="btn btn-dark form-control mt-2 mb-3" type="button" to="checkout" onClick={() => toggleBooknow(product)}>Book Now</Link>
+           <Link className="btn btn-dark form-control mt-2 mb-3" type="button" to="/checkout" onClick={() => toggleBooknow(product)}>Book Now</Link>
          </div>
        </div>
      </div>

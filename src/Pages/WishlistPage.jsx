@@ -81,7 +81,7 @@ const WishlistPage = () => {
            </div>
                 <div className="row mt-5">
                 <div className="col-md-6 mx-auto">
-                  <Link className="btn btn-dark" to="rentnow">Rent Now</Link>
+                  <Link className="btn btn-dark" to="/rentnow">Rent Now</Link>
                 </div>
                 <div className="col-md-6 pt-3 mx-auto"> 
                 <button className="btn btn-danger" onClick={() => removeFromWishlist(product)}>Remove</button>

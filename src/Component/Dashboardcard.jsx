@@ -35,9 +35,9 @@ function Dashboardcard (props){
                         <hr className='w-75 mx-auto border-3'></hr>
                     </div>
                     <div className="row pt-2 pb-5">
-                        <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='mybooking'>{props.view1}</Link>
+                        <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='/mybooking'>{props.view1}</Link>
                         <a className='fs-4 ms-3 fw-bold text-decoration-none text-black' onClick={()=>scrollToAllBooking("allBooking")}>{props.view2}</a>
-                        <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='wishlistpage'>{props.view3}</Link>
+                        <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='/wishlistpage'>{props.view3}</Link>
                     </div>
                 </div>
             </div>

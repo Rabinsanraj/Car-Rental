@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "boxicons";
 import CarNav from '../Component/CarNav';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { LocationAPI } from '../Component/LocationAPI';
 import { useRef } from 'react';
 
@@ -143,14 +143,14 @@ function BillingDetails() {
 
           <div className="row mt-4">
             <div className="col-md-6 text-center mb-3">
-              <button type="submit" className='btn btn-warning text-light fs-3 fw-bold'>
+              <Link type="submit" className='btn btn-warning text-light fs-3 fw-bold' to="/paymentoptions">
                 Confirm & Pay
-              </button>
+              </Link>
             </div>
             <div className="col-md-6 text-center mb-2">
-              <button type="button" className='btn btn-dark text-light fs-3 fw-bold' onClick={BacktoDetails}>
+              <Link type="button" className='btn btn-dark text-light fs-3 fw-bold' to="/checkout">
                 Back to Details
-              </button>
+              </Link>
             </div>
           </div>
         </form>

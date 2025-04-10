@@ -39,7 +39,7 @@ function RentNow() {
       alert("Please fill in all the fields before continuing.");
       return;
     }else{
-      navigate("paymentoptions", { state: formData });
+      navigate("/paymentoptions", { state: formData });
     }
   }
     const formData = {selectedDelivery, bookingType, startDate, startTime, endDate, endTime,currentLocation,

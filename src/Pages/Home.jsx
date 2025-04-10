@@ -8,53 +8,105 @@ import CarPassing from '../Component/CarPassing'
 import {LocationAPI} from '../Component/LocationAPI'
 import { CarAPI } from "../Component/CarAPI"
 import { Link } from "react-router-dom"
+import React, { useState } from "react";
 
 
 function Home() {
+  const [formData, setFormData] = useState({
+    carType: "",
+    pickupLocation: "",
+    dropLocation: ""});
+
+  const [errors, setErrors] = useState({
+    carType: "",
+    pickupLocation: "",
+    dropLocation: ""});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    let isValid = true;
+
+    Object.keys(formData).forEach((field) => {
+      if (!formData[field]) {
+        newErrors[field] = `${field} is required.`;
+        isValid = false;
+      }
+    });
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      alert("Form is valid, proceeding...");
+    }
+  };
   return (
     <>
     <div className="container-fluid" style={{backgroundImage: `url(${Car})`,
     backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
-     width: "100%",minHeight:"681px"}}>
+     width: "100%",minHeight:"750px"}}>
     <div className="container-fluid ps-5 pb-5 d-flex align-items-center">
     <div>
       <div className="card-body  p-3"  style={{backgroundColor:"#050563",borderRadius:"15px",opacity:"90%",
-        margin:"auto", marginTop:"30px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.6)"}}>
+        margin:"auto", marginTop:"100px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.6)"}}>
         <h5 className="card-title text-center text-white mb-4">CONTINUE CARE RESERVATION</h5>
-        <form>
-          <div className="mb-4">
-          <CarAPI inputstyle="form-control"  placeholder="Enter Your Car Type" />
-          </div>
-          <div className="mb-4">
-          <LocationAPI inputstyle="form-control" placeholder="Enter Pickup Location"/>
-          </div>
-          <div className="mb-4">
-          <LocationAPI inputstyle="form-control" placeholder="Enter Drop Location"/>
-          </div>
-        
-        <div className="row pb-4" >
-        <div className="col-md-6">
-        <label htmlFor="date" className="form-label text-white">Pickup Date</label>
-        <input type="date" className="form-control" placeholder="Enter Drop Location" style={{width:"200px"}} required/>
-          </div>
-        <div className="col-md-6">
-        <label htmlFor="time" className="form-label text-white">Pickup Time</label>
-        <input type="time" className="form-control" placeholder="Enter Drop Location" style={{width:"200px"}} required/>
-          </div>
-        </div>
+        <form onSubmit={handleSubmit}>
+      <div className="mb-4">
+        <CarAPI name="carType" inputstyle="form-control"  placeholder="Enter Your Car Type"
+        value={formData.carType} onChange={handleChange}/>
+        {errors.carType && <small className="text-danger">{errors.carType}</small>}
+      </div>
+      <div className="mb-4">
+        <LocationAPI name="pickupLocation" inputstyle="form-control" placeholder="Enter Pickup Location" 
+        value={formData.pickupLocation} onChange={handleChange}/>
+        {errors.pickupLocation && <small className="text-danger">{errors.pickupLocation}</small>}
+      </div>
+      <div className="mb-4">
+        <LocationAPI name="dropLocation" inputstyle="form-control" placeholder="Enter Drop Location" 
+        value={formData.dropLocation} onChange={handleChange}/>
+        {errors.dropLocation && <small className="text-danger">{errors.dropLocation}</small>}
+      </div>
 
-        <div className="row pb-4">
+      <div className="row pb-4">
         <div className="col-md-6">
-        <label htmlFor="date" className="form-label text-white">Drop Date</label>
-        <input type="date" className="form-control" placeholder="Enter Drop Location" style={{width:"200px"}}  required/>
-          </div>
-        <div className="col-md-6">
-        <label htmlFor="date" className="form-label text-white">Drop time</label>
-        <input type="time" className="form-control" placeholder="Enter Drop Location" style={{width:"200px"}} required/>
-          </div>
+          <label htmlFor="pickupDate" className="form-label text-white">Pickup Date</label>
+          <input type="date" className="form-control" style={{width:"200px"}}required/>
         </div>
-          <button type="submit" className="btn btn-danger text-white w-100">Book Now</button>
-        </form>
+        <div className="col-md-6">
+          <label htmlFor="pickupTime" className="form-label text-white">Pickup Time</label>
+          <input type="time" className="form-control" placeholder="Enter Drop Location"
+           style={{width:"200px"}}required/>
+        </div>
+      </div>
+
+      <div className="row pb-4">
+        <div className="col-md-6">
+          <label htmlFor="dropDate" className="form-label text-white">Drop Date</label>
+          <input type="date" className="form-control" placeholder="Enter Drop Location"
+           style={{width:"200px"}} required/>
+          
+        </div>
+        <div className="col-md-6">
+          <label htmlFor="dropTime" className="form-label text-white">Drop Time</label>
+          <input type="time" className="form-control" placeholder="Enter Drop Location" 
+          style={{width:"200px"}}required/>
+        </div>
+      </div>
+
+      <Link type="submit" className="btn btn-danger text-white w-100" to="/getstart" onClick={handleSubmit}>
+      Book Now</Link>
+    </form>
       </div>
     </div>
     </div>

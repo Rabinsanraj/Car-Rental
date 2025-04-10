@@ -16,6 +16,7 @@ import DriverDetails from '../Pages/DriverDetails';
 import BillingDetails from '../Pages/BillingDetails';
 import PaymentOptions from '../Pages/PaymentOptions';
 import RentNow from '../Pages/RentNow'
+import ChangeDriver from './ChangeDriver';
 
 export const ScrollToTop = () =>{
   const {pathname} = useLocation();
@@ -67,26 +68,22 @@ function Navebar (){
       <Route path="/contact" element={<Contact />} />
       <Route path="/getstart" element={<GetStart />} />
 
+
       {/* Dashboard & Subpages */}
       <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/dashboard/mybooking" element={<MyBooking />} />
-      <Route path="/dashboard/wishlistpage" element={<WishlistPage />} />
-      <Route path="/dashboard/wishlistpage/rentnow" element={<RentNow />} />
-      <Route path="/dashboard/wishlistpage/rentnow/paymentoptions" element={<PaymentOptions />} />
-      <Route path="/dashboard/checkout/billingdetails/paymentoptions/changedriver" element={<DriverDetails />} />
-      <Route path="/dashboard/checkout/billingdetails/paymentoptions/changedriver/paymentoptions" element={<PaymentOptions/>} />
-      <Route path="/dashboard/wishlistpage/rentnow/paymentoptions/rentnow" element={<RentNow />} />
-      <Route path="/dashboard/wishlistpage/rentnow/paymentoptions/rentnow/paymentoptions" element={<PaymentOptions />} />
+      <Route path="/mybooking" element={<MyBooking />} />
+      <Route path="/wishlistpage" element={<WishlistPage />} />
+      <Route path="/rentnow" element={<RentNow />} />
+      <Route path="/paymentoptions" element={<PaymentOptions />} />
+      <Route path="/changedriver" element={<DriverDetails />} />
+      <Route path="/paymentoptions" element={<PaymentOptions/>} />
 
       {/* Checkout Flow */}
-      <Route path="/getstart/checkout" element={<CheckOut />} />
-      <Route path="/getstart/checkout/changedriver" element={<DriverDetails />} />
-      <Route path="/getstart/checkout/billingdetails" element={<BillingDetails />} />
-      <Route path="/getstart/checkout/billingdetails/paymentoptions" element={<PaymentOptions />} />
-      <Route path="/getstart/checkout/billingdetails/paymentoptions/changedriver" element={<DriverDetails />} />
-      <Route path="/getstart/checkout/billingdetails/paymentoptions/changedriver/paymentoptions" element={<PaymentOptions/>} />
-      <Route path="/getstart/checkout/billingdetails/paymentoptions/rentnow" element={<RentNow />} />
-      <Route path="/getstart/checkout/billingdetails/paymentoptions/rentnow/paymentoptions" element={<PaymentOptions />} />
+      <Route path="/checkout" element={<CheckOut />} />
+      <Route path="/billingdetails" element={<BillingDetails />} />
+
+      <Route path='/changedriver' element={<ChangeDriver/>}/>
+      
     </Routes>
       </HashRouter>
     
