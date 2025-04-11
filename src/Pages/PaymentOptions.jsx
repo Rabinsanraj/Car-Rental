@@ -144,7 +144,7 @@ export function FinalBill({
   // console.log(typeof selectedDriver)
   return (
     <>
-      <div className="container-fluid text-center mx-auto mt-5 pt-5 pb-5" id='finalbill' style={{border:"2px solid black"}}>
+      <div className="container-fluid text-center mx-auto mt-5 mb-5 pt-5 pb-5" id='finalbill' style={{border:"2px solid black"}}>
         <h1>
           <box-icon name="check-double" color="white" size="70px" className="bg-success p-1 rounded-circle"></box-icon>
         </h1>
