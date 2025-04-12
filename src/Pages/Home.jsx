@@ -161,17 +161,17 @@ function Home() {
           <div className="container-fluid pt-5">
             <div className="row row-cols-2">
               <div className="col-6">
-              <div className="card" style={{height:"260px",borderRadius:"20px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
+              <div className="card" style={{width:"100%",height:"fit-content",minHeight:"260px",maxHeight:"350px",borderRadius:"20px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
               <h1><box-icon name='target-lock'  color='#08082d' size="45px" className="p-3 mt-3 rounded-circle" style={{backgroundColor:"red"}}></box-icon></h1>
               <h3 className="fs-2 fw-bold">Our Vision</h3>
               <p className="fs-6 fw-bold">"Redefining Mobility, Empowering journeys."</p>
             </div>
               </div>
               <div className="col-6">
-              <div className="card" style={{height:"260px",borderRadius:"20px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
+              <div className="card" style={{ width:"100%",height:"fit-content",minHeight:"260px",maxHeight:"auto",borderRadius:"20px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
               <h1><box-icon name='like' color='#08082d' size="45px" className="p-3 mt-3 rounded-circle" style={{backgroundColor:"red"}} ></box-icon></h1>
                 <h3 className="fs-2 fw-bold">Our Mision</h3>
-                <p className="fs-6 fw-bold">"To Provide reliable, affordable and customer car rental solutions and convenience at every Mile"</p>
+                <p className="fs-6 fw-bold">"affordable and customer car rental solutions and convenience at every Mile"</p>
               </div>
               </div>
             </div>
