@@ -144,7 +144,7 @@ function Home() {
           <h4> - Ride First Class </h4>
     </div>
     <div className="col-md-3">
-    <box-icon name='star' color='#08082d' size="40px" className="p-3 rounded-circle" style={{backgroundColor:"red"}}></box-icon>
+    <box-icon name='star' color='#08082d' size="40px" className="p-2 rounded-circle" style={{backgroundColor:"red"}}></box-icon>
     <h1 className="fs-5 text-black fw-bolder">Free Pickup and Drop Off</h1>
           <h4>Experience Excellence</h4>
           <h4> - Ride First Class </h4>
@@ -205,8 +205,8 @@ function Home() {
       </div>
 
       <div className="col-md-5 pb-5" style={{backgroundImage:`url(${KeyInHand})`,
-      backgroundRepeat:"no-repeat",backgroundSize:"cover",height:"700px"}} >
-        <div className="container position-relative w-100 left-25  mt-5 top-50">
+      backgroundRepeat:"no-repeat",backgroundSize:"cover",height:"80vh"}} >
+        <div className="container position-relative w-100 top-50">
         <img src={ManONCar} className="w-100 pt-5 mt-5"/>
         </div>
       </div>
@@ -214,7 +214,7 @@ function Home() {
    </div>
     <CarPassing/>
 
-    <div className="container-fluid mt-1" style={{backgroundImage: `url(${CarGray})`,
+    <div className="container-fluid mt-1 mb-3" style={{backgroundImage: `url(${CarGray})`,
     backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
      width: "100%"}}>
       <div className="text-container text-end" style={{paddingTop:"150px",paddingBottom:"150px", textShadow:"3px 3px 5px black"}}>
