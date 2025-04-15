@@ -33,8 +33,8 @@ function Navebar (){
       <HashRouter>
       <nav className="navbar navbar-expand-lg pt-2 pb-2 navbar-light bg-light position-sticky top-0 z-3">
           <div className="container-fluid">
-            <Link to="/"><box-icon name='car' color='#ffffff' size="25px" className="bg-danger ms-5 p-2 rounded-circle"></box-icon></Link>
-            <Link className="navbar-brand fs-3 ms-2 fw-bold text-danger" to="/">Easy  Car</Link>
+            <Link to="/"><box-icon name='car' color='#ffffff' size="25px" className="ms-5 p-2 rounded-circle"style={{backgroundColor:"red"}}></box-icon></Link>
+            <Link className="navbar-brand fs-3 ms-2 fw-bold" style={{color:"red"}} to="/">Easy  Car</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
@@ -53,7 +53,7 @@ function Navebar (){
                   <Link className="nav-link me-5 fs-5" to="/contact" >Contact US</Link>
                 </li>
                <li className='nav-item'>
-                <Link className="btn btn-danger fs-5 rounded-pill ps-4 pe-4 me-4" to="/getstart">Get Started</Link>
+                <Link className="btn fs-5 text-light fw-bold rounded-pill ps-4 pe-4 me-4" style={{backgroundColor:"red"}} to="/getstart">Get Started</Link>
                 </li>
               </ul>
             </div>

@@ -162,7 +162,7 @@ export function FinalBill({
             </div>
             <div className="col-md-4 text-center pt-5">
               <h1 className="fs-3 fw-bold">TOTAL AMOUNT</h1>
-              <h1 className="fs-2 fw-bold text-danger">2000</h1>
+              <h1 className="fs-2 fw-bold" style={{color:"red"}}>2000</h1>
             </div>
           </div>
         </div>
@@ -254,6 +254,9 @@ export function FinalBill({
             </div>
           </div>
           <ChangeDriver/>
+          <div className="pt-5 text-end">
+        <Link to="/paymentoptions" className="btn btn-warning fs-3 mt-5 text-light fw-bold">Print Now</Link>
+          </div>
         </div>
       </div>
       </>

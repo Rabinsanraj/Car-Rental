@@ -66,17 +66,17 @@ function Home() {
       <div className="mb-4">
         <CarAPI name="carType" inputstyle="form-control"  placeholder="Enter Your Car Type"
         value={formData.carType} onChange={handleChange}/>
-        {errors.carType && <small className="text-danger">{errors.carType}</small>}
+        {errors.carType && <small style={{color:"red"}}>{errors.carType}</small>}
       </div>
       <div className="mb-4">
         <LocationAPI name="pickupLocation" inputstyle="form-control" placeholder="Enter Pickup Location" 
         value={formData.pickupLocation} onChange={handleChange}/>
-        {errors.pickupLocation && <small className="text-danger">{errors.pickupLocation}</small>}
+        {errors.pickupLocation && <small style={{color:"red"}}>{errors.pickupLocation}</small>}
       </div>
       <div className="mb-4">
         <LocationAPI name="dropLocation" inputstyle="form-control" placeholder="Enter Drop Location" 
         value={formData.dropLocation} onChange={handleChange}/>
-        {errors.dropLocation && <small className="text-danger">{errors.dropLocation}</small>}
+        {errors.dropLocation && <small style={{color:"red"}}>{errors.dropLocation}</small>}
       </div>
 
       <div className="row pb-4">
@@ -105,7 +105,7 @@ function Home() {
         </div>
       </div>
 
-      <Link type="submit" className="btn btn-danger text-white w-100" to="/getstart" onClick={handleSubmit}>
+      <Link type="submit" className="btn fw-bold fs-5 text-white w-100" style={{backgroundColor:"red"}} to="/getstart" onClick={handleSubmit}>
       Book Now</Link>
     </form>
       </div>
@@ -158,7 +158,7 @@ function Home() {
     <div className="row row-cols-md-2 ">
       <div className="col-md-7 text-center">
         <div className="container-fluid">
-          <h1 className="pt-3" style={{color:"black"}}><span style={{color:"red"}}>About</span> Easy Car Rente</h1>
+          <h1 className="pt-3 fw-bold" style={{color:"black"}}><span style={{color:"red"}}>About</span> Easy Car Rente</h1>
           <div className="container-fluid pt-5">
             <div className="row gy-4">
               <div className="col-md-6">
@@ -217,18 +217,18 @@ function Home() {
     <div className="container-fluid mt-1 mb-3" style={{backgroundImage: `url(${CarGray})`,
     backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
      width: "100%"}}>
-      <div className="text-container text-end" style={{paddingTop:"150px",paddingBottom:"150px", textShadow:"3px 3px 5px black"}}>
+      <div className="text-container text-end" style={{paddingTop:"100px",paddingBottom:"100px", textShadow:"3px 3px 5px black"}}>
         <h1 className="display-1 fw-bold  lh-base" style={{color:"red"}}>Rent Your Car</h1>
         <h1 className="display-6 fw-bold  lh-base" style={{color:"white"}}>Intrerested in Renting ?</h1>
         <h1 className="display-6 fw-bold  lh-base" style={{color:"white"}}>Don't hesitate and <span style={{color:"red"}}>SEND </span> 
         us a <span className="display-4 fw-bold  lh-base" style={{color:"red"}}>MESSAGE</span></h1>
-        <div className="row row row-cols-2 row-cols-md-2 pt-5">
+        <div className="row row-cols-md-2 pt-5">
           <div className="col">
             <div className="row">
             <div className="col-4"></div>
             <div className="col"><button className="btn text-white fs-4 fw-bold p-auto" style={{backgroundColor:"#ff1b1b",
             borderRadius:"25px",textShadow:"3px 3px 5px black"}}>Whatsapp</button></div>
-            <div className="col-4"></div>
+            <div className="col"></div>
             </div>
           </div>
           <div className="col">

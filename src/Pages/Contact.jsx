@@ -10,7 +10,7 @@ function Contact(){
     <CarNav name="Contact Us" link1="/" link2="/" link3="getstart"
      pagename1="Home" pagename2="About" pagename3="Our Car"/>
     <div className="text-center fs-3">
-            <h1 className='text-danger'>Contact us</h1>
+            <h1 style={{color:"red"}}>Contact us</h1>
         </div>
         <div className="container-fluid">
         <div className="row row-cols-md-4 pb-2 pt-5">
@@ -38,7 +38,7 @@ function Contact(){
                 <div className="col ">
                     <div className="card" style={{width:"95%",backgroundColor:"#000c69",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
                       <div className="card-body mt-3">
-                        <h1 className="card-title text-danger">Send Your Message</h1>
+                        <h1 className="card-title" style={{color:"red"}}>Send Your Message</h1>
                         <div className="container mt-5">
                         <form>
                        <div className="row d-flex mb-3">

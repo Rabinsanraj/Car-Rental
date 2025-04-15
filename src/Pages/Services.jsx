@@ -13,7 +13,7 @@ function Services(){
         <CarNav name="Our Services" link1="/" link2="/" link3="getstart"
         pagename1="Home" pagename2="About" pagename3="Our Cars"/>
         <div className="text-center fs-3">
-            <h1>Easy Car <span className="text-danger">Services</span></h1>
+            <h1>Easy Car <span style={{color:"red"}}>Services</span></h1>
         </div>
         <div className="container-fluid">
         <div className="row row-cols-md-3 pt-4 pb-2">

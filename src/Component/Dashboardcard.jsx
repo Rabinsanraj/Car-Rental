@@ -50,7 +50,7 @@ export function Booking (props){
 return (
     <>
     <div className="container-fluid mt-5" id='allBooking' style={{width:"95%"}}>
-        <h1 className='display-5 fw-bold text-danger'>{props.heading}</h1>
+        <h1 className='display-5 fw-bold' style={{color:"red"}}>{props.heading}</h1>
     </div>
     <div className="container-fluid d-flex justify-content-center align-content-center mt-5">
     <div className="row text-center align-items-center">
@@ -141,7 +141,7 @@ export function WishListComp(){
                               <h3>3.58 Reviews</h3>
                           </div>
                           <div className="row pb-5">
-                              <h3 className='fs-2 fw-bold text-danger'>1500/day</h3>
+                              <h3 className='fs-2 fw-bold'style={{color:"red"}}>1500/day</h3>
                           </div>
                           <div className="row mt-5 align-items-center justify-content-center">
                               <Link type='button' className='form-control text-white bg-dark w-50 pt-3 pb-3 fs-4'

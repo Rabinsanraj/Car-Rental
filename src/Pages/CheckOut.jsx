@@ -30,7 +30,7 @@ const CheckOut = () => {
     <CarNav name="Checkout" link1="/" link2="/" pagename1="Home" pagename2="About"/>
     <div className="container-fluid mt-4 pb-4" style={{border:"3px solid black", width:"95%"}}>
       <h1 className="mt-3">Reserve Your Car</h1>
-      <h3  className="mt-3 mb-3 text-danger">Check the Details</h3>
+      <h3  className="mt-3 mb-3" style={{color:"red"}}>Check the Details</h3>
       {booknow.length === 0 ? (
         <p className="mt-3 mb-3 fs-4 text-warning">No items in this Page !</p>
       ) : (
@@ -61,7 +61,8 @@ const CheckOut = () => {
                 </div>
                 <div className="row pt-4 w-100 h-50 mx-auto pb-4">
                   <div className="col text-center">
-                  <button className="btn fs-3 fw-bold btn-danger" onClick={() => removeFromBooknow(product)}>Remove</button>
+                  <button className="btn fs-4 text-light fw-bold" style={{backgroundColor:"red"}}
+                   onClick={() => removeFromBooknow(product)}>Remove</button>
                   </div>
                 </div>
                 </div>

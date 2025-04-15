@@ -27,7 +27,7 @@ const ChangeDriver = () => {
             </div>
             <div className="col my-auto text-start">
               <ul style={{listStyleType:"square"}}>
-                <li className='fw-bold text-danger fs-4'>{driverData}</li>
+                <li className='fw-bold fs-4'style={{color:"red"}}>{driverData}</li>
                 <li className="mt-3 fs-5 fw-bold">NAME : {firstName} <span>{lastName}</span></li>
                 <li className="mt-3 fs-5 fw-bold">DL Number : {dlNumber}</li>
               </ul>
@@ -39,9 +39,6 @@ const ChangeDriver = () => {
             </div>
           </div> 
         </div>
-      </div>
-      <div className="pt-5 text-end">
-        <Link to="/paymentoptions" className="btn btn-warning fs-3 mt-5 text-light fw-bold">Print Now</Link>
       </div>
     </div>
   );

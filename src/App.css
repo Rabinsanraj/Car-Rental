@@ -7,10 +7,3 @@
 .payment-card:hover {
       background-color: rgb(214, 245, 255) !important;
   }
-
-  @media (min-width : 320px) and (max-width:576px) {
-    #merun-Img{
-      background-size: 100px ;
-      background-position: center 170px,0px;
-    }
-  }

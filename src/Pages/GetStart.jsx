@@ -85,7 +85,7 @@ const GetStart = () => {
     <div className="container-fluid mt-4" style={{backgroundImage: `url(${Carouselbg})`,
         backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
          width: "100%",minHeight:"681px"}}>
-      <h2 className="text-black text-center fs-1 fw-bold pb-3 pt-5">Vehicle <span className="text-danger">Categories</span></h2>
+      <h2 className="text-black text-center fs-1 fw-bold pb-3 pt-5">Vehicle <span style={{color:"red"}}>Categories</span></h2>
       <div id="productCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" >
         <div className="carousel-inner">
           {products.map((product, index) => (
@@ -107,7 +107,7 @@ const GetStart = () => {
                </button>
              </div>
              <div className="col">
-               <h3 className="text-danger fs-4 text-center mt-1" id="count">{count}/day</h3></div>
+               <h3 className="fs-4 text-center mt-1" id="count" style={{color:"red"}}>{count}/day</h3></div>
              <div className="col-3">
                <button className="mt-1" type="button" style={{ background: "none", border: "none" }}>
                  <box-icon name="minus" size="30px" onClick={Decrease}></box-icon>

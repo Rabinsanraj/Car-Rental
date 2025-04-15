@@ -27,7 +27,7 @@ function Dashboard(){
             <Dashboardcard name="All Booking" count="50" icon={ <box-icon name='calendar' size='50px' color="#ffffff" 
             className="bg-warning p-4 rounded-circle" ></box-icon> } view2="View All"/>
             <Dashboardcard name="Wishlist" count="2" icon={<box-icon name='car'  size='50px' color="#ffffff" 
-            className="bg-danger p-4 rounded-circle" ></box-icon>} view3="View"/>
+            className=" p-4 rounded-circle"  ></box-icon>} view3="View"/>
         </div>
         </div>
         <Booking heading="All Booking" image={Car1} buttonstyle="btn bg-light btn-primary text-primary fw-bold rounded-pill" buttonname="Upcoming"/>
