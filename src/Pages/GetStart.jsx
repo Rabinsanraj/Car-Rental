@@ -119,11 +119,12 @@ const GetStart = () => {
                <h5 className="text-center pt-3 pb-3">{product.review}</h5>
              </div>
              <div className="col-4">
-               <button
-                  className={`btn ${wishlist.some((item) => item.id === product.id) ? "btn-danger" : "btn-outline-danger"}`}
-                  onClick={() => toggleWishlist(product)}>
-                  {wishlist.some((item) => item.id === product.id) ? "♥ Liked" : "♡ Like"}
-                </button>
+             <button className="text-light" style={{ backgroundColor: wishlist.some((item) => item.id === product.id) ? "red" : "transparent",
+          color: wishlist.some((item) => item.id === product.id) ? "white" : "red",
+          border: "2px solid red", borderRadius: "5px", padding: "5px 12px", 
+          transition: "0.3s ease",}}onClick={() => toggleWishlist(product)}>
+          {wishlist.some((item) => item.id === product.id) ? "♥ Liked" : "♡ Like"}
+          </button>
              </div>
            </div>
            <div className="row p-2">

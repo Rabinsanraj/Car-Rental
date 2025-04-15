@@ -81,10 +81,10 @@ const WishlistPage = () => {
            </div>
                 <div className="row mt-5">
                 <div className="col-md-6 mx-auto">
-                  <Link className="btn btn-dark" to="/rentnow">Rent Now</Link>
+                  <Link className="btn btn-dark text-light fw-bold" to="/rentnow">Rent Now</Link>
                 </div>
-                <div className="col-md-6 pt-3 mx-auto"> 
-                <button className="btn" style={{backgroundColor:"red"}} onClick={() => removeFromWishlist(product)}>Remove</button>
+                <div className="col-md-6 mx-auto"> 
+                <button className="btn text-light fw-bold" style={{backgroundColor:"red"}} onClick={() => removeFromWishlist(product)}>Remove</button>
                 </div>
                 </div>
               </div>

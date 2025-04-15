@@ -143,9 +143,9 @@ function BillingDetails() {
 
           <div className="row mt-4">
             <div className="col-md-6 text-center mb-3">
-              <Link type="submit" className='btn btn-warning text-light fs-3 fw-bold' to="/paymentoptions">
-                Confirm & Pay
-              </Link>
+            <button type="submit" className='btn btn-warning text-light fs-3 fw-bold'>
+            Confirm & Pay
+            </button>
             </div>
             <div className="col-md-6 text-center mb-2">
               <Link type="button" className='btn btn-dark text-light fs-3 fw-bold' to="/checkout">
