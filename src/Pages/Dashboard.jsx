@@ -22,12 +22,12 @@ function Dashboard(){
         </div>
         <div className="container-fluid" style={{width:"95%"}}>
         <div className="row mt-3">
-            <Dashboardcard name="My Booking" count="2" icon={ <box-icon name='calendar' size='50px' color="#ffffff"
-             className="bg-success p-4 rounded-circle" ></box-icon> } view1="View"/>
-            <Dashboardcard name="All Booking" count="50" icon={ <box-icon name='calendar' size='50px' color="#ffffff" 
-            className="bg-warning p-4 rounded-circle" ></box-icon> } view2="View All"/>
-            <Dashboardcard name="Wishlist" count="2" icon={<box-icon name='car'  size='50px' color="#ffffff" 
-            className=" p-4 rounded-circle"  ></box-icon>} view3="View"/>
+            <Dashboardcard name="My Booking" count="2" icon={ <box-icon name='calendar' size='35px' color="#ffffff"
+             className="bg-success p-3 rounded-circle" ></box-icon> } view1="View"/>
+            <Dashboardcard name="All Booking" count="50" icon={ <box-icon name='calendar' size='35px' color="#ffffff" 
+            className="bg-warning p-3 rounded-circle" ></box-icon> } view2="View All"/>
+            <Dashboardcard name="Wishlist" count="2" icon={ <box-icon name='cart-add' size='35px' color="#ffffff" 
+            className=" bg-dark p-3 rounded-circle"></box-icon> } view3="View"/>
         </div>
         </div>
         <Booking heading="All Booking" image={Car1} buttonstyle="btn bg-light btn-primary text-primary fw-bold rounded-pill" buttonname="Upcoming"/>
