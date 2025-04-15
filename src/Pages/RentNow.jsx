@@ -121,14 +121,14 @@ function RentNow() {
           ))}
         </div>
 
-        <div className="row gy-2">
+        <div className="row gy-2 pt-4">
           <div className="col-md-6">
-            <label htmlFor="sd" className="form-label fs-4 fw-bold">Starting Date</label>
+            <h3 htmlFor="sd" className="form-label text-center fs-4 fw-bold">Starting Date</h3>
             <input type="date" id="sd"className="form-control mx-auto fs-5" value={startDate}onChange={(e) =>
             setStartDate(e.target.value)}style={{height: "50px",border: "1px solid black",width: "70%",}}required/>
           </div>
           <div className="col-md-6">
-            <label htmlFor="st" className="form-label fs-4 fw-bold">Starting Time</label>
+            <h3 htmlFor="st" className="form-label text-center fs-4 fw-bold">Starting Time</h3>
             <input type="time" id="st" className="form-control mx-auto fs-5"
             value={startTime}onChange={(e) => setStartTime(e.target.value)}
             style={{height: "50px",border: "1px solid black",width: "70%",}}required/>
@@ -136,20 +136,20 @@ function RentNow() {
         </div>
         <div className="row gy-2">
           <div className="col-md-6">
-            <label htmlFor="ed" className="form-label fs-4 fw-bold">Ending Date</label>
+            <h3 htmlFor="ed" className="form-label fs-4 text-center fw-bold">Ending Date</h3>
             <input type="date" id="ed" className="form-control mx-auto fs-5" value={endDate}
               onChange={(e) => setEndDate(e.target.value)} style={{ height: "50px",
               border: "1px solid black",width: "70%",}}required/>
           </div>
           <div className="col-md-6">
-            <label htmlFor="et" className="form-label fs-4 fw-bold">Ending Time</label>
+            <h3 htmlFor="et" className="form-label text-center fs-4 fw-bold">Ending Time</h3>
             <input type="time"id="et"className="form-control mx-auto fs-5"value={endTime}onChange={(e) =>
              setEndTime(e.target.value)}style={{ height: "50px", border: "1px solid black", width: "70%"}}required/>
           </div>
         </div>
 
-        <div className="container pt-5 text-end pb-5">
-        <button  state={formData} className="btn text-light fs-2 btn-warning" onClick={handleContinue}>
+        <div className="container pt-5 text-center pb-5">
+        <button  state={formData} className="btn text-light fs-2 fw-bold btn-warning" onClick={handleContinue}>
         Continue Booking</button>
         </div>
       </div>

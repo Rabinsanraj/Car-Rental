@@ -136,18 +136,9 @@ function DriverDetails() {
           </div>
 
           <div className="container pt-5 d-flex align-items-center justify-content-center">
-          <button
-  type="button"
-  className="form-control text-center w-50 fs-3 fw-bold"
-  style={{
-    backgroundColor: formSubmitted ? "#ffc107" : "red", 
-    color: "white",
-    border: "none"
-  }}
-  onClick={handleSubmitPayment}
->
-  Go To Pay
-</button>
+          <button type="button" className="form-control text-center w-50 fs-3 fw-bold"
+          style={{backgroundColor: formSubmitted ? "#ffc107" : "red", 
+          color: "white", border: "none"}}onClick={handleSubmitPayment}>Go To Pay</button>
           </div>
         </form>
       </div>

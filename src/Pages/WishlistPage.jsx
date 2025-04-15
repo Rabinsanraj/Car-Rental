@@ -65,22 +65,22 @@ const WishlistPage = () => {
                 <div className="row">
                   <h1>Review</h1>
                 </div>
-                <div className="row m-3 bg-white rounded-pill" style={{ boxShadow: "inset 5px 5px 5px rgba(0,0,0,2)" }}>
-             <div className="col-3">
-               <button className="mt-1" type="button" style={{ background: "none", border: "none" }}>
+                <div className="row m-3 pt-2 bg-white rounded-pill g-0" style={{ boxShadow: "inset 5px 5px 5px rgba(0,0,0,2)" }}>
+             <div className="col">
+               <button type="button" style={{ background: "none", border: "none" }}>
                  <box-icon name="plus" size="30px" onClick={Increase}></box-icon>
                </button>
              </div>
              <div className="col">
-               <h3 className="fs-4 text-center mt-1" style={{color:"red"}} id="count">{count}/day</h3></div>
-             <div className="col-3">
-               <button className="mt-1" type="button" style={{ background: "none", border: "none" }}>
+               <h3 className="fs-4 mt-1 text-center" style={{color:"red"}} id="count">{count}/day</h3></div>
+             <div className="col">
+               <button type="button" style={{ background: "none", border: "none" }}>
                  <box-icon name="minus" size="30px" onClick={Decrease}></box-icon>
                </button>
              </div>
            </div>
                 <div className="row mt-5">
-                <div className="col-md-6 mx-auto">
+                <div className="col-md-6 pb-3 mx-auto">
                   <Link className="btn btn-dark text-light fw-bold" to="/rentnow">Rent Now</Link>
                 </div>
                 <div className="col-md-6 mx-auto"> 
