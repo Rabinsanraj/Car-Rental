@@ -1,6 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import "boxicons";
 import CarNav from '../Component/CarNav';
 import Dashboardcard from '../Component/Dashboardcard';
 import {Booking}from '../Component/Dashboardcard';
@@ -18,9 +15,9 @@ function Dashboard(){
         <CarNav name="User Dashboard" pagename1="Home" pagename2="About" link1="/" link2="/"/>
 
         <div className="container-fluid " style={{width:"95%"}}>
-            <h1 className='display-3 text-black fw-bold'>Dashboard</h1>
+            <h1 className='display-5 text-black fw-bold'>Dashboard</h1>
         </div>
-        <div className="container-fluid" style={{width:"95%"}}>
+        <div className="container-fluid pt-3" style={{width:"95%"}}>
         <div className="row mt-3">
             <Dashboardcard name="My Booking" count="2" icon={ <box-icon name='calendar' size='35px' color="#ffffff"
              className="bg-success p-3 rounded-circle" ></box-icon> } view1="View"/>

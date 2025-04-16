@@ -1,7 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import "boxicons";
-import { HashRouter,Routes,Route,Link} from "react-router-dom";
+import { Routes,Route,Link} from "react-router-dom";
 import Home from '../Pages/Home'
 import Services from "../Pages/Services"
 import Dashboard from '../Pages/Dashboard'
@@ -30,7 +27,7 @@ export const ScrollToTop = () =>{
 
 function Navebar (){
     return(
-      <HashRouter>
+      <>
       <nav className="navbar navbar-expand-lg pt-2 pb-2 navbar-light bg-light position-sticky top-0 z-3">
           <div className="container-fluid">
             <Link to="/"><box-icon name='car' color='#ffffff' size="25px" className="ms-5 p-2 rounded-circle"style={{backgroundColor:"red"}}></box-icon></Link>
@@ -68,7 +65,6 @@ function Navebar (){
       <Route path="/contact" element={<Contact />} />
       <Route path="/getstart" element={<GetStart />} />
 
-
       {/* Dashboard & Subpages */}
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/mybooking" element={<MyBooking />} />
@@ -81,12 +77,10 @@ function Navebar (){
       {/* Checkout Flow */}
       <Route path="/checkout" element={<CheckOut />} />
       <Route path="/billingdetails" element={<BillingDetails />} />
-
       <Route path='/changedriver' element={<ChangeDriver/>}/>
       
     </Routes>
-      </HashRouter>
-    
+    </>
     );
 }
 export default Navebar

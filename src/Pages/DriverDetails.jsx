@@ -1,6 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import "boxicons";
 import CarNav from '../Component/CarNav';
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
@@ -67,8 +64,7 @@ function DriverDetails() {
 
   return (
     <>
-      <CarNav name="Checkout" />
-
+      <CarNav name="Checkout"/>
       <div className="container-fluid text-center">
         <h1 className="fw-bold pt-3 pb-3">Driver Details</h1>
       </div>

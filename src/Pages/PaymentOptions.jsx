@@ -1,13 +1,9 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "boxicons";
 import CarNav from "../Component/CarNav";
 import Paypal from "../Images/paypal-logo.png";
 import Stripe from "../Images/Stripe-Logo.png";
 import Gpay from "../Images/google-pay.png";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import CarDriver from "../Images/CarDriver.jpg";
 import Car1 from "../Images/Car1.jpg";
 import { Row } from "./CheckOut";
 import ChangeDriver from "../Component/ChangeDriver";
@@ -52,7 +48,7 @@ function PaymentOptions() {
 
   return (
     <>
-      <CarNav name="Checkout" />
+      <CarNav name="Checkout"/>
       <div className="container-fluid" id="payoption" style={{ border: "2px solid black" }}>
         <h1 className="fs-2 fw-bold">Payment Options</h1>
         <h3 className="fs-4 pt-2">Choose your payment method</h3>

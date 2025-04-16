@@ -1,6 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import "boxicons";
 import { Link } from 'react-router-dom';
 import Car1 from '../Images/Car1.jpg'
 
@@ -18,7 +15,7 @@ function Dashboardcard (props){
 
     return(
         <>
-        <div className="col-lg-6 col-12">
+        <div className="col-lg-4 col-12">
                 <div className="card border-1 mb-4 rounded-0"style={{boxShadow:"5px 5px 10px red"}}>
                     <div className="card-title">
                         <div className="row pt-2">

@@ -35,7 +35,7 @@ const WishlistPage = () => {
 
   return (
     <>
-    <CarNav name="Our Cars" link1="/" link2="/" pagename1="Home" pagename2="About"/>
+    <CarNav name="Our Cars"/>
     <div className="container-fluid mt-4">
       <h2>Wishlist</h2>
       {wishlist.length === 0 ? (
@@ -44,35 +44,36 @@ const WishlistPage = () => {
         <div className="container-fluid">
           {wishlist.map((product) => (
           <div key={product.id}>
-            <div className="row pb-5 text-center mx-auto" >
+            <div className="row pb-3 text-center mx-auto border border-3" >
               <div className="col-md-3">
                 <img src={product.image} style={{width:"100%"}} />
               </div>
               <div className="col-md-5">
-                <div className="row"><h1>{product.name}</h1></div>
+                <div className="row"><h1 className="fs-3 pt-2 pb-5">{product.name}</h1></div>
                 <div className="row">
-                  <div className="col"><h4>{product.seats}</h4></div>
-                  <div className="col"><h4>{product.trans}</h4></div>
-                  <div className="col"><h4>{product.fuel}</h4></div>
+                  <div className="col"><h5>{product.seats}</h5></div>
+                  <div className="col"><h5>{product.trans}</h5></div>
+                  <div className="col"><h5>{product.fuel}</h5></div>
                 </div>
                 <div className="row">
-                  <div className="col"><h4>{product.year}</h4></div>
-                  <div className="col"><h4>{product.setting}</h4></div>
-                  <div className="col"><h4>{product.km}</h4></div>
+                  <div className="col"><h5>{product.year}</h5></div>
+                  <div className="col"><h5>{product.setting}</h5></div>
+                  <div className="col"><h5>{product.km}</h5></div>
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="row">
-                  <h1>Review</h1>
+                <div className="row pt-2">
+                  <h4>Review</h4>
+                  <h5>3.8</h5>
                 </div>
-                <div className="row m-3 pt-2 bg-white rounded-pill g-0" style={{ boxShadow: "inset 5px 5px 5px rgba(0,0,0,2)" }}>
+                <div className="row pt-2 bg-white rounded-pill g-0" style={{ boxShadow: "inset 5px 5px 5px rgba(0,0,0,2)" }}>
              <div className="col">
                <button type="button" style={{ background: "none", border: "none" }}>
                  <box-icon name="plus" size="30px" onClick={Increase}></box-icon>
                </button>
              </div>
              <div className="col">
-               <h3 className="fs-4 mt-1 text-center" style={{color:"red"}} id="count">{count}/day</h3></div>
+               <h3 className="fs-4  text-center" style={{color:"red"}} id="count">{count}/day</h3></div>
              <div className="col">
                <button type="button" style={{ background: "none", border: "none" }}>
                  <box-icon name="minus" size="30px" onClick={Decrease}></box-icon>

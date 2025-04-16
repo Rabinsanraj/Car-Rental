@@ -11,6 +11,7 @@ import Car8 from "../Images/Car8.jpg"
 import Car9 from "../Images/Car9.jpg"
 import Carouselbg from '../Images/Carouselbg.jpg'
 import { Link} from "react-router-dom";
+
 const products = [
   { id: 1, name: "Product 1", image:Car1, review:"Review: 3.8", seats:"4 Seats", 
     trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Settings", km:"27 K "},
@@ -81,7 +82,7 @@ const GetStart = () => {
 
   return (
     <>
-    <CarNav name="Our Cars" link1="/" link2="/" pagename1="Home" pagename2="About"/>
+    <CarNav name="Our Cars"/>
     <div className="container-fluid mt-4" style={{backgroundImage: `url(${Carouselbg})`,
         backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
          width: "100%",minHeight:"681px"}}>
@@ -119,7 +120,7 @@ const GetStart = () => {
                <h5 className="text-center pt-3 pb-3">{product.review}</h5>
              </div>
              <div className="col-4">
-             <button className="text-light" style={{ backgroundColor: wishlist.some((item) => item.id === product.id) ? "red" : "transparent",
+             <button className="text-light text-dark" style={{ backgroundColor: wishlist.some((item) => item.id === product.id) ? "red" : "transparent",
           color: wishlist.some((item) => item.id === product.id) ? "white" : "red",
           border: "2px solid red", borderRadius: "5px", padding: "5px 12px", 
           transition: "0.3s ease",}}onClick={() => toggleWishlist(product)}>

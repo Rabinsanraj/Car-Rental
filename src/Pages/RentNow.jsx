@@ -1,6 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "boxicons";
 import CarNav from "../Component/CarNav";
 import { useState } from "react";
 import { useNavigate} from "react-router-dom";
@@ -47,7 +44,7 @@ function RentNow() {
 
   return (
     <>
-      <CarNav name="Checkout" />
+      <CarNav name="Checkout"/>
       <div className="container-fluid">
         <h1 className="fs-2 fw-bold">Rental Type & Time</h1>
       </div>

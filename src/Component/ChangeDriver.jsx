@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ChangeDriver = () => {
   const location = useLocation();

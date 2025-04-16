@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import CarNav from "../Component/CarNav";
-import CarDriver from '../Images/CarDriver.jpg'
 import {Link} from "react-router-dom";
 import ChangeDriver from "../Component/ChangeDriver";
 
@@ -27,7 +26,7 @@ const CheckOut = () => {
 
   return (
     <>
-    <CarNav name="Checkout" link1="/" link2="/" pagename1="Home" pagename2="About"/>
+    <CarNav name="Checkout"/>
     <div className="container-fluid mt-4 pb-4" style={{border:"3px solid black", width:"95%"}}>
       <h1 className="mt-3">Reserve Your Car</h1>
       <h3  className="mt-3 mb-3" style={{color:"red"}}>Check the Details</h3>

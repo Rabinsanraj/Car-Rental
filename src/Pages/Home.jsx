@@ -3,7 +3,6 @@ import KeyInHand from "../Images/keyinhand.jpg"
 import ManONCar from "../Images/topofcar.jpg"
 import CarGray from "../Images/Car-gray.jpg"
 import Merun from "../Images/merun.png"
-import 'bootstrap/dist/css/bootstrap.min.css'
 import CarPassing from '../Component/CarPassing'
 import {LocationAPI} from '../Component/LocationAPI'
 import { CarAPI } from "../Component/CarAPI"

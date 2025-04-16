@@ -1,6 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import "boxicons";
 import CarNav from '../Component/CarNav';
 import { Link, useNavigate } from 'react-router-dom';
 import { LocationAPI } from '../Component/LocationAPI';
