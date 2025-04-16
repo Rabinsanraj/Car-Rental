@@ -57,34 +57,34 @@ return (
         </div>
         <div className="col-sm-6 col-lg-2">
             <div className="row">
-                <h3 className='fs-5 fw-bold' style={{color:"#600047"}}>Ferrari 458 MM Speciale</h3>
+                <h3 className='fs-6 fw-bold' style={{color:"#600047"}}>Ferrari 458 MM Speciale</h3>
             </div>
             <div className="row">
-            <h3 className='fs-5 fw-bold'>Rent Type : Hourly</h3>
-            </div>
-        </div>
-        <div className="col-sm-6 col-lg-3">
-            <div className="row">
-            <h3 className='fs-5 fw-bold'>Start Date</h3>
-            </div>
-            <div className="row">
-            <h3 className='fs-5 fw-bold'>30 March 2025, 11:30 AM</h3>
+            <h3 className='fs-6 fw-bold'>Rent Type : Hourly</h3>
             </div>
         </div>
         <div className="col-sm-6 col-lg-3">
             <div className="row">
-            <h3 className='fs-5 fw-bold'>End Date</h3>
+            <h3 className='fs-6 fw-bold'>Start Date</h3>
             </div>
             <div className="row">
-            <h3 className='fs-5 fw-bold'>30 March 2025, 2:30 PM</h3>
+            <h3 className='fs-6 fw-bold'>30 March 2025, 11:30 AM</h3>
+            </div>
+        </div>
+        <div className="col-sm-6 col-lg-3">
+            <div className="row">
+            <h3 className='fs-6 fw-bold'>End Date</h3>
+            </div>
+            <div className="row">
+            <h3 className='fs-6 fw-bold'>30 March 2025, 2:30 PM</h3>
             </div>
         </div>
         <div className="col-md-6 col-lg-2 text-center">
             <div className="row">
-                <h3 className='fs-5 fw-bold'>Price</h3>
+                <h3 className='fs-6 fw-bold'>Price</h3>
             </div>
             <div className="row">
-                <h1 className='fs-5 fw-bold'>2000</h1>
+                <h1 className='fs-6 fw-bold'>2000</h1>
             </div>
             <div className="row justify-content-center align-items-center">
                 <button type='button' className={props.buttonstyle}>{props.buttonname}</button>
