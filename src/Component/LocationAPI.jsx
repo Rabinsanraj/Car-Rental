@@ -39,9 +39,10 @@ export const LocationAPI = (props) => {
   return (
     <div>
       <input className={props.inputstyle} type="text" placeholder={props.placeholder}
-       value={inputPlaces} onChange={handleInputChange}  style={props.style}/>
+       value={inputPlaces} onChange={handleInputChange}/>
       {suggestions.length > 0 && (
-        <ul style={{ marginTop: "3px", maxHeight: "auto", maxWidth: "auto", listStyle: "none",}}>
+        <ul style={{ marginTop: "3px", maxHeight: "auto", maxWidth: "auto", listStyle: "none",
+          position:"absolute",zIndex:"5",width:"100%"}}>
           {suggestions.map((city, index) => (
             <li key={index} onClick={() => selectSuggestion(city)}
               style={{ backgroundColor: "white", textAlign: "start", cursor: "pointer", padding: "5px",

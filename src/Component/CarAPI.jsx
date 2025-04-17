@@ -39,13 +39,14 @@ export const CarAPI = (props) => {
   return (
     <div>
       <input className={props.inputstyle} type="text" placeholder={props.placeholder}
-       value={inputCars} onChange={handleInputChange}  style={props.style}/>
+       value={inputCars} onChange={handleInputChange}/>
       {suggestions.length > 0 && (
-        <ul style={{ marginTop: "3px", maxHeight: "auto", maxWidth: "auto", listStyle: "none",}}>
+        <ul style={{ marginTop: "2px", maxHeight: "auto",width:"auto", listStyle: "none",
+          position:"absolute",zIndex:"5",width:"100%"}}>
           {suggestions.map((car, index) => (
             <li key={index} onClick={() => selectSuggestion(car)}
               style={{ backgroundColor: "white", textAlign: "start", cursor: "pointer", padding: "5px",
-                borderBottom: "2px solid #ddd"}}>
+                borderBottom: "2px solid #ddd",}}>
               {car}
             </li>
           ))}

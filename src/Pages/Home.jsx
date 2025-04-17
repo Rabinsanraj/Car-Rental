@@ -4,114 +4,110 @@ import ManONCar from "../Images/topofcar.jpg"
 import CarGray from "../Images/Car-gray.jpg"
 import Merun from "../Images/merun.png"
 import CarPassing from '../Component/CarPassing'
-import {LocationAPI} from '../Component/LocationAPI'
+import { LocationAPI } from '../Component/LocationAPI'
 import { CarAPI } from "../Component/CarAPI"
-import { Link } from "react-router-dom"
-import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom"
+import React, { useState } from "react";
 
 function Home() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
-    carType: "",
-    pickupLocation: "",
-    dropLocation: ""});
+    carType: '',
+    pickupLocation: '',
+    dropLocation: '',
+    pickupDate: '',
+    pickupTime: '',
+    dropDate: '',
+    dropTime: ''
+  });
 
-  const [errors, setErrors] = useState({
-    carType: "",
-    pickupLocation: "",
-    dropLocation: ""});
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const validateForm = () => {
-    const newErrors = {};
-    let isValid = true;
-
-    Object.keys(formData).forEach((field) => {
-      if (!formData[field]) {
-        newErrors[field] = `${field} is required.`;
-        isValid = false;
-      }
-    });
-
-    setErrors(newErrors);
-    return isValid;
+  const handleInputChange = (name, value) => {
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      alert("Form is valid, proceeding...");
+
+    const {
+      carType,
+      pickupLocation,
+      dropLocation,
+      pickupDate,
+      pickupTime,
+      dropDate,
+      dropTime
+    } = formData;
+
+    if (!carType || !pickupLocation || !dropLocation || !pickupDate || 
+      !pickupTime || !dropDate || !dropTime) {
+      navigate("/getstart", { state: formData });
+      return;
     }
   };
- 
+
   return (
-    
     <>
-    <div className="container-fluid" style={{backgroundImage: `url(${Car})`,
-    backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
-     width: "100%",minHeight:"700px"}}>
-    <div className="container-fluid  pb-5 d-flex">
-    <div className="w-auto pt-4">
-      <div className="card-body h1-form p-4"  style={{ width:"auto",backgroundColor:"#050563",borderRadius:"15px",opacity:"90%",
-        margin:"auto", marginTop:"50px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.6)"}}>
-        <h5 className="card-title fs-4 fw-bold text-center text-white mb-4">CONTINUE CARE RESERVATION</h5>
-        <form onSubmit={handleSubmit}>
-      <div className="mb-4">
-        <CarAPI name="carType" inputstyle="form-control"  placeholder="Enter Your Car Type"
-        value={formData.carType} onChange={handleChange}/>
-        {errors.carType && <small style={{color:"red"}}>{errors.carType}</small>}
-      </div>
-      <div className="mb-4">
-        <LocationAPI name="pickupLocation" inputstyle="form-control" placeholder="Enter Pickup Location" 
-        value={formData.pickupLocation} onChange={handleChange}/>
-        {errors.pickupLocation && <small style={{color:"red"}}>{errors.pickupLocation}</small>}
-      </div>
-      <div className="mb-4">
-        <LocationAPI name="dropLocation" inputstyle="form-control" placeholder="Enter Drop Location" 
-        value={formData.dropLocation} onChange={handleChange}/>
-        {errors.dropLocation && <small style={{color:"red"}}>{errors.dropLocation}</small>}
+      <div className="container-fluid" style={{
+        backgroundImage: `url(${Car})`,
+        backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat",
+        width: "100%", minHeight: "auto"}}>
+        <div className="container-fluid  pb-5 d-flex">
+          <div className="w-auto pt-4">
+            <div className="card-body h1-form p-4" style={{
+              width: "auto", backgroundColor: "#050563", borderRadius: "15px", opacity: "90%",
+               boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.6)"}}>
+              <h5 className="card-title fs-4 fw-bold text-center text-white mb-4">CONTINUE CARE RESERVATION</h5>
+              <form onSubmit={handleSubmit}>
+                <div className="mb-4" style={{position:"relative"}}>
+                  <CarAPI name="carType" inputstyle="form-control" placeholder="Enter Your Car Type"
+                    onChange={(value) => handleInputChange("carType", value)} />
+                </div>
+                <div className="mb-4"style={{position:"relative"}}>
+                  <LocationAPI name="pickupLocation" inputstyle="form-control" placeholder="Enter Pickup Location"
+                    onChange={(value) => handleInputChange("pickupLocation", value)} />
+                </div>
+                <div className="mb-4"style={{position:"relative"}}>
+                  <LocationAPI name="dropLocation" inputstyle="form-control" placeholder="Enter Drop Location"
+                    onChange={(value) => handleInputChange("dropLocation", value)} />
+                </div>
+
+                <div className="row pb-4">
+                  <div className="col-6 col-md-6 text-center">
+                    <label htmlFor="pickupDate" className="form-label text-white">Pickup Date</label>
+                    <input type="date" className="form-control" required
+                      onChange={(e) => handleInputChange("pickupDate", e.target.value)} />
+                  </div>
+                  <div className="col-6 col-md-6 text-center">
+                    <label htmlFor="pickupTime" className="form-label text-white">Pickup Time</label>
+                    <input type="time" className="form-control" required
+                      onChange={(e) => handleInputChange("pickupTime", e.target.value)} />
+                  </div>
+                </div>
+
+                <div className="row pb-4">
+                  <div className="col-6 col-md-6 text-center">
+                    <label htmlFor="dropDate" className="form-label text-white">Drop Date</label>
+                    <input type="date" className="form-control" required
+                      onChange={(e) => handleInputChange("dropDate", e.target.value)} />
+                  </div>
+                  <div className="col-6 col-md-6 text-center">
+                    <label htmlFor="dropTime" className="form-label text-white">Drop Time</label>
+                    <input type="time" className="form-control" required
+                      onChange={(e) => handleInputChange("dropTime", e.target.value)} />
+                  </div>
+                </div>
+
+                <button type="submit" className="btn fw-bold fs-5 text-white w-100" style={{ backgroundColor: "red" }}>
+                  Book Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="row pb-4">
-        <div className="col-6 col-md-6 text-center">
-          <label htmlFor="pickupDate" className="form-label text-white">Pickup Date</label>
-          <input type="date" className="form-control" style={{width:"100%"}}required/>
-        </div>
-        <div className="col-6 col-md-6 text-center">
-          <label htmlFor="pickupTime" className="form-label text-white">Pickup Time</label>
-          <input type="time" className="form-control" placeholder="Enter Drop Location"
-           style={{width:"100%"}}required/>
-        </div>
-      </div>
-
-      <div className="row pb-4">
-        <div className="col-6 col-md-6 text-center">
-          <label htmlFor="dropDate" className="form-label text-white">Drop Date</label>
-          <input type="date" className="form-control" placeholder="Enter Drop Location"
-           style={{width:"100%"}} required/>
-          
-        </div>
-        <div className="col-6 col-md-6 text-center">
-          <label htmlFor="dropTime" className="form-label text-white">Drop Time</label>
-          <input type="time" className="form-control" placeholder="Enter Drop Location" 
-          style={{width:"100%"}}required/>
-        </div>
-      </div>
-
-      <Link type="submit" className="btn fw-bold fs-5 text-white w-100" style={{backgroundColor:"red"}} to="/getstart" onClick={handleSubmit}>
-      Book Now</Link>
-    </form>
-      </div>
-    </div>
-    </div>
-    </div>
-    {/* ---------------------------------------------------------------- */}
+          {/* ---------------------------------------------------------------- */}
 
     <div className="w-100 pt-4" style={{backgroundImage: `url(${Merun})`, backgroundColor:"#e4e4e4",
     backgroundSize:"600px",backgroundPosition:"center 170px,0px",backgroundRepeat:"no-repeat",
@@ -211,41 +207,45 @@ function Home() {
       </div>
     </div>
    </div>
-    <CarPassing/>
+      <CarPassing />
 
-    <div className="container-fluid mt-1 mb-3" style={{backgroundImage: `url(${CarGray})`,
-    backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
-     width: "100%"}}>
-      <div className="text-container text-end" style={{paddingTop:"100px",paddingBottom:"100px", textShadow:"3px 3px 5px black"}}>
-        <h1 className="display-1 fw-bold  lh-base" style={{color:"red"}}>Rent Your Car</h1>
-        <h1 className="display-6 fw-bold  lh-base" style={{color:"white"}}>Intrerested in Renting ?</h1>
-        <h1 className="display-6 fw-bold  lh-base" style={{color:"white"}}>Don't hesitate and <span style={{color:"red"}}>SEND </span> 
-        us a <span className="display-4 fw-bold  lh-base" style={{color:"red"}}>MESSAGE</span></h1>
-        <div className="row row-cols-md-2 pt-5">
-          <div className="col">
-            <div className="row">
-            <div className="col-4"></div>
-            <div className="col"><button className="btn text-white fs-4 fw-bold p-auto" style={{backgroundColor:"#ff1b1b",
-            borderRadius:"25px",textShadow:"3px 3px 5px black"}}>Whatsapp</button></div>
-            <div className="col"></div>
+      <div className="container-fluid mt-1 mb-3" style={{
+        backgroundImage: `url(${CarGray})`,
+        backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat",
+        width: "100%"
+      }}>
+        <div className="text-container text-end" style={{
+          paddingTop: "100px", paddingBottom: "100px", textShadow: "3px 3px 5px black"
+        }}>
+          <h1 className="display-1 fw-bold  lh-base" style={{ color: "red" }}>Rent Your Car</h1>
+          <h1 className="display-6 fw-bold  lh-base" style={{ color: "white" }}>Intrerested in Renting ?</h1>
+          <h1 className="display-6 fw-bold  lh-base" style={{ color: "white" }}>Don't hesitate and <span style={{ color: "red" }}>SEND </span>
+            us a <span className="display-4 fw-bold  lh-base" style={{ color: "red" }}>MESSAGE</span></h1>
+          <div className="row row-cols-md-2 pt-5">
+            <div className="col">
+              <div className="row">
+                <div className="col-4"></div>
+                <div className="col"><button className="btn text-white fs-4 fw-bold p-auto" style={{
+                  backgroundColor: "#ff1b1b",
+                  borderRadius: "25px", textShadow: "3px 3px 5px black"
+                }}>Whatsapp</button></div>
+                <div className="col"></div>
+              </div>
             </div>
-          </div>
-          <div className="col">
-            <div className="row">
-            <div className="col-4"></div>
-            <div className="col"><Link to="contact" className="btn text-white fs-4 fw-bold p-auto" style={{backgroundColor:"#ff1b1b",
-            borderRadius:"25px"}}>Contactus</Link></div>
-            <div className="col-4"></div>
+            <div className="col">
+              <div className="row">
+                <div className="col-4"></div>
+                <div className="col"><Link to="contact" className="btn text-white fs-4 fw-bold p-auto" style={{
+                  backgroundColor: "#ff1b1b",
+                  borderRadius: "25px"
+                }}>Contactus</Link></div>
+                <div className="col-4"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-     </div>
     </>
   );
-  setTimeout(()=>{
-    console.log=()=>{}
-  },5000)
- 
 }
 export default Home;
