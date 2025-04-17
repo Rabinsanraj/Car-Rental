@@ -68,21 +68,21 @@ function Contact(){
                     </div>
                 </div>
                 <div className="col">
-                <div className="card mt-1 pb-3" style={{border:"none", backgroundColor:"#dfdfdf",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
-                      <div className="card-body  text-center bg-white ms-4 me-4 mt-3" style={{borderRadius:"40px", boxShadow:"5px 5px 10px rgba(0,0,0,0.5) "}}>
-                        <h3 className="card-title">Our Branch 1</h3>
-                        <p className="fs-6">Address : <box-icon name='location-plus' size="15px" color='#ff0000'></box-icon></p>
-                        <p>Telephone : <box-icon name='phone' color='#ff0000'></box-icon></p>
+                <div className="card py-4" style={{border:"none", backgroundColor:"#dfdfdf",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
+                      <div className="card-body text-center bg-white mx-auto" style={{borderRadius:"40px",width:"80%", boxShadow:"5px 5px 10px rgba(0,0,0,0.5) "}}>
+                        <h4 className="card-title">Our Branch 1</h4>
+                        <p className="fw-bold"style={{color:"red"}}>Address :</p>
+                        <p className="fw-bold"style={{color:"red"}}>Telephone : </p>
                       </div>
-                      <div className="card-body  text-center bg-white ms-4 me-4 mt-3"style={{borderRadius:"40px", boxShadow:"5px 5px 10px rgba(0,0,0,0.5)"}}>
-                        <h3 className="card-title">Our Branch 2</h3>
-                        <p className="fs-6">Address : <box-icon name='location-plus' size="15px" color='#ff0000'></box-icon></p>
-                        <p>Telephone : <box-icon name='phone' color='#ff0000'></box-icon></p>
+                      <div className="card-body text-center bg-white mx-auto mt-3"style={{borderRadius:"40px",width:"80%", boxShadow:"5px 5px 10px rgba(0,0,0,0.5)"}}>
+                        <h4 className="card-title">Our Branch 2</h4>
+                        <p className="fw-bold"style={{color:"red"}}>Address :</p>
+                        <p className="fw-bold"style={{color:"red"}}>Telephone : </p>
                       </div>
-                      <div className="card-body text-center bg-white ms-4 me-4 mt-3"style={{borderRadius:"40px",  boxShadow:"5px 5px 10px rgba(0,0,0,0.5) "}}>
-                        <h3 className="card-title">Our Branch 3</h3>
-                        <p className="fs-6">Address : <box-icon name='location-plus' size="15px" color='#ff0000'></box-icon></p>
-                        <p>Telephone : <box-icon name='phone'color='#ff0000'></box-icon></p>
+                      <div className="card-body text-center bg-white mx-auto mt-3"style={{borderRadius:"40px",width:"80%",  boxShadow:"5px 5px 10px rgba(0,0,0,0.5) "}}>
+                        <h4 className="card-title">Our Branch 3</h4>
+                        <p className="fw-bold"style={{color:"red"}}>Address : </p>
+                        <p className="fw-bold"style={{color:"red"}}>Telephone : +91 0000000000</p>
                       </div>
                     </div> 
                 </div>

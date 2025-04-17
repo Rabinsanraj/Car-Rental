@@ -16,25 +16,24 @@ function Dashboardcard (props){
     return(
         <>
         <div className="col-lg-4 col-12">
-                <div className="card border-1 mb-4 rounded-0"style={{boxShadow:"5px 5px 10px red"}}>
+                <div className="card border-1 mb-4"style={{boxShadow:"7px 7px 10px red",
+                     borderRadius:"20px", height:"fit-content"}}>
                     <div className="card-title">
-                        <div className="row pt-2">
+                        <div className="row pt-1">
                             <div className="col-8">
-                            <h1 className='fs-2 ms-3 mt-3'>{props.name}</h1>
+                            <h2 className='ms-3 mt-2'>{props.name}</h2>
                             <div className="row">
-                                <h1 className='display-6 ms-3 fw-bold'>{props.count}</h1>
+                                <h2 className='ms-3 fw-bold'>{props.count}</h2>
                             </div>
-                            </div>
-                            <div className="col-4 text-center">
-                            <span className='ms-auto'>{props.icon}</span>
                             </div>
                         </div>
                         <hr className='w-75 mx-auto border-3'></hr>
                     </div>
-                    <div className="row w-75 pt-2 pb-5">
-                        <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='/mybooking'>{props.view1}</Link>
-                        <a className='fs-4 ms-3 fw-bold text-decoration-none text-black' onClick={()=>scrollToAllBooking("allBooking")}>{props.view2}</a>
-                        <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='/wishlistpage'>{props.view3}</Link>
+                    <div className="row w-75 pb-5">
+                        <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='/mybooking'>{props.view1}<span>{props.icon1}</span></Link>
+                        <a className='fs-4 ms-3 fw-bold text-decoration-none text-black' onClick={()=>scrollToAllBooking("allBooking")}>
+                            {props.view2}<span>{props.icon2}</span></a>
+                        <Link className='fs-4 ms-3 fw-bold text-decoration-none text-black' to='/wishlistpage'>{props.view3}<span className='g-1'>{props.icon3}</span></Link>
                     </div>
                 </div>
             </div>
