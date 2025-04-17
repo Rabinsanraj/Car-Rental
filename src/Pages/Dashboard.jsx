@@ -17,8 +17,8 @@ function Dashboard(){
         <div className="container-fluid " style={{width:"95%"}}>
             <h1 className='display-5 text-black fw-bold'>Dashboard</h1>
         </div>
-        <div className="container-fluid pt-3" style={{width:"95%"}}>
-        <div className="row mt-3">
+        <div className="container-fluid pt-3" style={{width:"85%"}}>
+        <div className="row d-flex justify-content-center align-items-center mt-3">
             <Dashboardcard name="My Booking" count="2" icon={ <box-icon name='calendar' size='35px' color="#ffffff"
              className="bg-success p-3 rounded-circle" ></box-icon> } view1="View"/>
             <Dashboardcard name="All Booking" count="50" icon={ <box-icon name='calendar' size='35px' color="#ffffff" 
