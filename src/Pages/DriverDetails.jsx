@@ -1,5 +1,5 @@
 import CarNav from '../Component/CarNav';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 
 function DriverDetails() {
@@ -8,10 +8,28 @@ function DriverDetails() {
   const [lastName, setLastName] = useState("");
   const [dlNumber, setDlNumber] = useState("");
   const [dlImage, setDlImage] = useState(null);
-  const [dlImageBase64, setDlImageBase64] = useState(""); // New state for base64
+  const [dlImageBase64, setDlImageBase64] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
-
   const navigate = useNavigate();
+
+  // Load from localStorage on mount
+  useEffect(() => {
+    const savedData = JSON.parse(localStorage.getItem("driverData"));
+    if (savedData) {
+      setSelectedDriver(savedData.selectedDriver || "");
+      setFirstName(savedData.firstName || "");
+      setLastName(savedData.lastName || "");
+      setDlNumber(savedData.dlNumber || "");
+      setDlImageBase64(savedData.dlImage || "");
+    }
+  }, []);
+
+  // Save to localStorage when data changes
+  useEffect(() => {
+    const driverData = { selectedDriver, firstName, lastName, dlNumber, dlImage: dlImageBase64 };
+    localStorage.setItem("driverData", JSON.stringify(driverData));
+  }, [selectedDriver, firstName, lastName, dlNumber, dlImageBase64]);
+// console.log()
   const handleSelect = (driverType) => {
     setSelectedDriver(driverType);
   };
@@ -24,8 +42,8 @@ function DriverDetails() {
       return;
     }
 
-    const driverData = {selectedDriver,firstName,lastName,dlNumber,dlImage: dlImageBase64,};
-
+    const driverData = { selectedDriver, firstName, lastName, dlNumber, dlImage: dlImageBase64 };
+    localStorage.setItem("driverData", JSON.stringify(driverData));
     navigate('/changedriver', { state: driverData });
     setFormSubmitted(true);
   };
@@ -43,14 +61,12 @@ function DriverDetails() {
       return;
     }
 
-    const driverData = {selectedDriver,firstName,lastName,dlNumber,dlImage: dlImageBase64,};
-
+    const driverData = { selectedDriver, firstName, lastName, dlNumber, dlImage: dlImageBase64 };
     navigate('/paymentoptions', { state: driverData });
   };
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
-    // console.log(file)
     setDlImage(file);
 
     const reader = new FileReader();
@@ -58,13 +74,13 @@ function DriverDetails() {
       setDlImageBase64(reader.result);
     };
     if (file) {
-      reader.readAsDataURL(file); // Convert to base64 string
+      reader.readAsDataURL(file);
     }
   };
 
   return (
     <>
-      <CarNav name="Checkout"/>
+       <CarNav name="Checkout"/>
       <div className="container-fluid text-center">
         <h1 className="fw-bold pt-3 pb-3">Driver Details</h1>
       </div>
