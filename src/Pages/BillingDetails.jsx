@@ -9,10 +9,6 @@ function BillingDetails() {
   const countryRef = useRef(null);
   const cityRef = useRef(null);
 
-  const BacktoDetails = () => {
-    navigate(-1);
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = formRef.current;
@@ -140,9 +136,9 @@ function BillingDetails() {
 
           <div className="row mt-4">
             <div className="col-md-6 text-center mb-3">
-            <button type="submit" className='btn btn-warning text-light fs-3 fw-bold'>
+            <Link type="submit" to="/paymentoptions"className='btn btn-warning text-light fs-3 fw-bold'>
             Confirm & Pay
-            </button>
+            </Link>
             </div>
             <div className="col-md-6 text-center mb-2">
               <Link type="button" className='btn btn-dark text-light fs-3 fw-bold' to="/checkout">

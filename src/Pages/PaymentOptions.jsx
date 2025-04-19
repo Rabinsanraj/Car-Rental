@@ -5,17 +5,15 @@ import Stripe from "../Images/Stripe-Logo.png";
 import Gpay from "../Images/google-pay.png";
 import Car1 from "../Images/Car1.jpg";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import ChangeDriver from "../Component/ChangeDriver";
-
+import ChangeDriver, { RentNowDetails } from "../Component/ChangeDriver";
 
 function Row({ detail, amount }) {
   return (
     <div className="row">
-      <div className="col">
-        <p className="fs-4">{detail}</p>
+      <div className="col text-start ms-4 pt-2">
+        <p className="fs-4 fw-bold">{detail}</p>
       </div>
-      <div className="col text-end">
+      <div className="col text-end me-3 pt-2">
         <p className="fs-4">{amount}</p>
       </div>
     </div>
@@ -26,27 +24,10 @@ function PaymentOptions() {
   const [selectedMethod, setSelectedMethod] = useState("");
   const [showFinalBill, setShowFinalBill] = useState(false);
 
-  const location = useLocation();
-  const {
-    selectedDelivery,
-    bookingType,
-    startDate,
-    endDate,
-    startTime,
-    endTime,
-    currentLocation,
-    returnLocation,
-    selectedDriver,
-    firstName,
-    lastName,
-    dlNumber,
-    dlImage,
-  } = location.state || {};
-
   const handleSelect = (method) => {
     setSelectedMethod(method);
   };
-
+  
   const handleConfirmPayment = () => {
     if (selectedMethod !== "") {
       setShowFinalBill(true);
@@ -68,7 +49,11 @@ function PaymentOptions() {
   return (
     <>
       <CarNav name="Checkout" />
-      <div className="container-fluid" id="payoption" style={{ border: "2px solid black" }}>
+      <div
+        className="container-fluid"
+        id="payoption"
+        style={{ border: "2px solid black" }}
+      >
         <h1 className="fs-2 fw-bold">Payment Options</h1>
         <h3 className="fs-4 pt-2">Choose your payment method</h3>
         <div className="container-fluid pt-4">
@@ -166,62 +151,52 @@ function PaymentOptions() {
         </div>
 
         <div className="container d-flex justify-content-center align-items-center pt-5 pb-5">
-          <button className="btn btn-warning fs-2 fw-bold text-light" onClick={handleConfirmPayment}>
+          <button
+            className="btn btn-warning fs-2 fw-bold text-light"
+            onClick={handleConfirmPayment}>
             Confirm & Pay
           </button>
         </div>
-
-        {showFinalBill && (
-          <FinalBill
-            selectedDelivery={selectedDelivery}
-            bookingType={bookingType}
-            startDate={startDate}
-            endDate={endDate}
-            startTime={startTime}
-            endTime={endTime}
-            currentLocation={currentLocation}
-            returnLocation={returnLocation}
-            selectedDriver={selectedDriver}
-            firstName={firstName}
-            lastName={lastName}
-            dlNumber={dlNumber}
-            dlImage={dlImage}
-            selectedMethod={selectedMethod}
-          />
-        )}
+        {showFinalBill && (<FinalBill/>)}
       </div>
     </>
   );
 }
 
 function FinalBill({
-  selectedDelivery,
-  bookingType,
-  startDate,
-  endDate,
-  startTime,
-  endTime,
-  currentLocation,
-  returnLocation,
-  selectedDriver,
-  firstName,
-  lastName,
-  dlNumber,
-  dlImage,
   selectedMethod,
 }) {
   return (
     <>
-      <div className="container-fluid text-center mx-auto mt-5 mb-5 pt-5 pb-5" id="finalbill" style={{ border: "2px solid black" }}>
+      <div
+        className="container-fluid text-center mx-auto mt-5 mb-5 pt-5 pb-5"
+        id="finalbill"
+        style={{ border: "2px solid black" }}
+      >
         <h1>
-          <box-icon name="check-double" color="white" size="70px" className="bg-success p-1 rounded-circle"></box-icon>
+          <box-icon
+            name="check-double"
+            color="white"
+            size="70px"
+            className="bg-success p-1 rounded-circle"
+          ></box-icon>
         </h1>
-        <h1 className="fs-2 fw-bold pt-3">Thank you! Your Booking Has Been Received</h1>
+        <h1 className="fs-2 fw-bold pt-3">
+          Thank you! Your Booking Has Been Received
+        </h1>
 
-        <div className="container-fluid mx-auto mt-5 pt-1 pb-1" style={{ backgroundColor: "#a5eed1" }}>
+        <div
+          className="container-fluid mx-auto mt-5 pt-1 pb-1"
+          style={{ backgroundColor: "#a5eed1" }}
+        >
           <div className="row d-flex justify-content-center align-items-center">
             <div className="col-md-3 h-50">
-              <img src={Car1} alt="" className="w-75" style={{ borderRadius: "30px" }} />
+              <img
+                src={Car1}
+                alt=""
+                className="w-75"
+                style={{ borderRadius: "30px" }}
+              />
             </div>
             <div className="col-md-5 pt-5">
               <h1 className="fs-2 fw-bold">Chevrolet Camaro</h1>
@@ -238,39 +213,9 @@ function FinalBill({
 
         <div className="container mt-5 mx-auto">
           <div className="row">
-            <div className="col-md-6 text-start" style={{ border: "2px solid black" }}>
-              <div className="row">
-                <h1 className="col fw-bold fs-3 pt-3 pb-3">Location & Time</h1>
-                <Link className="col fw-bold pt-4 pb-2 text-end pe-5" to="/rentnow">
-                  <box-icon type="solid" name="edit" color="#787878" size="40px"></box-icon>
-                </Link>
-              </div>
-              <hr style={{ border: "2px solid black" }} />
-              <ul>
-                <li className="fs-4 fw-bold">Booking Type</li>
-                <li className="fs-5">{selectedDelivery}</li>
-              </ul>
-              <ul>
-                <li className="fs-4 fw-bold">Rental Type</li>
-                <li className="fs-5">{bookingType}</li>
-              </ul>
-              <ul>
-                <li className="fs-4 fw-bold">Delivery Location & Time</li>
-                <li className="fs-5">{currentLocation}</li>
-                <li className="fs-5">
-                  {startDate} - {startTime}
-                </li>
-              </ul>
-              <ul>
-                <li className="fs-4 fw-bold">Return Location & Time</li>
-                <li className="fs-5">{returnLocation}</li>
-                <li className="fs-5">
-                  {endDate} - {endTime}
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-md-5 mt-3 mx-auto" style={{ border: "3px solid black", borderRadius: "20px" }}>
+            <RentNowDetails/>
+            <div className="col-md-5 mt-3 mx-auto"
+              style={{ border: "3px solid black", borderRadius: "20px" }}>
               <Row detail="Rental Charge" amount="+300" />
               <Row detail="Service Fee" amount="+60" />
               <Row detail="Insurance" amount="+200" />
@@ -295,14 +240,19 @@ function FinalBill({
               <ul>
                 <li className="text-start fs-3 fw-bold">Payment Mode</li>
                 <li className="text-start fs-4">
-                  {selectedMethod === "new_card" ? "New Card" : selectedMethod?.toUpperCase()}
+                  {selectedMethod === "new_card"
+                    ? "New Card"
+                    : selectedMethod?.toUpperCase()}
                 </li>
                 <li className="text-start fs-3 fw-bold">Transaction ID</li>
                 <li className="text-start fs-4">#13245454455454</li>
               </ul>
             </div>
 
-            <div className="col-md-5 mx-auto my-auto" style={{ border: "1px solid black", height: "fit-content" }}>
+            <div
+              className="col-md-5 mx-auto my-auto"
+              style={{ border: "1px solid black", height: "fit-content" }}
+            >
               <div className="row">
                 <h2 className="text-start pt-4">Billing Information</h2>
               </div>
@@ -310,7 +260,9 @@ function FinalBill({
               <ul>
                 <li className="text-start fw-bold">Darren Jurel</li>
                 <li className="text-start fw-bold">Mak Infotech </li>
-                <li className="text-start fw-bold">1230 E Springs Rd, Los Angeles, CA, USA</li>
+                <li className="text-start fw-bold">
+                  1230 E Springs Rd, Los Angeles, CA, USA
+                </li>
                 <li className="text-start fw-bold">+1 0000000000</li>
                 <li className="text-start fw-bold">demo@gmail.com</li>
               </ul>
@@ -319,7 +271,10 @@ function FinalBill({
 
           <ChangeDriver />
           <div className="pt-5 text-end">
-            <button onClick={() => window.print()} className="btn btn-warning fs-3 mt-5 text-light fw-bold">
+            <button
+              onClick={() => window.print()}
+              className="btn btn-warning fs-3 mt-5 text-light fw-bold"
+            >
               Print Now
             </button>
           </div>

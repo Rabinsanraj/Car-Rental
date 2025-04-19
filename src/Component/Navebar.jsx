@@ -13,6 +13,7 @@ import CheckOut from '../Pages/CheckOut';
 import DriverDetails from '../Pages/DriverDetails';
 import BillingDetails from '../Pages/BillingDetails';
 import PaymentOptions from '../Pages/PaymentOptions';
+import FinalBill from '../Pages/PaymentOptions'
 import RentNow from '../Pages/RentNow'
 import ChangeDriver from './ChangeDriver';
 
@@ -75,6 +76,7 @@ function Navebar (){
       <Route path="/paymentoptions" element={<PaymentOptions />} />
       <Route path="/changedriver" element={<DriverDetails />} />
       <Route path="/paymentoptions" element={<PaymentOptions/>} />
+      <Route path="/finalbill" element={<FinalBill/>} />
 
       {/* Checkout Flow */}
       <Route path="/checkout" element={<CheckOut />} />

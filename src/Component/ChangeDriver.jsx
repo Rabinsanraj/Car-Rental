@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
 const ChangeDriver = () => {
   const location = useLocation();
 
-  // Load from either location.state or localStorage
-  const storedData = JSON.parse(localStorage.getItem("driverData"));
-  const stateData = location.state || storedData || {};
+  const bookingData = JSON.parse(localStorage.getItem("bookingData")) || {};
+  // console.log(bookingData)
+  const storedDriver = bookingData.driverData || {};
+  const incomingDriver = location.state || {};
 
-  const { selectedDriver, firstName, lastName, dlNumber, dlImage } = stateData;
+  const mergedData = { ...storedDriver, ...incomingDriver };
+ console.log(mergedData)
+  const { selectedDriver, firstName, lastName, dlNumber, dlImage } = mergedData;
 
-  const [driverData, setData] = useState("");
-
-  useEffect(() => {
-    if (selectedDriver) {
-      setData(selectedDriver.toUpperCase());
-    } else {
-      setData("SELECT DRIVER");
-    }
+  const driverData = useMemo(() => {
+    return selectedDriver ? selectedDriver.toUpperCase() : "SELECT DRIVER";
   }, [selectedDriver]);
 
   return (
@@ -52,3 +49,48 @@ const ChangeDriver = () => {
 };
 
 export default ChangeDriver;
+
+
+// ----------------------------------------------------------------
+
+export function RentNowDetails() {
+  const location = useLocation();
+
+  const bookingData = JSON.parse(localStorage.getItem("bookingData")) || {};
+  return (
+    <>
+      <div className="col-md-6 text-start" style={{ border: "2px solid black" }}>
+        <div className="row">
+          <h1 className="col fw-bold fs-3 pt-3 pb-3">Location & Time</h1>
+          <Link className="col fw-bold pt-4 pb-2 text-end pe-5" to="/rentnow">
+            <box-icon type="solid" name="edit" color="#787878" size="40px"></box-icon>
+          </Link>
+        </div>
+        <hr style={{ border: "2px solid black" }} />
+
+        <ul>
+          <li className="fs-4 fw-bold">Booking Type</li>
+          <li className="fs-5">{bookingData.selectedDelivery}</li>
+        </ul>
+        <ul>
+          <li className="fs-4 fw-bold">Rental Type</li>
+          <li className="fs-5">{bookingData.bookingType}</li>
+        </ul>
+        <ul>
+          <li className="fs-4 fw-bold">Delivery Location & Time</li>
+          <li className="fs-5">{bookingData.currentLocation}</li>
+          <li className="fs-5">
+            {bookingData.startDate} - {bookingData.startTime}
+          </li>
+        </ul>
+        <ul>
+          <li className="fs-4 fw-bold">Return Location & Time</li>
+          <li className="fs-5">{bookingData.returnLocation}</li>
+          <li className="fs-5">
+            {bookingData.endDate} - {bookingData.endTime}
+          </li>
+        </ul>
+      </div>
+    </>
+  );
+}
