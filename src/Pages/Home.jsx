@@ -137,7 +137,7 @@ function Home() {
 </div>     
 {/* --------------------------------- */}
 
-   <div className="container-fluid pt-3">
+   <div className="container-fluid pt-3 pb-5">
     <div className="row row-cols-md-2 ">
       <div className="col-md-7 text-center">
         <div className="container-fluid">
@@ -169,19 +169,19 @@ function Home() {
               <div className="col-md-6 pt-3">
               <div className="card p-3 border-0 ps-5">
               <div className="row">
-                <div className="col col-md-2"><i className="bx bx-check fs-4 p-1 rounded "
+                <div className="col-1"><i className="bx bx-check fs-4 p-1 rounded "
                 style={{backgroundColor:"red"}}></i></div>
-                <div className="col-10"><p className=" fw-bold fs-5 text-start ps-3">First Class Service</p></div>
+                <div className="col"><p className=" fw-bold text-start ps-3">First Class Service</p></div>
               </div>
               <div className="row">
-                <div className=" col col-md-2 "><i className="bx bx-check fs-4 p-1 rounded"
+                <div className=" col-1"><i className="bx bx-check fs-4 p-1 rounded"
                 style={{backgroundColor:"red"}}></i></div>
-                <div className="col-10 "><p className="fw-bold fs-5 text-start ps-3">Quality at Minimum</p></div>
+                <div className="col"><p className="fw-bold text-start ps-3">Quality Minimum</p></div>
               </div>
               <div className="row">
-                <div className="col col-md-2 "><i className="bx bx-check fs-4 p-1 rounded"
+                <div className="col-1 "><i className="bx bx-check fs-4 p-1 rounded"
                 style={{backgroundColor:"red"}}></i></div>
-                <div className="col-10"><p className="fw-bold fs-5 text-start ps-3">Free Pick and Drop</p></div>
+                <div className="col"><p className="fw-bold text-start ps-3">Free Pick and Drop</p></div>
               </div> 
               </div>
               </div>
