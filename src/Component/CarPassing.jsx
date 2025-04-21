@@ -3,7 +3,7 @@ import CaratNight from "../Images/carpassing.jpeg"
 function CarPassing (){
     return(
         <>
-        <div className="container-fluid w-100 mt-1" style={{backgroundImage: `url(${CaratNight})`,
+        <div className="container-fluid w-100" style={{backgroundImage: `url(${CaratNight})`,
             backgroundSize:"cover",backgroundPosition:"center",backgroundRepeat:"no-repeat",
              width: "100%", height:"auto"}}>
                 <div className='container-fluid pt-5 pb-md-5 mb-3 w-100'>
