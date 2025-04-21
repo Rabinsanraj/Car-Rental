@@ -104,14 +104,14 @@ const GetStart = () => {
            <div className="row m-3 p-1 bg-white rounded-pill" style={{ boxShadow: "inset 5px 5px 5px rgba(0,0,0,2)" }}>
              <div className="col-3">
                <button className="mt-1" type="button" style={{ background: "none", border: "none" }}>
-                 <box-icon name="plus" size="30px" onClick={Increase}></box-icon>
+                 <i className="plus fs-1" onClick={Increase}></i>
                </button>
              </div>
              <div className="col">
                <h3 className="fs-4 text-center mt-1" id="count" style={{color:"red"}}>{count}/day</h3></div>
              <div className="col-3">
                <button className="mt-1" type="button" style={{ background: "none", border: "none" }}>
-                 <box-icon name="minus" size="30px" onClick={Decrease}></box-icon>
+                 <i className="minus fs-1" onClick={Decrease}></i>
                </button>
              </div>
            </div>
@@ -159,11 +159,11 @@ const GetStart = () => {
       </div>))}
       </div>
         {/* Carousel Controls */}
-        <button className="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-        <box-icon type='solid' name='chevrons-left'size="30px"></box-icon>
+        <button className="carousel-control-prev " type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+        <i className='bx bx-chevrons-left fs-1' style={{color:"black"}}></i>
         </button>
         <button className="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-        <box-icon name='chevrons-right' type='solid'size="30px" ></box-icon>
+        <i className='bx bx-chevrons-right fs-1' style={{color:"black"}} ></i>
         </button>
       </div>
     </div>

@@ -168,35 +168,19 @@ function FinalBill({
 }) {
   return (
     <>
-      <div
-        className="container-fluid text-center mx-auto mt-5 mb-5 pt-5 pb-5"
-        id="finalbill"
-        style={{ border: "2px solid black" }}
-      >
-        <h1>
-          <box-icon
-            name="check-double"
-            color="white"
-            size="70px"
-            className="bg-success p-1 rounded-circle"
-          ></box-icon>
-        </h1>
+      <div className="container-fluid text-center mx-auto mt-5 mb-5 pt-5 pb-5"
+        id="finalbill"style={{ border: "2px solid black" }}>
+        <h1><i name="" color="white" size="70px"
+            className="bx bx-check-double fs-1 bg-success p-1 rounded-circle"></i></h1>
         <h1 className="fs-2 fw-bold pt-3">
           Thank you! Your Booking Has Been Received
         </h1>
 
-        <div
-          className="container-fluid mx-auto mt-5 pt-1 pb-1"
-          style={{ backgroundColor: "#a5eed1" }}
-        >
+        <div className="container-fluid mx-auto mt-5 pt-1 pb-1"
+          style={{ backgroundColor: "#a5eed1" }}>
           <div className="row d-flex justify-content-center align-items-center">
             <div className="col-md-3 h-50">
-              <img
-                src={Car1}
-                alt=""
-                className="w-75"
-                style={{ borderRadius: "30px" }}
-              />
+              <img src={Car1} alt="" className="w-75" style={{ borderRadius: "30px" }}/>
             </div>
             <div className="col-md-5 pt-5">
               <h1 className="fs-2 fw-bold">Chevrolet Camaro</h1>
@@ -271,12 +255,8 @@ function FinalBill({
 
           <ChangeDriver />
           <div className="pt-5 text-end">
-            <button
-              onClick={() => window.print()}
-              className="btn btn-warning fs-3 mt-5 text-light fw-bold"
-            >
-              Print Now
-            </button>
+            <button onClick={() => window.print()}
+              className="btn btn-warning fs-3 mt-5 text-light fw-bold">Print Now</button>
           </div>
         </div>
       </div>

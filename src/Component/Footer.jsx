@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+import facebook from '../Images/facebook-logo-24.png'
+import instagram from '../Images/instagram-logo-24.png'
+import twitter from '../Images/twitter-logo-24.png'
 
 function Footer(){
     return(
@@ -42,15 +45,12 @@ function Footer(){
           </div>
           <div className="col-md-2">
           <p className='display-5 fs-5 fw-bold mt-4 text-center'style={{color:"red"}}>Contact Info</p>
-          <h1 className="fs-6 fw-bold text-center"><box-icon name='phone' size='30px' color='#ff0000' ></box-icon>+91 0000000000</h1>
-          <h1 className="fs-6 fw-bold text-center"><box-icon name='envelope' size='30px' color='#ff0000' ></box-icon>Easycar@gmail.com</h1>
+          <h1 className="fs-6 fw-bold text-center"><i className='bx bx-phone fs-3' ></i>+91 0000000000</h1>
+          <h1 className="fs-6 fw-bold text-center"><i className='bx bx-envelope fs-3'></i>Easycar@gmail.com</h1>
           <div className="pt-4 d-flex justify-content-center "style={{gap:"15px"}}>
-              <a href="https://www.facebook.com/login.php"><box-icon className="bg-white p-2 rounded-circle" name='facebook' 
-              size="35px" type='logo' color='red' ></box-icon></a>
-              <a href="https://www.instagram.com/accounts/login/"><box-icon className="bg-white p-2 rounded-circle" name='instagram'
-              size="35px" type='logo' color='red' ></box-icon></a>
-              <a href="https://x.com/login"><box-icon className="bg-white p-2 rounded-circle" name='twitter' 
-              size="35px" type='logo' color='red' ></box-icon></a>
+              <a href="https://www.facebook.com/login.php"><img src={facebook }className="bg-white p-2 rounded-circle" ></img></a>
+              <a href="https://www.instagram.com/accounts/login/"><img src={instagram} className="bg-white p-2 rounded-circle"></img></a>
+              <a href="https://x.com/login"><img src={twitter} className="bg-white p-2 rounded-circle"></img></a>
           </div>
           </div>
         </div>

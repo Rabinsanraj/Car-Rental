@@ -19,12 +19,12 @@ function Dashboard(){
         </div>
         <div className="container-fluid pt-3" style={{width:"85%"}}>
         <div className="row d-flex justify-content-center align-items-center mt-3">
-            <Dashboardcard name="My Booking" count="2" icon1={ <box-icon name='calendar' size='35px' color="#ffffff"
-             className="bg-success ms-2 p-2 rounded-circle" ></box-icon> } view1="View"/>
-            <Dashboardcard name="All Booking" count="50" icon2={ <box-icon name='calendar' size='35px' color="#ffffff" 
-            className="bg-warning ms-2 p-2 rounded-circle" ></box-icon> } view2="View All"/>
-            <Dashboardcard name="Wishlist" count="2" icon3={ <box-icon name='cart-add' size='35px' color="#ffffff" 
-            className=" bg-dark ms-2 p-2 rounded-circle"></box-icon> } view3="View"/>
+            <Dashboardcard name="My Booking" count="2" icon1={ 
+            <i className="bx bx-calendar text-white fs-2 bg-success ms-2 p-2 rounded-circle" ></i> } view1="View"/>
+            <Dashboardcard name="All Booking" count="50" icon2={ 
+            <i className="bx bx-calendar text-white fs-2 bg-warning ms-2 p-2 rounded-circle" ></i> } view2="View All"/>
+            <Dashboardcard name="Wishlist" count="2" icon3={ 
+            <i className="bx bx-cart-add text-white fs-2 bg-dark ms-2 p-2 rounded-circle"></i> } view3="View"/>
         </div>
         </div>
         <Booking heading="All Booking" image={Car1} buttonstyle="btn bg-light btn-primary text-primary fw-bold rounded-pill" buttonname="Upcoming"/>

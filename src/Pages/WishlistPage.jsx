@@ -69,14 +69,14 @@ const WishlistPage = () => {
                 <div className="row pt-2 bg-white rounded-pill g-0" style={{ boxShadow: "inset 5px 5px 5px rgba(0,0,0,2)" }}>
              <div className="col">
                <button type="button" style={{ background: "none", border: "none" }}>
-                 <box-icon name="plus" size="30px" onClick={Increase}></box-icon>
+                 <i className="bx bx-plus fs-3" onClick={Increase}></i>
                </button>
              </div>
              <div className="col">
                <h3 className="fs-4  text-center" style={{color:"red"}} id="count">{count}/day</h3></div>
              <div className="col">
                <button type="button" style={{ background: "none", border: "none" }}>
-                 <box-icon name="minus" size="30px" onClick={Decrease}></box-icon>
+                 <i className="bx bx-minus fs-3"onClick={Decrease}></i>
                </button>
              </div>
            </div>

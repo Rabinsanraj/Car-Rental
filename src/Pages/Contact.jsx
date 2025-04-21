@@ -11,20 +11,20 @@ function Contact(){
         <div className="container-fluid">
         <div className="row row-cols-md-4 pb-2 pt-5">
             <div className="col-sm-3 pb-4">
-            <CardBox icon={<box-icon name='location-plus' color='#08082d' size="45px" className="p-2 rounded-circle"style={{backgroundColor:"red"}} >
-            </box-icon>} head="Address"/>
+            <CardBox icon={<i className="bx bx-location-plus fs-1 p-2 rounded-circle"style={{backgroundColor:"red"}} >
+            </i>} head="Address"/>
             </div>
             <div className="col-sm-3 pb-4">
-            <CardBox icon={<box-icon name='envelope' color='#08082d' size="45px" className="p-2 rounded-circle"style={{backgroundColor:"red"}} >
-            </box-icon>} head="Email"/>
+            <CardBox icon={<i className="bx bx-envelope fs-1 p-2 rounded-circle"style={{backgroundColor:"red"}} >
+            </i>} head="Email"/>
             </div>
             <div className="col-sm-3 pb-4">
-            <CardBox icon={<box-icon name='phone-call' color='#08082d' size="45px" className="p-2 rounded-circle"style={{backgroundColor:"red"}} >
-            </box-icon>} head="Contact"/>
+            <CardBox icon={<i className="bx bx-phone-call fs-1 p-2 rounded-circle"style={{backgroundColor:"red"}} >
+            </i>} head="Contact"/>
             </div>
             <div className="col-sm-2 pb-4">
-            <CardBox icon={<box-icon name='sitemap'  color='#08082d' size="45px" className="p-2 rounded-circle"style={{backgroundColor:"red"}} >
-            </box-icon>} head="Site"/>
+            <CardBox icon={<i className="bx bx-sitemap fs-1 p-2 rounded-circle"style={{backgroundColor:"red"}} >
+            </i>} head="Site"/>
             </div>
         </div>
         </div>

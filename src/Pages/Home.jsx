@@ -13,14 +13,8 @@ function Home() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    carType: '',
-    pickupLocation: '',
-    dropLocation: '',
-    pickupDate: '',
-    pickupTime: '',
-    dropDate: '',
-    dropTime: ''
-  });
+    carType: '', pickupLocation: '', dropLocation: '', pickupDate: '',
+    pickupTime: '', dropDate: '', dropTime: ''});
 
   const handleInputChange = (name, value) => {
     setFormData({ ...formData, [name]: value });
@@ -30,14 +24,8 @@ function Home() {
     e.preventDefault();
 
     const {
-      carType,
-      pickupLocation,
-      dropLocation,
-      pickupDate,
-      pickupTime,
-      dropDate,
-      dropTime
-    } = formData;
+      carType, pickupLocation, dropLocation,
+      pickupDate,pickupTime,dropDate,dropTime} = formData;
 
     if (!carType || !pickupLocation || !dropLocation || !pickupDate || 
       !pickupTime || !dropDate || !dropTime) {
@@ -121,25 +109,25 @@ function Home() {
 <div className="container-fluid w-100 pb-5" style={{paddingTop:"250px"}}>
   <div className="row row-cols-2 d-flex text-center ">
     <div className="col-md-3 pb-5">
-    <box-icon name='trophy' color='#08082d' size="40px" className="p-2 rounded-circle"style={{backgroundColor:"red",}}></box-icon>
+    <i className="bx bx-trophy fs-1 p-2 rounded-circle"style={{backgroundColor:"red",}}></i>
     <h1 className="fs-5 text-black fw-bolder">First Class Service</h1>
           <h4>Experience Excellence</h4>
           <h4> - Ride First Class </h4>
     </div>
     <div className="col-md-3">
-    <box-icon name='purchase-tag'size="40px" type='solid' color='#08082d' className="p-2 rounded-circle"style={{backgroundColor:"red"}}></box-icon>
+    <i className="bx bx-purchase-tag fs-1 p-2 rounded-circle"style={{backgroundColor:"red"}}></i>
     <h1 className="fs-5 text-black fw-bolder">Quality at Minimum</h1>
           <h4>Experience Excellence</h4>
           <h4> - Ride First Class </h4>
     </div>
     <div className="col-md-3">
-    <box-icon name='map'color='#08082d' size="40px" className="p-2 rounded-circle"style={{backgroundColor:"red"}}></box-icon>
+    <i className="bx bx-map fs-1 p-2 rounded-circle"style={{backgroundColor:"red"}}></i>
     <h1 className="fs-5 text-black fw-bolder">24/7 Road Assistance</h1>
           <h4>Experience Excellence</h4>
           <h4> - Ride First Class </h4>
     </div>
     <div className="col-md-3">
-    <box-icon name='star' color='#08082d' size="40px" className="p-2 rounded-circle" style={{backgroundColor:"red"}}></box-icon>
+    <i className="bx bx-star fs-1 p-2 rounded-circle" style={{backgroundColor:"red"}}></i>
     <h1 className="fs-5 text-black fw-bolder">Free Pickup and Drop Off</h1>
           <h4>Experience Excellence</h4>
           <h4> - Ride First Class </h4>
@@ -158,14 +146,14 @@ function Home() {
             <div className="row gy-4">
               <div className="col-md-6">
               <div className="card" style={{width:"100%",height:"fit-content",minHeight:"260px",maxHeight:"350px",borderRadius:"20px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
-              <h1><box-icon name='target-lock'  color='#08082d' size="45px" className="p-3 mt-3 rounded-circle" style={{backgroundColor:"red"}}></box-icon></h1>
+              <h1><i className="bx bx-target-lock fs-1 p-3 mt-3 rounded-circle" style={{backgroundColor:"red"}}></i></h1>
               <h3 className="fs-2 fw-bold">Our Vision</h3>
               <p className="fs-6 fw-bold">"Redefining Mobility, Empowering journeys."</p>
             </div>
               </div>
               <div className="col-md-6">
               <div className="card" style={{ width:"100%",height:"fit-content",minHeight:"260px",maxHeight:"auto",borderRadius:"20px",boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.5)"}}>
-              <h1><box-icon name='like' color='#08082d' size="45px" className="p-3 mt-3 rounded-circle" style={{backgroundColor:"red"}} ></box-icon></h1>
+              <h1><i className="bx bx-like fs-1 p-3 mt-3 rounded-circle" style={{backgroundColor:"red"}} ></i></h1>
                 <h3 className="fs-2 fw-bold">Our Mision</h3>
                 <p className="fs-6 fw-bold">"affordable and customer car rental solutions and convenience at every Mile"</p>
               </div>
@@ -178,19 +166,22 @@ function Home() {
               <p className="fs-2 fw-bold">Years of Experience</p>
             </div>
               </div>
-              <div className="col-md-6 pt-4 ">
-              <div className="card p-3 border-0">
-              <div className="row  mx-auto">
-                <p className="d-flex fw-bold"><box-icon name='check' color='#08082d' size="25px" className="me-4 rounded"
-                style={{backgroundColor:"red"}}></box-icon>First Class Service</p>
+              <div className="col-md-6 pt-3">
+              <div className="card p-3 border-0 ps-5">
+              <div className="row">
+                <div className="col col-md-2"><i className="bx bx-check fs-4 p-1 rounded "
+                style={{backgroundColor:"red"}}></i></div>
+                <div className="col-10"><p className=" fw-bold fs-5 text-start ps-3">First Class Service</p></div>
               </div>
-              <div className="row mx-auto">
-                <p className="d-flex fw-bold"><box-icon name='check' color='#08082d' size="25px" className="me-2 rounded" 
-                style={{backgroundColor:"red"}}></box-icon>Quality at Minimum</p>
+              <div className="row">
+                <div className=" col col-md-2 "><i className="bx bx-check fs-4 p-1 rounded"
+                style={{backgroundColor:"red"}}></i></div>
+                <div className="col-10 "><p className="fw-bold fs-5 text-start ps-3">Quality at Minimum</p></div>
               </div>
-              <div className="row mx-auto">
-                <p className="d-flex fw-bold"><box-icon name='check'color='#08082d' size="25px" className="me-3 rounded" 
-                style={{backgroundColor:"red"}}></box-icon>Free Pick and Drop</p>
+              <div className="row">
+                <div className="col col-md-2 "><i className="bx bx-check fs-4 p-1 rounded"
+                style={{backgroundColor:"red"}}></i></div>
+                <div className="col-10"><p className="fw-bold fs-5 text-start ps-3">Free Pick and Drop</p></div>
               </div> 
               </div>
               </div>
