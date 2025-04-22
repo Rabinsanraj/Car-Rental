@@ -9,10 +9,9 @@ function DriverDetails() {
   const [dlNumber, setDlNumber] = useState("");
   const [dlImage, setDlImage] = useState(null);
   const [dlImageBase64, setDlImageBase64] = useState("");
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formValidated, setFormValidated] = useState(false); // for UI
   const navigate = useNavigate();
 
-  // Load from localStorage on mount
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem("driverData"));
     if (savedData) {
@@ -24,7 +23,6 @@ function DriverDetails() {
     }
   }, []);
 
-  // Save to localStorage when data changes
   const saveDriverDataToLocalStorage = () => {
     const driverData = { selectedDriver, firstName, lastName, dlNumber, dlImage: dlImageBase64 };
     localStorage.setItem("driverData", JSON.stringify(driverData));
@@ -40,32 +38,15 @@ function DriverDetails() {
 
   const handleDataChangeDriver = (e) => {
     e.preventDefault();
+    setFormValidated(true); // Trigger validation visual
 
     if (!firstName || !lastName || !dlNumber || !dlImageBase64) {
-      alert("Please fill all the fields before submitting the form!");
+      // Don't navigate if any field is missing
       return;
     }
 
     const driverData = { selectedDriver, firstName, lastName, dlNumber, dlImage: dlImageBase64 };
     localStorage.setItem("driverData", JSON.stringify(driverData));
-    navigate('/changedriver', { state: driverData });
-    setFormSubmitted(true);
-  };
-
-  const handleSubmitPayment = (e) => {
-    e.preventDefault();
-
-    if (!formSubmitted) {
-      alert("First click the Submit button to submit the form!");
-      return;
-    }
-
-    if (!firstName || !lastName || !dlNumber || !dlImageBase64) {
-      alert("Please fill all the fields before proceeding to payment!");
-      return;
-    }
-
-    const driverData = { selectedDriver, firstName, lastName, dlNumber, dlImage: dlImageBase64 };
     navigate('/finalbill', { state: driverData });
   };
 
@@ -82,6 +63,8 @@ function DriverDetails() {
     }
   };
 
+  const isFormIncomplete = formValidated && (!firstName || !lastName || !dlNumber || !dlImageBase64);
+
   return (
     <>
       <CarNav name="Checkout" />
@@ -93,7 +76,7 @@ function DriverDetails() {
         <div className="row justify-content-center align-content-center">
           <div className="col-md-5 pb-5">
             <label className="container selfdriver pt-3 pb-3 border border-3 rounded-5 text-center w-100"
-              style={{ backgroundColor: selectedDriver === "self driver" ? "#aee0af" : "white", cursor: "pointer", }}
+              style={{ backgroundColor: selectedDriver === "self driver" ? "#aee0af" : "white", cursor: "pointer" }}
               onClick={() => handleSelect("self driver")}>
               <input type="radio" name="drivertoggle" style={{ transform: "scale(1.5)", accentColor: "green" }}
                 checked={selectedDriver === "self driver"} readOnly />
@@ -103,9 +86,7 @@ function DriverDetails() {
 
           <div className="col-md-5">
             <label className="container actingdriver pt-3 pb-3 border border-3 rounded-5 text-center w-100"
-              style={{
-                backgroundColor: selectedDriver === "acting driver" ? "#aee0af" : "white", cursor: "pointer",
-              }}
+              style={{ backgroundColor: selectedDriver === "acting driver" ? "#aee0af" : "white", cursor: "pointer" }}
               onClick={() => handleSelect("acting driver")}>
               <input type="radio" name="drivertoggle" style={{ transform: "scale(1.5)", accentColor: "green" }}
                 checked={selectedDriver === "acting driver"} readOnly />
@@ -143,21 +124,20 @@ function DriverDetails() {
               <label htmlFor="image" className="form-label fs-4 fw-bold">DL Image :</label>
               <input type="file" id="image" className="form-control fs-5"
                 style={{ height: "50px", border: "1px solid black" }}
-                onChange={handleImageUpload} required />
+                onChange={handleImageUpload} readOnly />
             </div>
           </div>
 
           <div className="container pt-5 d-flex align-items-center justify-content-center">
-            <button type="button" className="form-control w-50 bg-dark text-center text-light fs-3 fw-bold"
-              onClick={handleDataChangeDriver}>Submit</button>
-          </div>
-
-          <div className="container pt-5 d-flex align-items-center justify-content-center">
-            <button type="button" className="form-control text-center w-50 fs-3 fw-bold"
-              style={{
-                backgroundColor: formSubmitted ? "#ffc107" : "red",
-                color: "white", border: "none"
-              }} onClick={handleSubmitPayment}>Go To Pay</button>
+            <button
+              type="button"
+              className={`form-control w-50 text-center fs-3 fw-bold ${
+                isFormIncomplete ? "bg-warning text-dark" : "bg-dark text-light"
+              }`}
+              onClick={handleDataChangeDriver}
+            >
+              {isFormIncomplete ? "Please fill all fields!" : "Submit"}
+            </button>
           </div>
         </form>
       </div>
