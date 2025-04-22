@@ -14,23 +14,23 @@ import { Link} from "react-router-dom";
 
 const products = [
   { id: 1, name: "Product 1", image:Car1, review:"Review: 3.8", seats:"4 Seats", 
-    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Settings", km:"27 K "},
+    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Setting", km:"27 K "},
   { id: 2, name: "Product 2", image:Car2, review:"Review: 3.8", seats:"4 Seats", 
-    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Settings", km:"27 K "},
+    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Setting", km:"27 K "},
   { id: 3, name: "Product 3", image:Car3, review:"Review: 3.8", seats:"4 Seats", 
-    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Settings", km:"27 K " },
+    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Setting", km:"27 K " },
   { id: 4, name: "Product 4", image:Car4, review:"Review: 3.8", seats:"4 Seats", 
-    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Settings", km:"27 K " },
+    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Setting", km:"27 K " },
   { id: 5, name: "Product 5", image:Car5, review:"Review: 3.8", seats:"4 Seats", 
-    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Settings", km:"27 K " },
+    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Setting", km:"27 K " },
   { id: 6, name: "Product 6", image:Car6, review:"Review: 3.8", seats:"4 Seats", 
-    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Settings", km:"27 K " },
+    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Setting", km:"27 K " },
   { id: 7, name: "Product 7", image:Car7, review:"Review: 3.8", seats:"4 Seats", 
-    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Settings", km:"27 K " },
+    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Setting", km:"27 K " },
   { id: 8, name: "Product 8", image:Car8, review:"Review: 3.8", seats:"4 Seats", 
-    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Settings", km:"27 K " },
+    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Setting", km:"27 K " },
   { id: 9, name: "Product 9", image:Car9, review:"Review: 3.8", seats:"4 Seats", 
-    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Settings", km:"27 K " }
+    trans:"AT/MT", fuel:"Petrol", year:"2015", setting:"Setting", km:"27 K " }
 ];
 
 const GetStart = () => {
