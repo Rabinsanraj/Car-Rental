@@ -189,13 +189,13 @@ function Home() {
           </div>
         </div>
       </div>
+    <div className="col-md-5"style={{
+    backgroundImage: `url(${KeyInHand})`,backgroundRepeat: "no-repeat",
+    backgroundSize: "cover", height: "80vh", position: "relative",}}>
+  <img src={ManONCar} style={{width: "93%",position: "absolute",
+      bottom: "0",left:"7%",transform: "translateY(17%)",}}/>
+</div>
 
-      <div className="col-md-5 pb-0" style={{backgroundImage:`url(${KeyInHand})`,
-      backgroundRepeat:"no-repeat",backgroundSize:"cover",height:"80vh"}} >
-        <div className="container position-relative w-100 top-50">
-        <img src={ManONCar} className="w-100 pt-5 mt-5"/>
-        </div>
-      </div>
     </div>
    </div>
       <CarPassing />
