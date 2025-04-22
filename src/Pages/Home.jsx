@@ -190,7 +190,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="col-md-5 pb-5" style={{backgroundImage:`url(${KeyInHand})`,
+      <div className="col-md-5 pb-0" style={{backgroundImage:`url(${KeyInHand})`,
       backgroundRepeat:"no-repeat",backgroundSize:"cover",height:"80vh"}} >
         <div className="container position-relative w-100 top-50">
         <img src={ManONCar} className="w-100 pt-5 mt-5"/>
