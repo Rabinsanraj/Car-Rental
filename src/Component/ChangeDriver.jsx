@@ -109,7 +109,10 @@ export function BillingDetails() {
     <>
       <div className="col-md-5 mx-auto my-auto" style={{ border: "1px solid black", height: "fit-content" }}>
         <div className="row">
-          <h2 className="text-start pt-4">Billing Information</h2>
+          <h3 className=" col fw-bold pt-3 pb-3">Billing Information</h3>
+           <Link className="col-4 fw-bold pt-4 pb-2 text-end pe-5" to="/billingdetails">
+            <i type="solid" className="bx bx-edit fs-1"></i>
+          </Link>
         </div>
         <hr style={{ border: "2px solid black" }} />
         <ul>

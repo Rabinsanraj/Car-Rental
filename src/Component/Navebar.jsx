@@ -75,7 +75,6 @@ function Navebar (){
       <Route path="/rentnow" element={<RentNow />} />
       <Route path="/paymentoptions" element={<PaymentOptions />} />
       <Route path="/changedriver" element={<DriverDetails />} />
-      <Route path="/paymentoptions" element={<PaymentOptions/>} />
       <Route path="/finalbill" element={<FinalBill/>} />
 
       {/* Checkout Flow */}
