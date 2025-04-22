@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 
 const ChangeDriver = () => {
   const location = useLocation();
@@ -10,7 +10,6 @@ const ChangeDriver = () => {
   const incomingDriver = location.state || {};
 
   const mergedData = { ...storedDriver, ...incomingDriver };
- console.log(mergedData)
   const { selectedDriver, firstName, lastName, dlNumber, dlImage } = mergedData;
 
   const driverData = useMemo(() => {
@@ -89,6 +88,40 @@ export function RentNowDetails() {
           <li className="fs-5">
             {bookingData.endDate} - {bookingData.endTime}
           </li>
+        </ul>
+      </div>
+    </>
+  );
+}
+
+
+export function BillingDetails() {
+  const [formData, setFormData] = useState("");
+
+  useEffect(() => {
+    const storedData = localStorage.getItem('billingData');
+    if (storedData) {
+      setFormData(JSON.parse(storedData));
+    }
+  }, []);
+
+  return (
+    <>
+      <div className="col-md-5 mx-auto my-auto" style={{ border: "1px solid black", height: "fit-content" }}>
+        <div className="row">
+          <h2 className="text-start pt-4">Billing Information</h2>
+        </div>
+        <hr style={{ border: "2px solid black" }} />
+        <ul>
+          <li className="text-start fw-bold">
+            {formData.firstname} <span>{formData.lastname}</span>
+          </li>
+          <li className="text-start fw-bold">{formData.company}</li>
+          <li className="text-start fw-bold">
+            {formData.address}, {formData.country}, {formData.city} - {formData.pincode}
+          </li>
+          <li className="text-start fw-bold">{formData.phone}</li>
+          <li className="text-start fw-bold">{formData.email}</li>
         </ul>
       </div>
     </>

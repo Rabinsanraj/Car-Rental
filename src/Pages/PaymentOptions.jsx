@@ -5,7 +5,7 @@ import Stripe from "../Images/Stripe-Logo.png";
 import Gpay from "../Images/google-pay.png";
 import Car1 from "../Images/Car1.jpg";
 import { useState } from "react";
-import ChangeDriver, { RentNowDetails } from "../Component/ChangeDriver";
+import ChangeDriver, { RentNowDetails,BillingDetails } from "../Component/ChangeDriver";
 
 function Row({ detail, amount }) {
   return (
@@ -157,7 +157,7 @@ function PaymentOptions() {
             Confirm & Pay
           </button>
         </div>
-        {showFinalBill && (<FinalBill/>)}
+        {showFinalBill && (<FinalBill selectedMethod={selectedMethod}/>)}
       </div>
     </>
   );
@@ -222,35 +222,18 @@ function FinalBill({
               </div>
               <hr style={{ border: "2px solid black" }} />
               <ul>
-                <li className="text-start fs-3 fw-bold">Payment Mode</li>
-                <li className="text-start fs-4">
+                <li className="text-start fs-4 fw-bold">Payment Mode</li>
+                <li className="text-start fs-4 fw-bold text-primary">
                   {selectedMethod === "new_card"
                     ? "New Card"
                     : selectedMethod?.toUpperCase()}
                 </li>
-                <li className="text-start fs-3 fw-bold">Transaction ID</li>
-                <li className="text-start fs-4">#13245454455454</li>
+                <li className="text-start fs-4 fw-bold">Transaction ID</li>
+                <li className="text-start fs-4 fw-bold">#13245454455454</li>
               </ul>
             </div>
 
-            <div
-              className="col-md-5 mx-auto my-auto"
-              style={{ border: "1px solid black", height: "fit-content" }}
-            >
-              <div className="row">
-                <h2 className="text-start pt-4">Billing Information</h2>
-              </div>
-              <hr style={{ border: "2px solid black" }} />
-              <ul>
-                <li className="text-start fw-bold">Darren Jurel</li>
-                <li className="text-start fw-bold">Mak Infotech </li>
-                <li className="text-start fw-bold">
-                  1230 E Springs Rd, Los Angeles, CA, USA
-                </li>
-                <li className="text-start fw-bold">+1 0000000000</li>
-                <li className="text-start fw-bold">demo@gmail.com</li>
-              </ul>
-            </div>
+           <BillingDetails/>
           </div>
 
           <ChangeDriver />
