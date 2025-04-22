@@ -38,10 +38,9 @@ function DriverDetails() {
 
   const handleDataChangeDriver = (e) => {
     e.preventDefault();
-    setFormValidated(true); // Trigger validation visual
+    setFormValidated(true);
 
     if (!firstName || !lastName || !dlNumber || !dlImageBase64) {
-      // Don't navigate if any field is missing
       return;
     }
 

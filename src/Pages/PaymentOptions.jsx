@@ -238,8 +238,8 @@ function FinalBill({
 
           <ChangeDriver />
           <div className="pt-5 text-end">
-            <button onClick={() => window.print()}
-              className="btn btn-warning fs-3 mt-5 text-light fw-bold">Print Now</button>
+            <a onClick={() => window.print()}
+              className="btn btn-warning fs-3 mt-5 text-light fw-bold">Print Now</a>
           </div>
         </div>
       </div>
