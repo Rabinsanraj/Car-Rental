@@ -104,14 +104,14 @@ const GetStart = () => {
            <div className="row m-3 p-1 bg-white rounded-pill" style={{ boxShadow: "inset 5px 5px 5px rgba(0,0,0,2)" }}>
              <div className="col-3">
                <button className="mt-1" type="button" style={{ background: "none", border: "none" }}>
-                 <i className="plus fs-1" onClick={Increase}></i>
+                 <i className="bx bx-plus fs-2" onClick={Increase}></i>
                </button>
              </div>
              <div className="col">
                <h3 className="fs-4 text-center mt-1" id="count" style={{color:"red"}}>{count}/day</h3></div>
              <div className="col-3">
                <button className="mt-1" type="button" style={{ background: "none", border: "none" }}>
-                 <i className="minus fs-1" onClick={Decrease}></i>
+                 <i className="bx bx-minus fs-2" onClick={Decrease}></i>
                </button>
              </div>
            </div>
