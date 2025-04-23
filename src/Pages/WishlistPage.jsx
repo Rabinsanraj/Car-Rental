@@ -61,14 +61,26 @@ const WishlistPage = () => {
                       <h1 className="fs-3 pt-2 pb-5">{product.name}</h1>
                     </div>
                     <div className="row">
-                      <div className="col"><h5>{product.seats}</h5></div>
-                      <div className="col"><h5>{product.trans}</h5></div>
-                      <div className="col"><h5>{product.fuel}</h5></div>
+                      <div className="col">
+                        <h5>{product.seats}</h5>
+                      </div>
+                      <div className="col">
+                        <h5>{product.trans}</h5>
+                      </div>
+                      <div className="col">
+                        <h5>{product.fuel}</h5>
+                      </div>
                     </div>
                     <div className="row">
-                      <div className="col"><h5>{product.year}</h5></div>
-                      <div className="col"><h5>{product.setting}</h5></div>
-                      <div className="col"><h5>{product.km}</h5></div>
+                      <div className="col">
+                        <h5>{product.year}</h5>
+                      </div>
+                      <div className="col">
+                        <h5>{product.setting}</h5>
+                      </div>
+                      <div className="col">
+                        <h5>{product.km}</h5>
+                      </div>
                     </div>
                   </div>
                   <div className="col-md-4">
@@ -90,7 +102,10 @@ const WishlistPage = () => {
                         </button>
                       </div>
                       <div className="col">
-                        <h3 className="fs-4 text-center" style={{ color: "red" }}>
+                        <h3
+                          className="fs-4 text-center"
+                          style={{ color: "red" }}
+                        >
                           {counts[product.id]}/day
                         </h3>
                       </div>
@@ -106,7 +121,10 @@ const WishlistPage = () => {
                     </div>
                     <div className="row mt-5">
                       <div className="col-md-6 pb-3 mx-auto">
-                        <Link className="btn btn-dark text-light fw-bold" to="/rentnow">
+                        <Link
+                          className="btn btn-dark text-light fw-bold"
+                          to="/rentnow"
+                        >
                           Rent Now
                         </Link>
                       </div>
