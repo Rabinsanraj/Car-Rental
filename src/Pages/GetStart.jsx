@@ -77,16 +77,14 @@ const GetStart = () => {
     <>
       <CarNav name="Our Cars" />
       <div className="container-fluid mt-4"
-        style={{
-          backgroundImage: `url(${Carouselbg})`,
+        style={{backgroundImage: `url(${Carouselbg})`,
           backgroundSize: "cover", backgroundPosition: "center",
-          backgroundRepeat: "no-repeat", width: "100%", minHeight: "681px"
-        }}>
-        <h2 className="text-black text-center fs-1 fw-bold pb-3 pt-5">
+          backgroundRepeat: "no-repeat", width: "100%", minHeight: "681px"}}>
+        <h2 className="text-black text-center fs-1 fw-bold pb-3 pt-3">
           Vehicle <span style={{ color: "red" }}>Categories</span>
         </h2>
 
-      <div id="productCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div id="productCarousel" className="carousel slide mx-auto" style={{width:"98%"}}  data-bs-ride="carousel" data-bs-interval="4000">
         <div className="carousel-inner">
     {chunkedProducts.map((group, groupIndex) => (
       <div className={`carousel-item ${groupIndex === 0 ? "active" : ""}`} key={groupIndex}>
@@ -166,7 +164,7 @@ const GetStart = () => {
         </div>
       </div>
     ))} </div>
-    <div className="w-100 d-flex">
+    
     <button className="carousel-control-prev" type="button" data-bs-target="#productCarousel"
          data-bs-slide="prev" style={{height:"0px",top:"48%"}}>
     <i className="bx bx-chevrons-left" style={{ color: "black", fontSize: "50px"}}></i>
@@ -177,7 +175,6 @@ const GetStart = () => {
     </button>
     </div>
       </div>
-    </div> 
     </>
   );
 };
