@@ -1,0 +1,14 @@
+/* Add this CSS to hide unnecessary elements when printing */
+@media print {
+    body * {
+      visibility: hidden;
+    }
+  
+    #finalbill, #finalbill * {
+      visibility: hidden;
+    }
+    #payoption, #payoption * {
+      visibility: visible;
+    }
+  }
+  
