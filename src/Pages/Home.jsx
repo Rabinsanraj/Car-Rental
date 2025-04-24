@@ -100,7 +100,7 @@ function Home() {
           <h5 className="text-black fw-bold lh-1">Maintains a safe distance from the vehicle ahead, automatically adjusting speed to match traffic flow.</h5>
         </div>
 
-        <div className="container-fluid w-100 pb-1" style={{ paddingTop: "280px" }}>
+        <div className="container-fluid w-100 pb-2" style={{ paddingTop: "280px" }}>
           <div className="row row-cols-2 d-flex text-center">
             <div className="col-md-3 pb-5">
               <i className="bx bx-trophy fs-1 p-2 rounded-circle" style={{ backgroundColor: "red" }}></i>
