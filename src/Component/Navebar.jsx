@@ -46,7 +46,7 @@ function Navebar() {
           <div className={`collapse navbar-collapse ${expanded ? "show" : ""}`} id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link className="nav-link active me-5 fs-5" onClick={handleNav} to="/">Home</Link>
+                <Link className="nav-link me-5 fs-5" onClick={handleNav} to="/">Home</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link me-5 fs-5" onClick={handleNav} to="/service">Services</Link>

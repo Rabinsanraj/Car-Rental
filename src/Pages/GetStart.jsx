@@ -32,9 +32,8 @@ const products = [
 const GetStart = () => {
   const [wishlist, setWishlist] = useState(() => JSON.parse(localStorage.getItem("wishlist")) || []);
   const [booknow, setBooknow] = useState(() => JSON.parse(localStorage.getItem("booknow")) || []);
-  const [counts, setCounts] = useState(() =>
-    products.reduce((acc, product) => ({ ...acc, [product.id]: 1500 }), {})
-  );
+  const [counts, setCounts] = useState(() =>products.reduce((acc, product) =>
+     ({ ...acc, [product.id]: 1500 }), {}));
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
