@@ -43,23 +43,27 @@ function PaymentOptions() {
   const getCardStyle = (method, image = null) => ({
     backgroundColor: getBackgroundColor(method),
     backgroundImage: image ? `url(${image})` : "none",
-    backgroundSize: "170px",backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",width: "100%",minHeight: "120px",
-    borderRadius: "30px",border: "2px solid green",cursor: "pointer",
+    backgroundSize: "170px",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    width: "100%",
+    minHeight: "120px",
+    borderRadius: "30px",
+    border: "2px solid green",
+    cursor: "pointer",
   });
 
   return (
     <>
       <CarNav name="Checkout" />
       <div className="container-fluid" id="payoption" style={{ border: "2px solid black" }}>
-        {!showFinalBill && (  // Hide payment options when showFinalBill is true
+        {!showFinalBill && (
           <>
             <h1 className="fs-2 fw-bold">Payment Options</h1>
             <h3 className="fs-4 pt-2">Choose your payment method</h3>
-
             <div className="container-fluid pt-4">
               <div className="row align-items-center justify-content-center">
-                {[ 
+                {[
                   { method: "paypal", img: Paypal },
                   { method: "stripe", img: Stripe },
                   { method: "gpay", img: Gpay },
@@ -67,10 +71,10 @@ function PaymentOptions() {
                   <div className="col-md-4 pb-3" key={method}>
                     <div className="card payment-card"
                       onClick={() => handleSelect(method)}
-                      style={getCardStyle(method, img)}/>
-                  </div>))}
+                      style={getCardStyle(method, img)} />
+                  </div>
+                ))}
               </div>
-
               <div className="row pb-3">
                 <div className="col-md-4 text-center">
                   <div className="card payment-card"
@@ -84,8 +88,7 @@ function PaymentOptions() {
                 <div className="col-md-4 text-center pt-3 my-auto">
                   <div className="card payment-card"
                     onClick={() => handleSelect("new_card")}
-                    style={{backgroundColor: getBackgroundColor("new_card"),
-                      border: "1px solid orange",borderRadius: "30px",cursor: "pointer",}}>
+                    style={{ backgroundColor: getBackgroundColor("new_card"), border: "1px solid orange", borderRadius: "30px", cursor: "pointer" }}>
                     <h1 className="fs-2 p-4">+ Add a new Card</h1>
                   </div>
                 </div>
@@ -94,11 +97,12 @@ function PaymentOptions() {
           </>
         )}
 
-        {!showFinalBill && (  // Hide the confirm button when showFinalBill is true
+        {!showFinalBill && (
           <div className="container d-flex justify-content-center align-items-center pt-5 pb-5">
-            <button className="btn btn-warning fs-2 fw-bold text-light"
-              onClick={handleConfirmPayment}>Confirm & Pay</button>
-          </div>)}
+            <button className="btn btn-warning fs-2 fw-bold text-light" onClick={handleConfirmPayment}>Confirm & Pay</button>
+          </div>
+        )}
+
         {showFinalBill && <FinalBill selectedMethod={selectedMethod} />}
       </div>
     </>
@@ -107,17 +111,9 @@ function PaymentOptions() {
 
 function FinalBill({ selectedMethod }) {
   return (
-    <div
-      className="container-fluid text-center mx-auto mt-5 mb-5 pt-5 pb-5"
-      id="finalbill"
-      style={{ border: "2px solid black" }}
-    >
-      <h1>
-        <i className="bx bx-check-double fs-1 bg-success p-1 rounded-circle"></i>
-      </h1>
-      <h1 className="fs-2 fw-bold pt-3">
-        Thank you! Your Booking Has Been Received
-      </h1>
+    <div className="container-fluid text-center mx-auto mt-5 mb-5 pt-5 pb-5" id="finalbill" style={{ border: "2px solid black" }}>
+      <h1><i className="bx bx-check-double fs-1 bg-success p-1 rounded-circle"></i></h1>
+      <h1 className="fs-2 fw-bold pt-3">Thank you! Your Booking Has Been Received</h1>
 
       <div className="container-fluid mx-auto mt-5 pt-1 pb-1" style={{ backgroundColor: "#a5eed1" }}>
         <div className="row d-flex justify-content-center align-items-center">
@@ -173,8 +169,7 @@ function FinalBill({ selectedMethod }) {
 
         <ChangeDriver />
         <div className="pt-5 text-end">
-          <a onClick={() => {window.print();}}
-          className="btn btn-warning fs-3 mt-5 text-light fw-bold"> Print Now </a>
+          <a onClick={() => { window.print(); }} className="btn btn-warning fs-3 mt-5 text-light fw-bold"> Print Now </a>
         </div>
       </div>
     </div>

@@ -26,6 +26,8 @@ function BillingDetails() {
     }
   };
 
+  const inputStyle = { height: "50px", border: "1px solid black" };
+
   return (
     <>
       <CarNav name="Checkout" />
@@ -37,13 +39,13 @@ function BillingDetails() {
               <label htmlFor="firstname" className='form-label fs-4 fw-bold'>First Name :</label>
               <input type="text" id='firstname' name="firstname" className='form-control fs-5'
                 placeholder='Enter Your Name' value={formData.firstname} onChange={handleChange}
-                style={{ height: "50px", border: "1px solid black" }} />
+                style={inputStyle} />
             </div>
             <div className="col-md-6 mb-4">
               <label htmlFor="lastname" className='form-label fs-4 fw-bold'>Last Name :</label>
               <input type="text" id='lastname' name="lastname" className='form-control fs-5'
                 placeholder='Enter Your Last Name' value={formData.lastname} onChange={handleChange}
-                style={{ height: "50px", border: "1px solid black" }} />
+                style={inputStyle} />
             </div>
           </div>
 
@@ -52,13 +54,13 @@ function BillingDetails() {
               <label htmlFor="persons" className='form-label fs-4 fw-bold'>No of Person :</label>
               <input type="number" id='persons' name="persons" className='form-control fs-5'
                 placeholder='Enter No of Person' value={formData.persons} onChange={handleChange}
-                style={{ height: "50px", border: "1px solid black" }} />
+                style={inputStyle} />
             </div>
             <div className="col-md-6 mb-4">
               <label htmlFor="company" className='form-label fs-4 fw-bold'>Company Name :</label>
               <input type="text" id='company' name="company" className='form-control fs-5'
                 placeholder='Enter Company Name' value={formData.company} onChange={handleChange}
-                style={{ height: "50px", border: "1px solid black" }} />
+                style={inputStyle} />
             </div>
           </div>
 
@@ -66,7 +68,7 @@ function BillingDetails() {
             <label htmlFor="address" className='form-label fs-4 fw-bold'>Street Address :</label>
             <input type="text" id='address' name="address" className='form-control fs-5'
               placeholder='Enter Your Address' value={formData.address} onChange={handleChange}
-              style={{ height: "50px", border: "1px solid black" }} />
+              style={inputStyle} />
           </div>
 
           <div className="row">
@@ -74,19 +76,19 @@ function BillingDetails() {
               <label className='form-label fs-4 fw-bold'>Country :</label>
               <input type="text" placeholder="Enter Your Country" className="form-control fs-5"
                 name="country" value={formData.country} onChange={handleChange}
-                style={{ height: "50px", border: "1px solid black" }} />
+                style={inputStyle} />
             </div>
             <div className="col-md-4 mb-4">
               <label className='form-label fs-4 fw-bold'>City :</label>
               <input placeholder="Enter Your City" className="form-control fs-5"
                 name="city" value={formData.city} onChange={handleChange}
-                style={{ height: "50px", border: "1px solid black" }} />
+                style={inputStyle} />
             </div>
             <div className="col-md-4 mb-4">
               <label htmlFor="pincode" className='form-label fs-4 fw-bold'>Pincode :</label>
               <input type="text" id='pincode' name="pincode" className='form-control fs-5'
                 placeholder='Enter Your Pincode' value={formData.pincode} onChange={handleChange}
-                style={{ height: "50px", border: "1px solid black" }} />
+                style={inputStyle} />
             </div>
           </div>
 
@@ -95,13 +97,13 @@ function BillingDetails() {
               <label htmlFor="email" className='form-label fs-4 fw-bold'>Email Address :</label>
               <input type="email" id='email' name="email" className='form-control fs-5'
                 placeholder='Enter Your Email' value={formData.email} onChange={handleChange}
-                style={{ height: "50px", border: "1px solid black" }} />
+                style={inputStyle} />
             </div>
             <div className="col-md-6 mb-4">
               <label htmlFor="phone" className='form-label fs-4 fw-bold'>Phone :</label>
               <input type="number" id='phone' name="phone" className='form-control fs-5'
                 placeholder='Enter Your Phone' value={formData.phone} onChange={handleChange}
-                style={{ height: "50px", border: "1px solid black" }} />
+                style={inputStyle} />
             </div>
           </div>
 
@@ -119,7 +121,7 @@ function BillingDetails() {
               </button>
             </div>
             <div className="col-md-6 text-center mb-2">
-              <Link type="button" className='btn btn-dark text-light fs-3 fw-bold' to="/checkout">
+              <Link className='btn btn-dark text-light fs-3 fw-bold' to="/checkout">
                 Back to Details
               </Link>
             </div>

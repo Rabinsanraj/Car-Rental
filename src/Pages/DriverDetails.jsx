@@ -9,7 +9,6 @@ function DriverDetails() {
   const [dlNumber, setDlNumber] = useState("");
   const [dlImageBase64, setDlImageBase64] = useState("");
   const [formValidated, setFormValidated] = useState(false);
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,32 +27,26 @@ function DriverDetails() {
     localStorage.setItem("driverData", JSON.stringify(driverData));
   }, [selectedDriver, firstName, lastName, dlNumber, dlImageBase64]);
 
-  const handleSelect = (driverType) => {
-    setSelectedDriver(driverType);
-  };
+  const handleSelect = (driverType) => setSelectedDriver(driverType);
 
   const handleDataChangeDriver = (e) => {
     e.preventDefault();
     setFormValidated(true);
-
-    if (!firstName || !lastName || !dlNumber || !dlImageBase64) return;
-
-    const driverData = { selectedDriver, firstName, lastName, dlNumber, dlImage: dlImageBase64 };
-    navigate('/finalbill', { state: driverData });
+    if (firstName && lastName && dlNumber && dlImageBase64) {
+      const driverData = { selectedDriver, firstName, lastName, dlNumber, dlImage: dlImageBase64 };
+      navigate('/finalbill', { state: driverData });
+    }
   };
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
-    if (!file) return;
-
-    if (!file.type.startsWith("image/")) {
+    if (file && file.type.startsWith("image/")) {
+      const reader = new FileReader();
+      reader.onloadend = () => setDlImageBase64(reader.result);
+      reader.readAsDataURL(file);
+    } else {
       alert("Please upload a valid image file.");
-      return;
     }
-
-    const reader = new FileReader();
-    reader.onloadend = () => setDlImageBase64(reader.result);
-    reader.readAsDataURL(file);
   };
 
   const isFormIncomplete = formValidated && (!firstName || !lastName || !dlNumber || !dlImageBase64);
