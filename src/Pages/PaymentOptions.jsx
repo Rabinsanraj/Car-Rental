@@ -75,14 +75,13 @@ function PaymentOptions() {
                   </div>
                 ))}
               </div>
-              <div className="row pb-3">
+              <div className="row">
                 <div className="col-md-4 text-center">
-                  <div className="card payment-card"
-                    onClick={() => handleSelect("visa")}
-                    style={getCardStyle("visa")}>
-                    <h1 className="fs-3 fw-bold">VISA</h1>
-                    <h3 className="fs-4 fw-light">Debit Card</h3>
-                    <h4 className="fs-3 fw-bold">4532*****5221</h4>
+                  <div className="card payment-card pt-4"
+                    onClick={() => handleSelect("Card")}
+                    style={getCardStyle("Card")}>
+                    <h3 className="fs-4 fw-bold">💳 Debit Card</h3>
+                    <h4 className="fs-4 ">4532*****5221</h4>
                   </div>
                 </div>
                 <div className="col-md-4 text-center pt-3 my-auto">
