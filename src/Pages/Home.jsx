@@ -94,13 +94,13 @@ function Home() {
       </div>
 
       {/* Feature Section */}
-      <div className="w-100 pt-4" style={{ backgroundImage: `url(${Merun})`, backgroundColor: "#e4e4e4", backgroundSize: "600px", backgroundPosition: "center 170px", backgroundRepeat: "no-repeat" }}>
+      <div className="w-100 pt-4" style={{ backgroundImage: `url(${Merun})`, backgroundColor: "#e4e4e4", backgroundSize: "600px", backgroundPosition: "center 160px", backgroundRepeat: "no-repeat" }}>
         <div className="w-100 text-center pb-5">
           <h1 className="text-black fs-2 fw-bold lh-1">EASY CARS <span style={{ color: "red" }}>FEATURE</span></h1>
           <h5 className="text-black fw-bold lh-1">Maintains a safe distance from the vehicle ahead, automatically adjusting speed to match traffic flow.</h5>
         </div>
 
-        <div className="container-fluid w-100 pb-5" style={{ paddingTop: "250px" }}>
+        <div className="container-fluid w-100 pb-1" style={{ paddingTop: "280px" }}>
           <div className="row row-cols-2 d-flex text-center">
             <div className="col-md-3 pb-5">
               <i className="bx bx-trophy fs-1 p-2 rounded-circle" style={{ backgroundColor: "red" }}></i>
