@@ -84,7 +84,7 @@ function PaymentOptions() {
                     <h4 className="fs-4 ">4532*****5221</h4>
                   </div>
                 </div>
-                <div className="col-md-4 text-center my-auto">
+                <div className="col-md-4 text-center pt-4 my-auto">
                   <div className="card payment-card"
                     onClick={() => handleSelect("new_card")}
                     style={{ backgroundColor: getBackgroundColor("new_card"), border: "1px solid orange", borderRadius: "30px", cursor: "pointer" }}>
