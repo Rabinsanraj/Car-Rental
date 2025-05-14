@@ -7,3 +7,48 @@
 .payment-card:hover {
       background-color: rgb(214, 245, 255) !important;
   }
+
+
+  .loader {
+  width: 60px;
+  height: 60px;
+  background: #000000;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s ease-in-out infinite reverse;
+}
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #ff0000;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.292);
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

@@ -1,19 +1,22 @@
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import Home from '../Pages/Home';
-import Services from "../Pages/Services";
-import Dashboard from '../Pages/Dashboard';
-import Contact from "../Pages/Contact";
-import GetStart from "../Pages/GetStart";
-import MyBooking from '../Pages/MyBooking';
-import WishlistPage from '../Pages/WishlistPage';
-import CheckOut from '../Pages/CheckOut';
-import DriverDetails from '../Pages/DriverDetails';
-import BillingDetails from '../Pages/BillingDetails';
-import PaymentOptions from '../Pages/PaymentOptions';
-import FinalBill from '../Pages/PaymentOptions'; // NOTE: Double import; use correct one if it's a different file
-import RentNow from '../Pages/RentNow';
-import ChangeDriver from './ChangeDriver';
+import { lazy } from 'react';
+
+// Lazy load pages
+const Home = lazy(() => import('../Pages/Home'));
+const Services = lazy(() => import('../Pages/Services'));
+const Dashboard = lazy(() => import('../Pages/Dashboard'));
+const Contact = lazy(() => import('../Pages/Contact'));
+const GetStart = lazy(() => import('../Pages/GetStart'));
+const MyBooking = lazy(() => import('../Pages/MyBooking'));
+const WishlistPage = lazy(() => import('../Pages/WishlistPage'));
+const CheckOut = lazy(() => import('../Pages/CheckOut'));
+const DriverDetails = lazy(() => import('../Pages/DriverDetails'));
+const BillingDetails = lazy(() => import('../Pages/BillingDetails'));
+const PaymentOptions = lazy(() => import('../Pages/PaymentOptions'));
+const RentNow = lazy(() => import('../Pages/RentNow'));
+const ChangeDriver = lazy(() => import('./ChangeDriver'));
+
 
 export const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -81,7 +84,6 @@ function Navebar() {
         <Route path="/rentnow" element={<RentNow />} />
         <Route path="/paymentoptions" element={<PaymentOptions />} />
         <Route path="/changedriver" element={<DriverDetails />} />
-        <Route path="/finalbill" element={<FinalBill />} />
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/billingdetails" element={<BillingDetails />} />
         <Route path="/changedriver" element={<ChangeDriver />} />
