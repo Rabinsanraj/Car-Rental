@@ -49,7 +49,7 @@ function RentNow() {
     };
 
     localStorage.setItem("bookingData", JSON.stringify(formData));
-    navigate("/finalbill");
+    navigate("/PaymentOptions");
   };
 
   return (

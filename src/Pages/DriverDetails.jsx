@@ -34,7 +34,7 @@ function DriverDetails() {
     setFormValidated(true);
     if (firstName && lastName && dlNumber && dlImageBase64) {
       const driverData = { selectedDriver, firstName, lastName, dlNumber, dlImage: dlImageBase64 };
-      navigate('/finalbill', { state: driverData });
+      navigate('/PaymentOptions', { state: driverData });
     }
   };
 
